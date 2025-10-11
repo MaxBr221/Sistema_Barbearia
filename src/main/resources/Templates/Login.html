@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Barbearia do Igor</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #222, #444);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+
+        .form-container {
+            background: #fff;
+            color: #333;
+            padding: 30px 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            width: 320px;
+        }
+
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+
+        .text-center {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .text-center a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .text-center a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+
+        @media (max-width: 400px) {
+            .form-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Bem-vindo à Barbearia do Igor 💈</h1>
+</header>
+
+<main>
+    <div class="form-container" xmlns:th="http://www.w3.org/1999/xhtml">
+        <h2>Entrar</h2>
+        <form th:action="@{/login}" method="post">
+            <label for="login">E-mail</label>
+            <input type="email" id="login" name="login" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <div class="text-center">
+            <a href="/cadastro">Criar uma conta</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Sistema de Barbearia</p>
+</footer>
+</body>
+</html>
