@@ -5,15 +5,25 @@ public abstract class Usuario {
     private String nome;
     private String telefone;
     private String email;
+    private Role role;
 
 
-    public Usuario(String nome, String telefone, String email) {
+    public Usuario(String nome, String telefone, String email, Role role) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
+        this.role = role;
     }
 
     public Usuario() {
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public String getNome() {

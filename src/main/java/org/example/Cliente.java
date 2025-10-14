@@ -6,8 +6,8 @@ public class Cliente extends Usuario{
     private UID id;
     private String senha;
 
-    public Cliente(String nome, String telefone, String email, UID id, String senha) {
-        super(nome, telefone, email);
+    public Cliente(String nome, String telefone, String email, Role role, UID id, String senha) {
+        super(nome, telefone, email, role);
         this.id = id;
         this.senha = senha;
     }
@@ -29,5 +29,8 @@ public class Cliente extends Usuario{
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+    public boolean isAtivo(){
+        return true;
     }
 }

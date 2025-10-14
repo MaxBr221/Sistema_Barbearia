@@ -1,5 +1,5 @@
 package org.example;
 
 public enum Status {
-    DISPONIVEL, RESERVADO;
+    DISPONIVEL, RESERVADO, CANCELADO;
 }
