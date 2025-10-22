@@ -1,6 +1,6 @@
 package org.example.Repositorys;
 
-import org.example.Cliente;
+import org.example.Dominios.Cliente;
 import java.util.List;
 
 public interface ClienteRepository {

@@ -1,6 +1,6 @@
 package org.example.Services;
 
-import org.example.Agendamento;
+import org.example.Dominios.Agendamento;
 import org.example.AgendamentoNaoExistente;
 import org.example.AgendamentoReservado;
 import org.example.Repositorys.AgendamentoRepository;

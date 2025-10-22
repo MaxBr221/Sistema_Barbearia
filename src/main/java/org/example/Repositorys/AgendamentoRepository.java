@@ -1,6 +1,6 @@
 package org.example.Repositorys;
 
-import org.example.Agendamento;
+import org.example.Dominios.Agendamento;
 
 import java.util.List;
 

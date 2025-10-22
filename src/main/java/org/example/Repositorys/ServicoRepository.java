@@ -1,6 +1,6 @@
 package org.example.Repositorys;
 
-import org.example.Servico;
+import org.example.Dominios.Servico;
 import java.util.List;
 
 public interface ServicoRepository {

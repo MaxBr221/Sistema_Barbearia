@@ -1,6 +1,6 @@
 package org.example.Services;
 
-import org.example.Cliente;
+import org.example.Dominios.Cliente;
 import org.example.ClienteAtivo;
 import org.example.ClienteNaoAtivo;
 import org.example.Repositorys.ClienteRepository;

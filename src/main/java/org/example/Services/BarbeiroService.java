@@ -1,7 +1,7 @@
 package org.example.Services;
 
-import org.example.Agendamento;
-import org.example.Cliente;
+import org.example.Dominios.Agendamento;
+import org.example.Dominios.Cliente;
 import org.example.Repositorys.BarbeiroRepository;
 
 import java.util.List;

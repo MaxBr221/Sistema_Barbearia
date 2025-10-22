@@ -1,8 +1,7 @@
 package org.example.Services;
 
-import org.example.ClienteNaoAtivo;
 import org.example.Repositorys.ServicoRepository;
-import org.example.Servico;
+import org.example.Dominios.Servico;
 
 import java.util.List;
 

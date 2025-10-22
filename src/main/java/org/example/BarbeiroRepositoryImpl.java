@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.Dominios.Agendamento;
+import org.example.Dominios.Cliente;
+import org.example.Dominios.Status;
 import org.example.Repositorys.BarbeiroRepository;
 
 import java.sql.*;
@@ -8,6 +11,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
 
 public class BarbeiroRepositoryImpl implements BarbeiroRepository {
 

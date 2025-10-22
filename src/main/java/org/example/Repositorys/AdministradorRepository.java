@@ -1,7 +1,7 @@
 package org.example.Repositorys;
 
-import org.example.Barbeiro;
-import org.example.Cliente;
+import org.example.Dominios.Barbeiro;
+import org.example.Dominios.Cliente;
 
 import java.util.List;
 

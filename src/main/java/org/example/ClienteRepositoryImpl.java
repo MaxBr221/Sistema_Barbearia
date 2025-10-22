@@ -1,4 +1,5 @@
 package org.example;
+import org.example.Dominios.Cliente;
 import org.example.Repositorys.ClienteRepository;
 
 import java.sql.*;
@@ -12,7 +13,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, cliente.getId().toString());
+            stmt.setObject(1, cliente.getId());
             stmt.setString(2, cliente.getNome());
             stmt.setString(3, cliente.getTelefone());
             stmt.setString(4, cliente.getEmail());
@@ -37,7 +38,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
             stmt.setString(3, cliente.getEmail());
             stmt.setBoolean(4, cliente.isAtivo());
             stmt.setString(5, cliente.getSenha());
-            stmt.setString(6, cliente.getId().toString());
+            stmt.setObject(6, cliente.getId());
 
             stmt.executeUpdate();
 

@@ -1,7 +1,7 @@
 package org.example.Repositorys;
 
-import org.example.Agendamento;
-import org.example.Cliente;
+import org.example.Dominios.Agendamento;
+import org.example.Dominios.Cliente;
 
 import java.util.List;
 
