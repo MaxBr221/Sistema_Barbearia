@@ -1,25 +1,25 @@
 package org.example;
 
-import java.rmi.server.UID;
+import java.util.UUID;
 
-public class Cliente extends Usuario{
-    private UID id;
+public class Cliente extends Usuario {
+    private UUID id;
     private String senha;
 
-    public Cliente(String nome, String telefone, String email, Role role, UID id, String senha) {
-        super(nome, telefone, email, role);
+
+    public Cliente(UUID id, String nome, String telefone, String email, String senha) {
+        super(nome, telefone, email, Role.CLIENTE);
         this.id = id;
         this.senha = senha;
+
     }
 
-    public Cliente() {
-    }
 
-    public UID getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(UID id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
