@@ -7,6 +7,7 @@ import org.example.ClienteNaoAtivo;
 import org.example.Repositorys.AdministradorRepository;
 
 import java.util.List;
+import java.util.UUID;
 
 public class AdministradorService {
     private AdministradorRepository administradorRepository;
@@ -29,13 +30,13 @@ public class AdministradorService {
         }
         administradorRepository.cadastrarBarbeiro(barbeiro);
     }
-    public void removerCliente(String id){
+    public void removerCliente(UUID id){
         if (id == null){
             throw new IllegalArgumentException("Não é permitido id nulo.");
         }
         administradorRepository.removerCliente(id);
     }
-    public void removerBarbeiro(String id){
+    public void removerBarbeiro(UUID id){
         if (id == null){
             throw new IllegalArgumentException("Não é permitido id nulo.");
         }
@@ -47,7 +48,7 @@ public class AdministradorService {
     public List<Barbeiro> listarBarbeiros(){
         return administradorRepository.listarBarbeiros();
     }
-    public Cliente buscarPorId(String id){
+    public Cliente buscarPorId(UUID id){
         if (id == null){
             throw new IllegalArgumentException("Não é permitido id nulo.");
         }
@@ -57,7 +58,7 @@ public class AdministradorService {
             }
         }return administradorRepository.buscarClientePorId(id);
     }
-    public Barbeiro buscarBarbeiroPorId(String id){
+    public Barbeiro buscarBarbeiroPorId(UUID id){
         if (id == null){
             throw new IllegalArgumentException("Não é permitido id nulo.");
         }

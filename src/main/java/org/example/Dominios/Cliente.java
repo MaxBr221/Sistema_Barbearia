@@ -6,14 +6,18 @@ public class Cliente extends Usuario {
     private UUID id;
     private String senha;
 
-
-    public Cliente(UUID id, String nome, String telefone, String email, String senha) {
-        super(nome, telefone, email, Role.CLIENTE);
+    public Cliente(UUID id,String nome, String telefone, String email, String senha) {
+        super(nome, telefone, email, Role.CLIENTE, senha);
         this.id = id;
         this.senha = senha;
-
     }
 
+    public Cliente(UUID id) {
+        this.id = id;
+    }
+
+    public Cliente() {
+    }
 
     public UUID getId() {
         return id;

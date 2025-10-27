@@ -12,10 +12,10 @@ import java.util.UUID;
 public class ServicoRepositoryImpl implements ServicoRepository {
     @Override
     public void adicionarServico(Servico servico) {
-        String sql = "INSERT INTO Servico (id, nome, data ) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Servico (id, nome, data ) VALUES (?, ?, ?)";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)){
-            stmt.setObject(1, servico.getId());
+            stmt.setString(1, servico.getId().toString());
             stmt.setString(2, servico.getNome());
             stmt.setObject(3, servico.getDuracao());
 
@@ -37,7 +37,7 @@ public class ServicoRepositoryImpl implements ServicoRepository {
                 Servico s = new Servico(
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
-                        rs.getDate("data").toLocalDate());
+                        rs.getTime("data").toLocalTime());
                 servicos.add(s);
             }
         } catch (SQLException e) {

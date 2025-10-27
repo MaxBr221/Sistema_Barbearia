@@ -1,17 +1,25 @@
 package org.example.Dominios;
 
-import java.time.LocalDate;
+
+import java.time.LocalTime;
 import java.util.UUID;
 
 public class Servico {
     private UUID id;
     private String nome;
-    private LocalDate duracao;
+    private LocalTime duracao;
 
-    public Servico(UUID id, String nome, LocalDate duracao) {
+    public Servico(UUID id, String nome, LocalTime duracao) {
         this.id = id;
         this.nome = nome;
         this.duracao = duracao;
+    }
+
+    public Servico(UUID id) {
+        this.id = id;
+    }
+
+    public Servico() {
     }
 
     public String getNome() {
@@ -30,11 +38,11 @@ public class Servico {
         this.nome = nome;
     }
 
-    public LocalDate getDuracao() {
+    public LocalTime getDuracao() {
         return duracao;
     }
 
-    public void setDuracao(LocalDate duracao) {
+    public void setDuracao(LocalTime duracao) {
         this.duracao = duracao;
     }
 }

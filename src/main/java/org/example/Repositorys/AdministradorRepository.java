@@ -4,14 +4,15 @@ import org.example.Dominios.Barbeiro;
 import org.example.Dominios.Cliente;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface AdministradorRepository {
     void cadastrarBarbeiro(Barbeiro barbeiro);
     List<Cliente> listarClientes();
     void cadastrarCliente(Cliente cliente);
-    Cliente buscarClientePorId(String id);
-    Barbeiro buscarBarbeiroPorId(String id);
-    void removerBarbeiro(String id);
-    void removerCliente(String id);
+    Cliente buscarClientePorId(UUID id);
+    Barbeiro buscarBarbeiroPorId(UUID id);
+    void removerBarbeiro(UUID id);
+    void removerCliente(UUID id);
     List<Barbeiro> listarBarbeiros();
 }

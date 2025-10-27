@@ -1,10 +1,23 @@
 package org.example.Dominios;
 
+import java.util.UUID;
+
 public class Administrador extends Usuario {
-    public Administrador(String nome, String telefone, String email, Role role) {
-        super(nome, telefone, email, role);
+    private UUID id;
+
+    public Administrador(UUID id, String nome, String telefone, String email, String senha) {
+        super(nome, telefone, email, Role.ADMIN, senha);
+        this.id = id;
     }
 
     public Administrador() {
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 }

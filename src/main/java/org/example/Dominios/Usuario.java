@@ -6,13 +6,20 @@ public abstract class Usuario {
     private String telefone;
     private String email;
     private Role role;
+    private String senha;
 
-
-    public Usuario(String nome, String telefone, String email, Role role) {
+    public Usuario(String nome, String telefone, String email, Role role, String senha) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.role = role;
+        this.senha = senha;
+    }
+
+    public Usuario(String nome, String telefone, String email) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
     }
 
     public Usuario() {
@@ -20,6 +27,14 @@ public abstract class Usuario {
 
     public Role getRole() {
         return role;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public void setRole(Role role) {

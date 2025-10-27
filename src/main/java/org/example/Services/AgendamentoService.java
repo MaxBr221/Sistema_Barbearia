@@ -5,6 +5,8 @@ import org.example.AgendamentoNaoExistente;
 import org.example.AgendamentoReservado;
 import org.example.Repositorys.AgendamentoRepository;
 
+import java.util.UUID;
+
 public class AgendamentoService {
     private AgendamentoRepository agendamentoRepository;
 
@@ -22,7 +24,7 @@ public class AgendamentoService {
         }
         agendamentoRepository.adicionarAgendamento(agendamento);
     }
-    public void removerAgendamento(String id){
+    public void removerAgendamento(UUID id){
         if (id == null){
             throw new IllegalArgumentException("Não é permitido id nulo");
         }
@@ -32,7 +34,7 @@ public class AgendamentoService {
             }
         }agendamentoRepository.removerAgendamento(id);
     }
-    public Agendamento buscarAgendamentoPorId(String id){
+    public Agendamento buscarAgendamentoPorId(UUID id){
         if (id == null){
             throw new IllegalArgumentException("Não é permitido id nulo");
         }

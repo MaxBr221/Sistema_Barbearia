@@ -9,16 +9,15 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public void cadastrarCliente(Cliente cliente) {
-        String sql = "INSERT INTO Cliente (id, nome, telefone, email, ativo, senha) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Cliente (id, nome, telefone, email, senha) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setObject(1, cliente.getId());
+            stmt.setString(1, cliente.getId().toString());
             stmt.setString(2, cliente.getNome());
             stmt.setString(3, cliente.getTelefone());
             stmt.setString(4, cliente.getEmail());
-            stmt.setBoolean(5, cliente.isAtivo());
-            stmt.setString(6, cliente.getSenha());
+            stmt.setString(5, cliente.getSenha());
 
             stmt.executeUpdate();
 
@@ -29,16 +28,15 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public void editarCliente(Cliente cliente) {
-        String sql = "UPDATE Cliente SET nome = ?, telefone = ?, email = ?, ativo = ?, senha = ? WHERE id = ?";
+        String sql = "UPDATE Cliente SET nome = ?, telefone = ?, email = ?, senha = ? WHERE id = ?";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, cliente.getNome());
             stmt.setString(2, cliente.getTelefone());
             stmt.setString(3, cliente.getEmail());
-            stmt.setBoolean(4, cliente.isAtivo());
-            stmt.setString(5, cliente.getSenha());
-            stmt.setObject(6, cliente.getId());
+            stmt.setString(4, cliente.getSenha());
+            stmt.setObject(5, cliente.getId().toString());
 
             stmt.executeUpdate();
 
@@ -73,12 +71,12 @@ public class ClienteRepositoryImpl implements ClienteRepository {
     }
 
     @Override
-    public Cliente buscarClientePorId(String id) {
+    public Cliente buscarClientePorId(UUID id) {
         String sql = "SELECT * FROM Cliente WHERE id = ?";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, id);
+            stmt.setString(1, id.toString());
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {

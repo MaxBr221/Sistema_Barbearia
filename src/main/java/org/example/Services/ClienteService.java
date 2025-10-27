@@ -6,6 +6,7 @@ import org.example.ClienteNaoAtivo;
 import org.example.Repositorys.ClienteRepository;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 public class ClienteService {
@@ -24,7 +25,7 @@ public class ClienteService {
         clienteRepository.cadastrarCliente(cliente);
 
     }
-    public Cliente buscarPorId(String id){
+    public Cliente buscarPorId(UUID id){
         if(id == null){
             throw new IllegalArgumentException("Id nulo não é permitido!");
         }
