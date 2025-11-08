@@ -1,6 +1,7 @@
 package org.example.Services;
 
 import org.example.Dominios.Agendamento;
+import org.example.Dominios.Barbeiro;
 import org.example.Dominios.Cliente;
 import org.example.Repositorys.BarbeiroRepository;
 
@@ -17,5 +18,11 @@ public class BarbeiroService {
     }
     public List<Cliente> listarClientes(){
         return barbeiroRepository.listarCliente();
+    }
+    public Barbeiro buscarPorLogin(String login){
+        if (login == null){
+            throw new IllegalArgumentException("Erro, não é permitido login nulo.");
+        }
+        return barbeiroRepository.buscarPorLogin(login);
     }
 }

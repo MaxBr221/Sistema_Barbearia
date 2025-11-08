@@ -5,8 +5,8 @@ import java.util.UUID;
 public class Administrador extends Usuario {
     private UUID id;
 
-    public Administrador(UUID id, String nome, String telefone, String email, String senha) {
-        super(nome, telefone, email, Role.ADMIN, senha);
+    public Administrador(UUID id, String nome, String telefone, String login, String senha) {
+        super(nome, telefone, login, Role.ADMIN, senha);
         this.id = id;
     }
 

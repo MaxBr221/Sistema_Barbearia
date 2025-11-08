@@ -9,5 +9,6 @@ public interface ClienteRepository {
     void editarCliente(Cliente cliente);
     List<Cliente> listarClientes();
     Cliente buscarClientePorId(UUID id);
+    Cliente buscarPorLogin(String login);
 
 }

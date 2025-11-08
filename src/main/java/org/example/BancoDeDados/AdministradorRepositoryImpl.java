@@ -1,5 +1,6 @@
-package org.example;
+package org.example.BancoDeDados;
 
+import org.example.Dominios.Administrador;
 import org.example.Dominios.Barbeiro;
 import org.example.Dominios.Cliente;
 import org.example.Repositorys.AdministradorRepository;
@@ -21,7 +22,7 @@ public class AdministradorRepositoryImpl implements AdministradorRepository {
             stmt.setString(1, barbeiro.getId().toString());
             stmt.setString(2, barbeiro.getNome());
             stmt.setString(3, barbeiro.getTelefone());
-            stmt.setString(4, barbeiro.getEmail());
+            stmt.setString(4, barbeiro.getLogin());
             stmt.setString(5, barbeiro.getSenha());
             stmt.executeUpdate();
         }catch (SQLException e){
@@ -60,7 +61,7 @@ public class AdministradorRepositoryImpl implements AdministradorRepository {
             stmt.setString(1, cliente.getId().toString());
             stmt.setString(2, cliente.getNome());
             stmt.setString(3, cliente.getTelefone());
-            stmt.setString(4, cliente.getEmail());
+            stmt.setString(4, cliente.getLogin());
             stmt.setString(5, cliente.getSenha());
             stmt.executeUpdate();
         }catch (SQLException e){
@@ -169,5 +170,28 @@ public class AdministradorRepositoryImpl implements AdministradorRepository {
         }catch (SQLException e){
             System.out.println("Erro ao listar barbeiro " + e.getMessage());
         }return barbeiros;
+    }
+
+    @Override
+    public Administrador buscarPorLogin(String login) {
+        String slq = "SELECT * FROM Administrador WHERE login = ?";
+        try(Connection conn = Database.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(slq)){
+
+            stmt.setString(1, login);
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next()) {
+                return new Administrador(
+                        UUID.fromString(rs.getString("id")),
+                        rs.getString("nome"),
+                        rs.getString("telefone"),
+                        rs.getString("login"),
+                        rs.getString("senha"));
+            }
+        }catch (SQLException e){
+            System.out.println("Erro ao buscar administrador por login" + e.getMessage());
+        }
+        return null;
     }
 }

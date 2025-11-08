@@ -1,4 +1,4 @@
-package org.example;
+package org.example.BancoDeDados;
 import org.example.Dominios.Cliente;
 import org.example.Repositorys.ClienteRepository;
 
@@ -16,7 +16,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
             stmt.setString(1, cliente.getId().toString());
             stmt.setString(2, cliente.getNome());
             stmt.setString(3, cliente.getTelefone());
-            stmt.setString(4, cliente.getEmail());
+            stmt.setString(4, cliente.getLogin());
             stmt.setString(5, cliente.getSenha());
 
             stmt.executeUpdate();
@@ -34,7 +34,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
             stmt.setString(1, cliente.getNome());
             stmt.setString(2, cliente.getTelefone());
-            stmt.setString(3, cliente.getEmail());
+            stmt.setString(3, cliente.getLogin());
             stmt.setString(4, cliente.getSenha());
             stmt.setObject(5, cliente.getId().toString());
 
@@ -91,6 +91,29 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public Cliente buscarPorLogin(String login) {
+        String slq = "SELECT * FROM Cliente WHERE login = ?";
+        try(Connection conn = Database.getConnection();
+           PreparedStatement stmt = conn.prepareStatement(slq)){
+
+            stmt.setString(1, login);
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next()){
+                return new Cliente(
+                        UUID.fromString(rs.getString("id")),
+                        rs.getString("nome"),
+                        rs.getString("telefone"),
+                        rs.getString("email"),
+                        rs.getString("senha"));
+            }
+        }catch (SQLException e){
+            System.out.println("Erro ao buscar cliente por login" + e.getMessage());
         }
         return null;
     }

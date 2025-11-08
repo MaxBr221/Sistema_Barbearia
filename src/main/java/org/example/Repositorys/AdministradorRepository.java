@@ -1,5 +1,6 @@
 package org.example.Repositorys;
 
+import org.example.Dominios.Administrador;
 import org.example.Dominios.Barbeiro;
 import org.example.Dominios.Cliente;
 
@@ -15,4 +16,5 @@ public interface AdministradorRepository {
     void removerBarbeiro(UUID id);
     void removerCliente(UUID id);
     List<Barbeiro> listarBarbeiros();
+    Administrador buscarPorLogin(String login);
 }

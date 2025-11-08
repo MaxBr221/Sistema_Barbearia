@@ -1,4 +1,4 @@
-package org.example;
+package org.example.BancoDeDados;
 
 import org.example.Dominios.Servico;
 import org.example.Repositorys.ServicoRepository;

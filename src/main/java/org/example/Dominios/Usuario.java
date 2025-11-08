@@ -4,14 +4,14 @@ package org.example.Dominios;
 public abstract class Usuario {
     private String nome;
     private String telefone;
-    private String email;
+    private String login;
     private Role role;
     private String senha;
 
     public Usuario(String nome, String telefone, String email, Role role, String senha) {
         this.nome = nome;
         this.telefone = telefone;
-        this.email = email;
+        this.login = email;
         this.role = role;
         this.senha = senha;
     }
@@ -19,7 +19,7 @@ public abstract class Usuario {
     public Usuario(String nome, String telefone, String email) {
         this.nome = nome;
         this.telefone = telefone;
-        this.email = email;
+        this.login = email;
     }
 
     public Usuario() {
@@ -57,11 +57,11 @@ public abstract class Usuario {
         this.telefone = telefone;
     }
 
-    public String getEmail() {
-        return email;
+    public String getLogin() {
+        return login;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setLogin(String login) {
+        this.login = login;
     }
 }

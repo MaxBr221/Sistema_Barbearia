@@ -52,5 +52,10 @@ public class ClienteService {
         }
         return clientesAtivos;
     }
-
+    public Cliente buscarPorLogin(String login){
+        if (login == null){
+            throw new IllegalArgumentException("Erro, não é permitido login nulo.");
+        }
+       return clienteRepository.buscarPorLogin(login);
+    }
 }

@@ -5,8 +5,8 @@ import java.util.UUID;
 public class Barbeiro extends Usuario {
     private UUID id;
 
-    public Barbeiro(UUID id,String nome, String telefone, String email, String senha) {
-        super(nome, telefone, email, Role.BARBEIRO, senha);
+    public Barbeiro(UUID id,String nome, String telefone, String login, String senha) {
+        super(nome, telefone, login, Role.BARBEIRO, senha);
         this.id = id;
     }
 

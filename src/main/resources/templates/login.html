@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Barbearia do Igor</title>
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
 
         body {
             font-family: Arial, sans-serif;
@@ -24,7 +22,6 @@
             height: 100vh;
         }
 
-
         header {
             text-align: center;
             margin-bottom: 20px;
@@ -35,7 +32,6 @@
             letter-spacing: 1px;
         }
 
-
         .form-container {
             background: #fff;
             color: #333;
@@ -44,7 +40,6 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             width: 320px;
         }
-
 
         .form-container h2 {
             text-align: center;
@@ -88,14 +83,12 @@
             background: #555;
         }
 
-
         footer {
             position: absolute;
             bottom: 10px;
             font-size: 14px;
             color: #ccc;
         }
-
 
         .text-center {
             text-align: center;
@@ -113,7 +106,6 @@
             text-decoration: underline;
         }
 
-
         @media (max-width: 400px) {
             .form-container {
                 width: 90%;
@@ -127,7 +119,7 @@
 </header>
 
 <main>
-    <div class="form-container" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="form-container">
         <h2>Entrar</h2>
         <form th:action="@{/login}" method="post">
             <label for="login">E-mail</label>
@@ -140,7 +132,7 @@
         </form>
 
         <div class="text-center">
-            <a href="/cadastro">Criar uma conta</a>
+            <a th:href="@{/cadastro}">Criar uma conta</a>
         </div>
     </div>
 </main>

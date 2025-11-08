@@ -1,6 +1,7 @@
-package org.example;
+package org.example.BancoDeDados;
 
 import org.example.Dominios.Agendamento;
+import org.example.Dominios.Barbeiro;
 import org.example.Dominios.Cliente;
 import org.example.Dominios.Status;
 import org.example.Repositorys.BarbeiroRepository;
@@ -70,5 +71,28 @@ public class BarbeiroRepositoryImpl implements BarbeiroRepository {
         }
 
         return clientes;
+    }
+
+    @Override
+    public Barbeiro buscarPorLogin(String login) {
+        String slq = "SELECT * FROM Barbeiro WHERE login = ?";
+        try(Connection conn = Database.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(slq)){
+
+            stmt.setString(1, login);
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next()){
+                return new Barbeiro(
+                        UUID.fromString(rs.getString("id")),
+                        rs.getString("nome"),
+                        rs.getString("telefone"),
+                        rs.getString("login"),
+                        rs.getString("senha"));
+            }
+        }catch (SQLException e){
+            System.out.println("Erro ao buscar barbeiro por login" + e.getMessage());
+        }
+        return null;
     }
 }
