@@ -2,11 +2,18 @@ package org.example;
 
 import io.javalin.Javalin;
 import io.javalin.config.JavalinConfig;
+import io.javalin.config.Key;
 import io.javalin.http.staticfiles.Location;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import io.javalin.rendering.template.JavalinThymeleaf;
+import org.example.BancoDeDados.BarbeiroRepositoryImpl;
+import org.example.BancoDeDados.ClienteRepositoryImpl;
 import org.example.Controllers.LoginController;
+import org.example.Repositorys.BarbeiroRepository;
+import org.example.Repositorys.ClienteRepository;
+import org.example.Services.BarbeiroService;
+import org.example.Services.ClienteService;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
@@ -38,6 +45,14 @@ public class App {
         }
         return prop;
     }
+    private void registrarServicos(JavalinConfig config){
+        ClienteRepository clienteRepository = new ClienteRepositoryImpl();
+        ClienteService clienteService = new ClienteService(clienteRepository);
+        BarbeiroRepository barbeiroRepository = new BarbeiroRepositoryImpl();
+        BarbeiroService barbeiroService = new BarbeiroService(barbeiroRepository);
+        config.appData(Keys.CLIENTE_SERVICE.key(), clienteService);
+        config.appData(Keys.BARBEIRO_SERVICE.key(), barbeiroService);
+    }
     private TemplateEngine configurarThymeleaf() {
         ClassLoaderTemplateResolver resolver = new ClassLoaderTemplateResolver();
         resolver.setPrefix("/templates/");
@@ -59,6 +74,7 @@ public class App {
         });
 
         app.get("/login", loginController::mostrarPaginaLogin);
+        app.post("/login", loginController::processarLogin);
 
     }
     private void configureJavalin(JavalinConfig config) {
@@ -67,6 +83,8 @@ public class App {
         config.events(event -> {
             event.serverStarting(() -> logger.info("Servidor Javalin está iniciando..."));
             event.serverStopping(() -> logger.info("Servidor parando..."));
+            registrarServicos(config);
+
         });
 
         config.staticFiles.add(staticFileConfig -> {

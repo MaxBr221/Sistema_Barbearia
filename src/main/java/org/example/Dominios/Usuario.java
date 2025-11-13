@@ -13,6 +13,9 @@ public abstract class Usuario {
         this.telefone = telefone;
         this.login = email;
         this.role = role;
+        if (senha == null){
+            throw new IllegalArgumentException("Erro, não pode ser nula");
+        }
         this.senha = senha;
     }
 

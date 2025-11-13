@@ -3,11 +3,12 @@ package org.example.Controllers;
 import io.javalin.http.Context;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.Dominios.Barbeiro;
 import org.example.Dominios.Cliente;
 import org.example.Keys;
-import org.example.Services.AdministradorService;
 import org.example.Services.BarbeiroService;
 import org.example.Services.ClienteService;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class LoginController {
     private static final Logger logger = LogManager.getLogger(LoginController.class);
@@ -23,17 +24,38 @@ public class LoginController {
         String senha = ctx.formParam("senha");
 
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
-        AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
         BarbeiroService barbeiroService = ctx.appData(Keys.BARBEIRO_SERVICE.key());
 
         Cliente cliente = clienteService.buscarPorLogin(login);
-        if (cliente == null){
-            logger.info("cliente " + cliente + " não está cadastrado.");
-            ctx.render("/cadastro.html");
+        if (cliente != null){
+            if (BCrypt.checkpw(senha, cliente.getSenha())) {
+                logger.info("Tentativa de login valida com sucesso!");
+                ctx.sessionAttribute("cliente", cliente);
+                ctx.redirect("cliente.html");
+            }else {
+                logger.warn("senha invalida para login.");
+                ctx.attribute("Erro, login ou senha invalida.");
+                ctx.render("login.html");
+
+            }
+        }
+        Barbeiro barbeiro = barbeiroService.buscarPorLogin(login);
+        if(barbeiro != null){
+            if (BCrypt.checkpw(senha, barbeiro.getSenha())){
+                logger.info("Tentativa de login valida com sucesso!");
+                ctx.sessionAttribute("barbeiro", barbeiro);
+                ctx.redirect("barbeiro.html");
+            }else {
+                logger.warn("Tentativa de login com erro.");
+                ctx.attribute("Erro, senha ou login incorreto!");
+                ctx.render("login.html");
+            }
+
         }
 
-
-
+        logger.info(login + " não está cadastrado.");
+        ctx.attribute("Erro, usuario não está cadastrado no sistema.");
+        ctx.render("cadastro.html");
     }
     public void logOut(Context ctx){
 

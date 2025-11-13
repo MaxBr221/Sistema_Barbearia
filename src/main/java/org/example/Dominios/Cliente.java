@@ -4,12 +4,12 @@ import java.util.UUID;
 
 public class Cliente extends Usuario {
     private UUID id;
-    private String senha;
+
 
     public Cliente(UUID id,String nome, String telefone, String login, String senha) {
         super(nome, telefone, login, Role.CLIENTE, senha);
         this.id = id;
-        this.senha = senha;
+
     }
 
     public Cliente(UUID id) {
@@ -27,13 +27,6 @@ public class Cliente extends Usuario {
         this.id = id;
     }
 
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
     public boolean isAtivo(){
         return true;
     }
