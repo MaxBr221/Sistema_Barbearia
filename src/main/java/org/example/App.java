@@ -2,13 +2,13 @@ package org.example;
 
 import io.javalin.Javalin;
 import io.javalin.config.JavalinConfig;
-import io.javalin.config.Key;
 import io.javalin.http.staticfiles.Location;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import io.javalin.rendering.template.JavalinThymeleaf;
 import org.example.BancoDeDados.BarbeiroRepositoryImpl;
 import org.example.BancoDeDados.ClienteRepositoryImpl;
+import org.example.Controllers.ClienteController;
 import org.example.Controllers.LoginController;
 import org.example.Repositorys.BarbeiroRepository;
 import org.example.Repositorys.ClienteRepository;
@@ -75,6 +75,9 @@ public class App {
 
         app.get("/login", loginController::mostrarPaginaLogin);
         app.post("/login", loginController::processarLogin);
+
+        ClienteController clienteController = new ClienteController();
+        app.get("/cadastro", clienteController :: cadastrarCliente);
 
     }
     private void configureJavalin(JavalinConfig config) {

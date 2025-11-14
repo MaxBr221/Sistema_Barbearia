@@ -13,7 +13,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0000ff, #444);
+            background: linear-gradient(135deg, #4444ff, #2b57ef);
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -33,7 +33,7 @@
         }
 
         .form-container {
-            background: #fff;
+            background: #ffd919;
             color: #333;
             padding: 30px 25px;
             border-radius: 12px;
@@ -80,7 +80,7 @@
         }
 
         button:hover {
-            background: #555;
+            background: #ff2020;
         }
 
         footer {
@@ -121,6 +121,10 @@
 <main>
     <div class="form-container">
         <h2>Entrar</h2>
+        <div th:if="${Erro}" class="alert" style="color: red; font-weight: bold; margin-bottom: 10px;">
+            <p th:text="${Erro}"></p>
+        </div>
+
         <form th:action="@{/login}" method="post">
             <label for="login">E-mail</label>
             <input type="email" id="login" name="login" required>

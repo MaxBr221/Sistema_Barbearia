@@ -8,14 +8,33 @@ public abstract class Usuario {
     private Role role;
     private String senha;
 
-    public Usuario(String nome, String telefone, String email, Role role, String senha) {
+    public Usuario(String nome, String telefone, String login, Role role, String senha) {
+        if (nome == null){
+            throw new IllegalArgumentException("Erro,nome não pode ser nula");
+        }
         this.nome = nome;
+        if (telefone == null){
+            throw new IllegalArgumentException("Erro,telefone não pode ser nula");
+        }
         this.telefone = telefone;
-        this.login = email;
+        if (login == null){
+            throw new IllegalArgumentException("Erro, login nome não pode ser nula");
+        }
+        this.login = login;
+        if (role == null){
+            throw new IllegalArgumentException("Erro,role nome não pode ser nula");
+        }
         this.role = role;
         if (senha == null){
-            throw new IllegalArgumentException("Erro, não pode ser nula");
+            throw new IllegalArgumentException("Erro,senha não pode ser nula");
         }
+        this.senha = senha;
+    }
+
+    public Usuario(String nome, String telefone, String login, String senha) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.login = login;
         this.senha = senha;
     }
 

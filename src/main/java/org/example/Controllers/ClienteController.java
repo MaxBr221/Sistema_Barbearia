@@ -17,16 +17,27 @@ public class ClienteController {
         String senha = ctx.formParam("senha");
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
 
-        if(nome == null || telefone == null || login == null || senha == null){
-            logger.warn("Não é permitido valores nulo.");
-            ctx.attribute("Erro, não é possivel cadastrar cliente com campo nulo.");
+
+        if(nome.isBlank() || telefone.isBlank() || login.isBlank() || senha.isBlank()){
+            logger.warn("Não é permitido valores vazios.");
+            ctx.attribute("Erro, não é possivel cadastrar usuário com campo vazio.");
             ctx.render("cadastro.html");
         }
 
+        Cliente cliente = clienteService.buscarPorLogin(login);
+        if (cliente != null){
+            logger.info("Cliente: " + login + " já está cadastrado!");
+            ctx.attribute("Erro", "Cliente já cadastrado!");
+            ctx.render("login.html");
+        }
 
-        Cliente cliente = new Cliente();
+        Cliente cliente1 = new Cliente(nome, telefone, login, senha);
 
-        clienteService.cadastrarCliente(cliente);
+        clienteService.cadastrarCliente(cliente1);
+        logger.info("cliente " + nome + " cadastrado com sucesso!");
+        ctx.attribute("Muito bem", "Cliente cadastrado com sucesso!");
+        ctx.redirect("/telaCliente.html");
+
 
 
     }

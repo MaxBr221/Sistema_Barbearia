@@ -12,6 +12,10 @@ public class Cliente extends Usuario {
 
     }
 
+    public Cliente(String nome, String telefone, String login, String senha) {
+        super(nome, telefone, login, senha);
+    }
+
     public Cliente(UUID id) {
         this.id = id;
     }

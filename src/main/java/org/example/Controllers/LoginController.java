@@ -53,8 +53,8 @@ public class LoginController {
 
         }
 
-        logger.info(login + " não está cadastrado.");
-        ctx.attribute("Erro, usuario não está cadastrado no sistema.");
+        logger.warn(login + " não está cadastrado.");
+        ctx.attribute("Erro", "usuario não está cadastrado no sistema.");
         ctx.render("cadastro.html");
     }
     public void logOut(Context ctx){
