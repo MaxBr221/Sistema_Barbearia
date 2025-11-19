@@ -6,6 +6,7 @@ import org.example.Dominios.Cliente;
 import org.example.Dominios.Status;
 import org.example.Repositorys.BarbeiroRepository;
 
+import javax.xml.crypto.Data;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -94,5 +95,25 @@ public class BarbeiroRepositoryImpl implements BarbeiroRepository {
             System.out.println("Erro ao buscar barbeiro por login" + e.getMessage());
         }
         return null;
+    }
+
+    @Override
+    public void removerCLiente(UUID id) {
+        String sql = "DELETE * FROM Cliente WHERE id = ?";
+        try(Connection conn = Database.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)){
+
+            stmt.setString(1, id.toString());
+            int linhaAfetadas = stmt.executeUpdate();
+
+            if (linhaAfetadas > 0){
+                System.out.println(linhaAfetadas + " linhas afetadas!, cliente removido com sucesso!");
+            }else{
+                System.out.println("Cliente não encontrado!");
+            }
+        }catch (SQLException e){
+            System.out.println("Erro ao remover cliente" + e.getMessage());
+        }
+
     }
 }

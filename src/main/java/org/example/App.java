@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import io.javalin.rendering.template.JavalinThymeleaf;
 import org.example.BancoDeDados.BarbeiroRepositoryImpl;
 import org.example.BancoDeDados.ClienteRepositoryImpl;
+import org.example.Controllers.BarbeiroController;
 import org.example.Controllers.ClienteController;
 import org.example.Controllers.LoginController;
 import org.example.Repositorys.BarbeiroRepository;
@@ -78,7 +79,11 @@ public class App {
 
         ClienteController clienteController = new ClienteController();
         app.get("/cadastro", clienteController :: cadastrarCliente);
+        app.get("/listarClientes", clienteController :: listarClientes);
 
+        BarbeiroController barbeiroController = new BarbeiroController();
+        app.get("listarClientes", barbeiroController :: listarCLientes);
+        app.get("listarAgendamentos", barbeiroController :: listarAgendamentos);
     }
     private void configureJavalin(JavalinConfig config) {
         TemplateEngine templateEngine = configurarThymeleaf();

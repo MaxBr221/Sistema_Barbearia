@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -17,15 +18,29 @@
         <jackson.version>2.17.2</jackson.version>
         <thymeleaf.version>3.1.2.RELEASE</thymeleaf.version>
         <junit.version>5.10.0</junit.version>
+        <!-- ✅ NOVO: Versão do Kotlin -->
+        <kotlin.version>1.9.0</kotlin.version>
     </properties>
 
     <dependencies>
+        <!-- ✅ DEPENDÊNCIAS KOTLIN (OBRIGATÓRIAS para Javalin) -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-reflect</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+
         <!-- 🌐 Javalin -->
         <dependency>
-
-            <groupId>io.javalin</groupId> <artifactId>javalin</artifactId> <version>${javalin.version}</version>
+            <groupId>io.javalin</groupId>
+            <artifactId>javalin</artifactId>
+            <version>${javalin.version}</version>
             <exclusions>
-                <!-- Evita conflito com SLF4J antigo -->
                 <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-api</artifactId>
@@ -86,16 +101,13 @@
             <artifactId>log4j-slf4j2-impl</artifactId>
             <version>${log4j.version}</version>
         </dependency>
-        <!-- 🗄️ Driver MySQL -->
+
         <!-- 🗄️ Driver MySQL -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>8.3.0</version>
         </dependency>
-
-
-
 
         <!-- 🧪 Testes -->
         <dependency>

@@ -5,6 +5,7 @@ import org.example.AgendamentoNaoExistente;
 import org.example.AgendamentoReservado;
 import org.example.Repositorys.AgendamentoRepository;
 
+import java.util.List;
 import java.util.UUID;
 
 public class AgendamentoService {
@@ -39,5 +40,8 @@ public class AgendamentoService {
             throw new IllegalArgumentException("Não é permitido id nulo");
         }
         return agendamentoRepository.buscarAgendamentoPorId(id);
+    }
+    public List<Agendamento> listarAgendamento(){
+        return agendamentoRepository.listarAgendamentos();
     }
 }

@@ -6,6 +6,7 @@ import org.example.Dominios.Cliente;
 import org.example.Repositorys.BarbeiroRepository;
 
 import java.util.List;
+import java.util.UUID;
 
 public class BarbeiroService {
     private BarbeiroRepository barbeiroRepository;
@@ -24,5 +25,11 @@ public class BarbeiroService {
             throw new IllegalArgumentException("Erro, não é permitido login nulo.");
         }
         return barbeiroRepository.buscarPorLogin(login);
+    }
+    public void removerCliente(UUID id){
+        if (id == null){
+            throw new IllegalArgumentException("id não é permitido nulo.");
+        }
+        barbeiroRepository.removerCLiente(id);
     }
 }

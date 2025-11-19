@@ -7,6 +7,10 @@ import org.example.Dominios.Cliente;
 import org.example.Keys;
 import org.example.Services.ClienteService;
 
+import java.util.List;
+import java.util.Map;
+
+
 public class ClienteController {
     private static final Logger logger = LogManager.getLogger(ClienteController.class);
 
@@ -37,9 +41,17 @@ public class ClienteController {
         logger.info("cliente " + nome + " cadastrado com sucesso!");
         ctx.attribute("Muito bem", "Cliente cadastrado com sucesso!");
         ctx.redirect("/telaCliente.html");
+    }
+    public void listarClientes(Context ctx){
+        ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
+        List<Cliente> listaClientes = clienteService.listarClientes();
+        logger.info("Listando clientes..");
+        ctx.attribute("listaClientes", listaClientes);
+        ctx.render("/listaClientes", Map.of("clientes", listaClientes));
 
+    }
+    public Cliente editarCliente(Context ctx){
 
 
     }
-
 }
