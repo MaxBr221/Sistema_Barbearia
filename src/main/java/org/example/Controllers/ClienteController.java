@@ -9,6 +9,7 @@ import org.example.Services.ClienteService;
 
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 
 public class ClienteController {
@@ -20,7 +21,6 @@ public class ClienteController {
         String login = ctx.formParam("login");
         String senha = ctx.formParam("senha");
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
-
 
         if(nome.isBlank() || telefone.isBlank() || login.isBlank() || senha.isBlank()){
             logger.warn("Não é permitido valores vazios.");
@@ -34,7 +34,6 @@ public class ClienteController {
             ctx.attribute("Erro", "Cliente já cadastrado!");
             ctx.render("login.html");
         }
-
         Cliente cliente1 = new Cliente(nome, telefone, login, senha);
 
         clienteService.cadastrarCliente(cliente1);
@@ -50,8 +49,33 @@ public class ClienteController {
         ctx.render("/listaClientes", Map.of("clientes", listaClientes));
 
     }
-    public Cliente editarCliente(Context ctx){
+    public void editarCliente(Context ctx){
+        ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
+        String idstr = ctx.formParam("id");
 
+        try {
+            UUID id = UUID.fromString(idstr);
+            Cliente cliente = clienteService.buscarPorId(id);
+            if (cliente == null){
+                ctx.status(400).result("Cliente nulo.");
+            }
+            String nome = ctx.formParam("nome");
+            String telefone = ctx.formParam("telefone");
+            String login = ctx.formParam("login");
+            String senha = ctx.formParam("senha");
 
+            cliente.setNome(nome);
+            cliente.setTelefone(telefone);
+            cliente.setLogin(login);
+            cliente.setSenha(senha);
+
+            clienteService.editarCliente(cliente);
+            logger.info("Cliente atualizado com sucesso!");
+            ctx.status(200).result("Cliena atualizado com sucesso!");
+
+        }catch (IllegalArgumentException e){
+            logger.warn("id não coincidente com cliente" + e.getMessage());
+            ctx.status(500).result("Cliente incorreto");
+        }
     }
 }
