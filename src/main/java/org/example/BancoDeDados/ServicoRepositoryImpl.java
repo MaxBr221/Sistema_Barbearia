@@ -4,6 +4,7 @@ import org.example.Dominios.Servico;
 import org.example.Repositorys.ServicoRepository;
 
 
+import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -63,6 +64,27 @@ public class ServicoRepositoryImpl implements ServicoRepository {
 
         }catch (SQLException e){
             System.out.println("Erro ao remover serviço: " + e.getMessage());
+        }
+    }
+
+    @Override
+    public Servico buscarPorId(UUID id) {
+        String sql = "SELECT * FROM Servico WHERE id = ?";
+        try(Connection conn = Database.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)){
+
+            stmt.setString(1, id.toString());
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next()){
+                return new Servico(
+                        UUID.fromString(rs.getString("id")),
+                        rs.getString("nome"),
+                        rs.getTime("duracao").toLocalTime());
+            }
+            return null;
+        }catch (SQLException e){
+            throw new RuntimeException(e);
         }
     }
 }

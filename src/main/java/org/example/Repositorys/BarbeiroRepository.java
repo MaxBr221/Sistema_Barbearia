@@ -12,6 +12,7 @@ public interface BarbeiroRepository {
     List<Cliente> listarCliente();
     Barbeiro buscarPorLogin(String login);
     void removerCLiente(UUID id);
+    Barbeiro buscarPorId(UUID id);
 
 
 }

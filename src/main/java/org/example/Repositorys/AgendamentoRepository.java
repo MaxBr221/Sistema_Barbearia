@@ -2,6 +2,8 @@ package org.example.Repositorys;
 
 import org.example.Dominios.Agendamento;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -10,5 +12,6 @@ public interface AgendamentoRepository {
     void removerAgendamento(UUID id);
     List<Agendamento> listarAgendamentos();
     Agendamento buscarAgendamentoPorId(UUID id);
+    boolean existeAgendamento(LocalDate localDate, LocalTime localTime, UUID barbeiroId);
 
 }

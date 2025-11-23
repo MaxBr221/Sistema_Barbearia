@@ -4,6 +4,8 @@ import org.example.Dominios.*;
 import org.example.Repositorys.AgendamentoRepository;
 
 import java.sql.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -112,5 +114,24 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
         } catch (SQLException e) {
             System.out.println("Erro ao buscarAgendamento" + e.getMessage());
         }return null;
+    }
+
+    @Override
+    public boolean existeAgendamento(LocalDate localDate, LocalTime localTime, UUID barbeiroId) {
+        String sql = "SELECT * FROM Agendamento WHERE data = ? and hora = ? and barberiro_id";
+        try (Connection conn = Database.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setObject(1, localDate);
+            stmt.setObject(2, localTime);
+            stmt.setObject(3, barbeiroId);
+
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao verificar agendamento", e);
+        }return false;
     }
 }

@@ -32,4 +32,10 @@ public class BarbeiroService {
         }
         barbeiroRepository.removerCLiente(id);
     }
+    public Barbeiro buscarPorId(UUID id){
+        if (id == null){
+            throw new IllegalArgumentException("Erro, valor nulo.");
+        }
+        return barbeiroRepository.buscarPorId(id);
+    }
 }

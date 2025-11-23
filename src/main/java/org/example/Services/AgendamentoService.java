@@ -3,6 +3,7 @@ package org.example.Services;
 import org.example.Dominios.Agendamento;
 import org.example.AgendamentoNaoExistente;
 import org.example.AgendamentoReservado;
+import org.example.Dominios.Status;
 import org.example.Repositorys.AgendamentoRepository;
 
 import java.util.List;
@@ -13,6 +14,11 @@ public class AgendamentoService {
 
     public AgendamentoService(AgendamentoRepository agendamentoRepository) {
         this.agendamentoRepository = agendamentoRepository;
+    }public void criar(Agendamento agendamento){
+        if(agendamentoRepository.existeAgendamento(agendamento.getData(), agendamento.getHora(), agendamento.getBarbeiro().getId())){
+            throw new AgendamentoReservado("Agendamento já reservado nesse horario.");
+        }
+        agendamentoRepository.adicionarAgendamento(agendamento);
     }
     public void adicionarAgendamento(Agendamento agendamento){
         if (agendamento == null){

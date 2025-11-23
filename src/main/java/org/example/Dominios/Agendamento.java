@@ -38,6 +38,7 @@ public class Agendamento {
     public Agendamento() {
     }
 
+
     public TipoServico getTipoServico() {
         return tipoServico;
     }
