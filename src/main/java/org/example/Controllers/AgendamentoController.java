@@ -38,7 +38,6 @@ public class AgendamentoController {
 
         LocalDate data = LocalDate.parse(strData);
         LocalTime hora = LocalTime.parse(strHora);
-
         UUID barbeiro = UUID.fromString(barbeiroId);
         UUID cliente = UUID.fromString(clienteId);
         UUID servico = UUID.fromString(servicoId);
@@ -49,16 +48,15 @@ public class AgendamentoController {
 
         TipoServico tipoServico1 = TipoServico.valueOf(tipoServico);
 
-        Agendamento age = new Agendamento();
-        age.setId(UUID.randomUUID());
-        age.setData(data);
-        age.setHora(hora);
-        age.setBarbeiro(barbeiro1);
-        age.setCliente(cliente1);
-        age.setServico(servico1);
-        age.setStatus(Status.RESERVADO);
-        age.setTipoServico(tipoServico1);
-
+        Agendamento age = new Agendamento(
+                UUID.randomUUID(),
+                data,
+                hora,
+                barbeiro1,
+                cliente1,
+                servico1,
+                Status.RESERVADO,
+                tipoServico1);
         try{
             agendamentoService.criar(age);
             logger.info("Agendamento criado com sucesso!");
@@ -67,5 +65,4 @@ public class AgendamentoController {
             ctx.status(400).result(e.getMessage());
         }
     }
-
 }
