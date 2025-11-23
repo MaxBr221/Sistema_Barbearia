@@ -48,9 +48,5 @@ public class BarbeiroController {
             logger.warn("Erro, id do cliente incorreto." + e.getMessage());
             ctx.status(400).result("id inválido!");
         }
-
-
     }
-
-
 }
