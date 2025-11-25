@@ -24,18 +24,18 @@ import java.io.InputStream;
 import java.util.Properties;
 import java.util.function.Consumer;
 
-public class App {
-    private static final Logger logger = LogManager.getLogger(App.class);
+public class AppBarbearia {
+    private static final Logger logger = LogManager.getLogger(AppBarbearia.class);
     private static final int PORTA_PADRAO = 7000;
     private static final String PROP_PORTA_SERVIDOR = "porta.servidor";
     private final Properties propriedades;
 
-    public App() {
+    public AppBarbearia() {
         this.propriedades = carregarPropriedades();
     }
     public Properties carregarPropriedades(){
         Properties prop = new Properties();
-        try (InputStream input = App.class.getClassLoader().getResourceAsStream("application.properties")) {
+        try (InputStream input = AppBarbearia.class.getClassLoader().getResourceAsStream("application.properties")) {
             if (input == null) {
                 logger.error("Arquivo application.properties não encontrado em /resources");
                 System.exit(1);
@@ -120,7 +120,7 @@ public class App {
 
     }
     public static void main(String[] args) {
-        new App().iniciar();
+        new AppBarbearia().iniciar();
     }
     public void configurarPaginasDeErro(Javalin app){
         app.error(404, ctx -> ctx.render("erro_404.html"));

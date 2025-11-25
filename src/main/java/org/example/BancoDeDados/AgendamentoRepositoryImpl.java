@@ -24,9 +24,8 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
             stmt.setTime(3, Time.valueOf(agendamento.getHora()));
             stmt.setString(4, agendamento.getBarbeiro().getId().toString());
             stmt.setString(5, agendamento.getCliente().getId().toString());
-            stmt.setString(6, agendamento.getServico().getId().toString());
-            stmt.setString(7, agendamento.getStatus().name());
-            stmt.setString(8, agendamento.getTipoServico().name());
+            stmt.setString(6, agendamento.getStatus().name());
+            stmt.setString(7, agendamento.getTipoServico().name());
             stmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println("Erro ao cadastrar " + e.getMessage());
@@ -68,14 +67,12 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
             while (rs.next()) {
                 Barbeiro barbeiro = new Barbeiro(UUID.fromString(rs.getString("barbeiro_id")));
                 Cliente cliente = new Cliente(UUID.fromString(rs.getString("cliente_id")));
-                Servico servico = new Servico(UUID.fromString(rs.getString("servico_id")));
                 Agendamento ag = new Agendamento(
                         UUID.fromString(rs.getString("id")),
                         rs.getDate("data").toLocalDate(),
                         rs.getTime("hora").toLocalTime(),
                         barbeiro,
                         cliente,
-                        servico,
                         Status.valueOf(rs.getString("status")),
                         TipoServico.valueOf(rs.getString("tipoServico")));
                 agendamentos.add(ag);
@@ -99,14 +96,12 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
             if (rs.next()) {
                 Barbeiro barbeiro = new Barbeiro(UUID.fromString(rs.getString("barbeiro_id")));
                 Cliente cliente = new Cliente(UUID.fromString(rs.getString("cliente_id")));
-                Servico servico = new Servico(UUID.fromString(rs.getString("servico_id")));
                 return new Agendamento(
                         UUID.fromString(rs.getString("id")),
                         rs.getDate("data").toLocalDate(),
                         rs.getTime("hora").toLocalTime(),
                         barbeiro,
                         cliente,
-                        servico,
                         Status.valueOf(rs.getString("status")),
                         TipoServico.valueOf(rs.getString("tipoServico")));
 

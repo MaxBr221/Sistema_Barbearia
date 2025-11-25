@@ -10,26 +10,23 @@ public class Agendamento {
     private LocalTime hora;
     private Barbeiro barbeiro;
     private Cliente cliente;
-    private Servico servico;
     private Status status;
     private TipoServico tipoServico;
 
-    public Agendamento(UUID id, LocalDate data, LocalTime hora, Barbeiro barbeiro, Cliente cliente, Servico servico, Status status, TipoServico tipoServico) {
+    public Agendamento(UUID id, LocalDate data, LocalTime hora, Barbeiro barbeiro, Cliente cliente, Status status, TipoServico tipoServico) {
         this.id = id;
         this.data = data;
         this.hora = hora;
         this.barbeiro = barbeiro;
         this.cliente = cliente;
-        this.servico = servico;
         this.status = status;
         this.tipoServico = tipoServico;
     }
 
-    public Agendamento(UUID id, LocalDate data, Cliente cliente, Servico servico, Status status, LocalTime hora, TipoServico tipoServico) {
+    public Agendamento(UUID id, LocalDate data, Cliente cliente, Status status, LocalTime hora, TipoServico tipoServico) {
         this.id = id;
         this.data = data;
         this.cliente = cliente;
-        this.servico = servico;
         this.status = status;
         this.hora = hora;
         this.tipoServico = tipoServico;
@@ -85,14 +82,6 @@ public class Agendamento {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-    }
-
-    public Servico getServico() {
-        return servico;
-    }
-
-    public void setServico(Servico servico) {
-        this.servico = servico;
     }
 
     public Status getStatus() {

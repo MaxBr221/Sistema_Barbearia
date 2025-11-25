@@ -145,7 +145,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>org.example.App</mainClass>
+                    <mainClass>org.example.AppBarbearia</mainClass>
                 </configuration>
             </plugin>
         </plugins>

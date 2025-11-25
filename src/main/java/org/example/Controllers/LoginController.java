@@ -58,7 +58,8 @@ public class LoginController {
         ctx.render("cadastro.html");
     }
     public void logOut(Context ctx){
+        ctx.attribute("usuario", null);
+        ctx.redirect("/login");
 
     }
-
 }
