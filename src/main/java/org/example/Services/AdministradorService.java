@@ -71,5 +71,11 @@ public class AdministradorService {
         }
         return administradorRepository.buscarPorLogin(login);
     }
+    public Barbeiro buscarBarbeiroPorLogin(String login){
+        if (login == null){
+            throw new IllegalArgumentException("Erro, não é permitido login nulo.");
+        }
+        return administradorRepository.buscarBarbeiroPorLogin(login);
+    }
 
 }

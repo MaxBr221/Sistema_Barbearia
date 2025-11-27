@@ -194,4 +194,27 @@ public class AdministradorRepositoryImpl implements AdministradorRepository {
         }
         return null;
     }
+
+    @Override
+    public Barbeiro buscarBarbeiroPorLogin(String login) {
+        String sql = "SELECT * FROM Barbeiro WHERE id = ?";
+        try(Connection conn = Database.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)){
+
+            stmt.setString(1, login);
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next()){
+                return new Barbeiro(
+                        UUID.fromString(rs.getString("id")),
+                        rs.getString("nome"),
+                        rs.getString("telefone"),
+                        rs.getString("login"),
+                        rs.getString("senha"));
+            }
+        }catch (SQLException e){
+            throw new RuntimeException(e.getMessage());
+        }
+        return null;
+    }
 }

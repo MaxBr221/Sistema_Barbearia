@@ -17,4 +17,5 @@ public interface AdministradorRepository {
     void removerCliente(UUID id);
     List<Barbeiro> listarBarbeiros();
     Administrador buscarPorLogin(String login);
+    Barbeiro buscarBarbeiroPorLogin(String login);
 }
