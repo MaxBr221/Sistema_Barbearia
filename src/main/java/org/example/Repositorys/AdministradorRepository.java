@@ -18,4 +18,5 @@ public interface AdministradorRepository {
     List<Barbeiro> listarBarbeiros();
     Administrador buscarPorLogin(String login);
     Barbeiro buscarBarbeiroPorLogin(String login);
+    Cliente buscarClientePorLogin(String login);
 }

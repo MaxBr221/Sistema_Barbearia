@@ -4,6 +4,7 @@ import io.javalin.http.Context;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Dominios.Barbeiro;
+import org.example.Dominios.Cliente;
 import org.example.Keys;
 import org.example.Services.AdministradorService;
 
@@ -21,7 +22,7 @@ public class AdministradorController {
 
         if(nome.isBlank() || telefone.isBlank() || login.isBlank() || senha.isBlank()){
             logger.warn("Não é permitido valores vazios.");
-            ctx.attribute("Erro, não é possivel cadastrar barbeiro com campo vazio.");
+            ctx.result("Erro, não é possivel cadastrar barbeiro com campo vazio.");
             ctx.render("cadastro.html");
         }
         Barbeiro barbeiro = administradorService.buscarBarbeiroPorLogin(login);
@@ -35,6 +36,37 @@ public class AdministradorController {
         logger.info("Barbeiro " + nome + " cadastrado com sucesso!");
         ctx.attribute("Barbeiro", "Barbeiro cadastrado com sucesso!");
         ctx.redirect("barbeiro.html");
+
+    }
+    public void cadastrarCliente(Context ctx){
+        AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
+
+        String nome = ctx.formParam("nome");
+        String telefone = ctx.formParam("telefone");
+        String login = ctx.formParam("login");
+        String  senha = ctx.formParam("senha");
+
+        if(nome.isBlank() || telefone.isBlank() || login.isBlank() || senha.isBlank()){
+            logger.warn("Não é permitido deixar espaços vazios.");
+            ctx.result("Erro, não é possivel cadastrar cliente com campo vazio.");
+            ctx.render("cadastro.html");
+        }
+
+        Cliente cliente = administradorService.buscarClientePorLogin(login);
+        if (cliente != null){
+            logger.info("Cliente já está cadastrado!");
+            ctx.result("cliente já cadastrado no sistema!");
+            ctx.render("cadastro.html");
+        }
+
+        Cliente cliente1 = new Cliente(UUID.randomUUID(), nome, telefone, login, senha);
+        administradorService.cadastrarCliente(cliente1);
+        logger.info(cliente1.getNome() + " cadastrado com sucesso!");
+        ctx.result("Cliente cadastrado com sucesso!");
+        ctx.redirect("cliente.html");
+
+    }
+    public void removerbarbeiro(Context ctx){
 
     }
 
