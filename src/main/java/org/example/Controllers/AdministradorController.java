@@ -67,6 +67,24 @@ public class AdministradorController {
 
     }
     public void removerbarbeiro(Context ctx){
+        AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
+
+        String strId = ctx.formParam("id");
+        UUID id = UUID.fromString(strId);
+
+        Barbeiro barbeiro = administradorService.buscarBarbeiroPorId(id);
+        if(barbeiro == null){
+            logger.info("Barbeiro não cadastrado!");
+            ctx.result("Barbeiro não existente.");
+
+        }
+        administradorService.removerBarbeiro(id);
+        logger.info("Barbeiro removido com sucesso!");
+        ctx.result("Barbeiro removido com sucesso!");
+        ctx.redirect("barbeiroTela.html");
+
+    }
+    public void removerCliente(Context ctx){
 
     }
 
