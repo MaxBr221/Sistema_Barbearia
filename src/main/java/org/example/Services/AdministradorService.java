@@ -83,5 +83,11 @@ public class AdministradorService {
         }
         return administradorRepository.buscarClientePorLogin(login);
     }
+    public Cliente buscarClientePorId(UUID id){
+        if (id == null){
+            throw new IllegalArgumentException("Não é permitido id nulo.");
+        }
+        return administradorRepository.buscarClientePorId(id);
+    }
 
 }
