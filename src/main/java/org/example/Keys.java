@@ -7,8 +7,7 @@ public enum Keys {
     CLIENTE_SERVICE(new Key<ClienteService>("cliente-service")),
     BARBEIRO_SERVICE(new Key<BarbeiroService>("barbeiro-service")),
     ADMINISTRADOR_SERVICE(new Key<AdministradorService>("administrador-service")),
-    AGENDAMENTO_SERVICE(new Key<AgendamentoService>("agendamento-service")),
-    SERVICO_SERVICE(new Key<ServicoService>("servico-service"));
+    AGENDAMENTO_SERVICE(new Key<AgendamentoService>("agendamento-service"));
 
     private final Key<?> k;
 
