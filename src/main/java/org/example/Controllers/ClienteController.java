@@ -22,7 +22,7 @@ public class ClienteController {
         String senha = ctx.formParam("senha");
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
 
-        if(nome.isBlank() || telefone.isBlank() || login.isBlank() || senha.isBlank()){
+        if(nome == null || nome.isBlank() || telefone == null || telefone.isBlank() || login == null || login.isBlank() || senha == null || senha.isBlank()){
             logger.warn("Não é permitido valores vazios.");
             ctx.attribute("Erro, não é possivel cadastrar usuário com campo vazio.");
             ctx.render("cadastro.html");

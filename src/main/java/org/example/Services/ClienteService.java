@@ -15,6 +15,7 @@ public class ClienteService {
     public ClienteService(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
     }
+
     public void cadastrarCliente(Cliente cliente){
         if(cliente == null){
             throw new IllegalArgumentException("Cliente nulo não é permitido!");
@@ -53,9 +54,6 @@ public class ClienteService {
         return clientesAtivos;
     }
     public Cliente buscarPorLogin(String login){
-        if (login == null){
-            throw new IllegalArgumentException("Erro, não é permitido login nulo.");
-        }
        return clienteRepository.buscarPorLogin(login);
     }
 }
