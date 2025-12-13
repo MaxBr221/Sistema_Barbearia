@@ -15,6 +15,11 @@ import java.util.UUID;
 public class ClienteController {
     private static final Logger logger = LogManager.getLogger(ClienteController.class);
 
+    public void mostrarPaginaCadastro(Context ctx){
+        logger.info("Direcionando para tela de cadastro..");
+        ctx.render("cadastro.html");
+    }
+
     public void cadastrarCliente(Context ctx){
         String nome = ctx.formParam("nome");
         String telefone = ctx.formParam("telefone");

@@ -60,6 +60,7 @@ public class LoginController {
     }
     public void logOut(Context ctx){
         ctx.attribute("usuario", null);
+        logger.info("Direcionando para saida..");
         ctx.redirect("/login");
 
     }

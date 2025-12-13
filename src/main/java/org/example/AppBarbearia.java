@@ -76,10 +76,15 @@ public class AppBarbearia {
 
         app.get("/login", loginController::mostrarPaginaLogin);
         app.post("/login", loginController::processarLogin);
+        app.get("/logOut", loginController::logOut);
 
         ClienteController clienteController = new ClienteController();
-        app.get("/cadastro", clienteController :: cadastrarCliente);
+        app.get("/cadastro", clienteController:: mostrarPaginaCadastro);
+        app.post("/cadastro", clienteController :: cadastrarCliente);
         app.get("/listarClientes", clienteController :: listarClientes);
+//        criar tela de editar usuario.
+//        app.get("/telaEditar", clienteController:: editarCliente);
+        app.post("/telaEditar", clienteController :: editarCliente);
 
         BarbeiroController barbeiroController = new BarbeiroController();
         app.get("listarClientes", barbeiroController :: listarCLientes);

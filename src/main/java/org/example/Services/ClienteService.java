@@ -20,9 +20,9 @@ public class ClienteService {
         if(cliente == null){
             throw new IllegalArgumentException("Cliente nulo não é permitido!");
         }
-        if(cliente.isAtivo()){
-            throw new ClienteAtivo("Cliente já está ativo");
-        }
+//        if(cliente.isAtivo()){
+//            throw new ClienteAtivo("Cliente já está ativo");
+//        }
         clienteRepository.cadastrarCliente(cliente);
 
     }
