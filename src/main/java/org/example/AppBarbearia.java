@@ -70,7 +70,6 @@ public class AppBarbearia {
     public void configurarRotas(Javalin app){
         LoginController loginController = new LoginController();
         app.get("/", ctx -> {
-            logger.info("Entrou na rota /");
             ctx.redirect("/login");
         });
 
