@@ -51,12 +51,12 @@
              input:focus {
                 border-color: #007bff;
             }
-            button{
+            .form-button{
                 width: 100%, height: 100%;
-                margin-top: 10%;
-                padding: 2%;
-                background: #ffffff;
-                color: #000000;
+                margin-top:20%;
+                padding: 3%;
+                background: black;
+                color: black;
                 cursor: pointer;
                 border: none;
                 border-radius: 6px;
@@ -118,5 +118,26 @@
 <footer>
     <p>&copy; 2025 Sistema de Barbearia</p>
 </footer>
+<script>
+    function validarSenha() {
+        const senha = document.getElementById('senha').value;
+        const confirmarSenha = document.getElementById('confirmar-senha').value;
+
+        const regexSenhaForte = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        if (senha !== confirmarSenha) {
+            alert('As senhas não coincidem.');
+            return false;
+        }
+
+        if (!regexSenhaForte.test(senha)) {
+            alert('A senha deve conter:\n- Mínimo 8 caracteres\n- Pelo menos 1 letra maiúscula\n- Pelo menos 1 letra minúscula\n- Pelo menos 1 número\n- Pelo menos 1 caractere especial (@$!%*?&)');
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
 </body>
 </html>

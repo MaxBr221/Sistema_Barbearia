@@ -60,7 +60,7 @@ public class AppBarbearia {
         resolver.setSuffix(".html");
         resolver.setTemplateMode("HTML");
         resolver.setCharacterEncoding("UTF-8");
-        resolver.setCacheable(false);
+        resolver.setCacheable(false);   
 
         TemplateEngine engine = new TemplateEngine();
         engine.setTemplateResolver(resolver);
