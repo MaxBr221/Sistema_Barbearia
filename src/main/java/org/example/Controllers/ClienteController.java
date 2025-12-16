@@ -30,21 +30,22 @@ public class ClienteController {
         if(nome == null || nome.isBlank() || telefone == null || telefone.isBlank() || login == null || login.isBlank() || senha == null || senha.isBlank()){
             logger.warn("Não é permitido valores vazios.");
             ctx.attribute("Erro, não é possivel cadastrar usuário com campo vazio.");
-            ctx.render("cadastro.html");
+            ctx.render("cadastro");
         }
 
         Cliente cliente = clienteService.buscarPorLogin(login);
         if (cliente != null){
             logger.info("Cliente: " + login + " já está cadastrado!");
             ctx.attribute("Erro", "Cliente já cadastrado!");
-            ctx.render("login.html");
+            ctx.render("login");
         }
-        Cliente cliente1 = new Cliente(nome, telefone, login, senha);
+
+        Cliente cliente1 = new Cliente(UUID.randomUUID(), nome, telefone, login, senha);
 
         clienteService.cadastrarCliente(cliente1);
         logger.info("cliente " + nome + " cadastrado com sucesso!");
-        ctx.attribute("Muito bem", "Cliente cadastrado com sucesso!");
-        ctx.redirect("/telaCliente.html");
+        ctx.attribute("ok", "Cliente cadastrado com sucesso!");
+        ctx.redirect("login");
     }
     public void listarClientes(Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());

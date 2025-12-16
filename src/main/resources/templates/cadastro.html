@@ -88,9 +88,9 @@
 <main>
     <div class="form-box"  xmlns:th="http://www.w3.org/1999/xhtml">
         <h2>Crie sua conta</h2>
-        <form th:action="@{/cadastro}" method="post"></form>
-        <div th:if="${erro}" class="alert alert-danger" role="alert">
-            <p th:text="${erro}"></p>
+        <form th:action="@{/cadastro}" method="post"  onsubmit="return validarSenha()">
+        <div th:if="${Erro}" class="alert alert-danger" role="alert">
+            <p th:text="${Erro}"></p>
         </div>
         <div th:if="${info}" class="alert alert-info" role="alert">
             <p th:text="${info}"></p>
@@ -111,7 +111,8 @@
         <label for="confirmar-senha">Confirmar-senha</label>
         <input type="password" id="confirmar-senha" name="confirmar-senha" required>
 
-        <button type="button">Cadastrar</button>
+        <button type="submit">Cadastrar</button>
+        </form>
     </div>
     </div>
 </main>
@@ -123,15 +124,10 @@
         const senha = document.getElementById('senha').value;
         const confirmarSenha = document.getElementById('confirmar-senha').value;
 
-        const regexSenhaForte = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
 
         if (senha !== confirmarSenha) {
             alert('As senhas não coincidem.');
-            return false;
-        }
-
-        if (!regexSenhaForte.test(senha)) {
-            alert('A senha deve conter:\n- Mínimo 8 caracteres\n- Pelo menos 1 letra maiúscula\n- Pelo menos 1 letra minúscula\n- Pelo menos 1 número\n- Pelo menos 1 caractere especial (@$!%*?&)');
             return false;
         }
 
