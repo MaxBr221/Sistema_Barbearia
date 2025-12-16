@@ -9,7 +9,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public void cadastrarCliente(Cliente cliente) {
-        String sql = "INSERT INTO Cliente (id, nome, telefone, email, senha) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Cliente (id, nome, telefone, login, senha) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -28,7 +28,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public void editarCliente(Cliente cliente) {
-        String sql = "UPDATE Cliente SET nome = ?, telefone = ?, email = ?, senha = ? WHERE id = ?";
+        String sql = "UPDATE Cliente SET nome = ?, telefone = ?, login = ?, senha = ? WHERE id = ?";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -58,7 +58,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("email"),
+                        rs.getString("login"),
                         rs.getString("senha")
                 );
                 clientes.add(c);
@@ -84,7 +84,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("email"),
+                        rs.getString("login"),
                         rs.getString("senha")
                 );
             }
@@ -109,7 +109,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("email"),
+                        rs.getString("login"),
                         rs.getString("senha"));
             }
         }catch (SQLException e){

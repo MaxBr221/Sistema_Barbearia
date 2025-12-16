@@ -6,7 +6,6 @@ import org.example.Dominios.Cliente;
 import org.example.Dominios.Status;
 import org.example.Repositorys.BarbeiroRepository;
 
-import javax.xml.crypto.Data;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -61,7 +60,7 @@ public class BarbeiroRepositoryImpl implements BarbeiroRepository {
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("email"),
+                        rs.getString("login"),
                         rs.getString("senha")
                 );
                 clientes.add(c);

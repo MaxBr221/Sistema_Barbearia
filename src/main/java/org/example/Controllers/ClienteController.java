@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.example.Dominios.Cliente;
 import org.example.Keys;
 import org.example.Services.ClienteService;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.List;
 import java.util.Map;
@@ -42,10 +43,14 @@ public class ClienteController {
 
         Cliente cliente1 = new Cliente(UUID.randomUUID(), nome, telefone, login, senha);
 
+        String senhaForm = BCrypt.hashpw(cliente1.getSenha(), BCrypt.gensalt());
+        cliente1.setSenha(senhaForm);
+
         clienteService.cadastrarCliente(cliente1);
         logger.info("cliente " + nome + " cadastrado com sucesso!");
-        ctx.attribute("ok", "Cliente cadastrado com sucesso!");
+        ctx.sessionAttribute("ok", "Cliente cadastrado com sucesso!");
         ctx.redirect("login");
+        return;
     }
     public void listarClientes(Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());

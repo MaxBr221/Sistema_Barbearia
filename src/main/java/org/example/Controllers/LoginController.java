@@ -30,21 +30,22 @@ public class LoginController {
         if (cliente != null){
             if (BCrypt.checkpw(senha, cliente.getSenha())) {
                 logger.info("Tentativa de login valida com sucesso!");
-                ctx.sessionAttribute("cliente", cliente);
-                ctx.redirect("cliente.html");
+                ctx.redirect("/telaCliente");
+                return;
             }else {
                 logger.warn("senha invalida para login.");
                 ctx.attribute("Erro, login ou senha invalida.");
-                ctx.render("login.html");
+                ctx.render("login");
 
             }
         }
         Barbeiro barbeiro = barbeiroService.buscarPorLogin(login);
-        if(barbeiro != null){
+        if (barbeiro != null){
             if (BCrypt.checkpw(senha, barbeiro.getSenha())){
                 logger.info("Tentativa de login valida com sucesso!");
                 ctx.sessionAttribute("barbeiro", barbeiro);
                 ctx.redirect("barbeiro.html");
+                return;
             }else {
                 logger.warn("Tentativa de login com erro.");
                 ctx.attribute("Erro, senha ou login incorreto!");
@@ -52,11 +53,9 @@ public class LoginController {
             }
 
         }
-
         logger.warn(login + " não está cadastrado.");
         ctx.attribute("Erro", "usuario não está cadastrado!");
         ctx.render("login");
-
     }
     public void logOut(Context ctx){
         ctx.attribute("usuario", null);
@@ -64,4 +63,5 @@ public class LoginController {
         ctx.redirect("/login");
 
     }
+
 }

@@ -16,7 +16,7 @@ import java.util.UUID;
 public class AdministradorRepositoryImpl implements AdministradorRepository {
     @Override
     public void cadastrarBarbeiro(Barbeiro barbeiro) {
-        String sql = "INSERT INTO Barbeiro (id, nome, telefone, email, senha) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Barbeiro (id, nome, telefone, login, senha) VALUES (?, ?, ?, ?, ?)";
         try(Connection conn = Database.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)){
             stmt.setString(1, barbeiro.getId().toString());
@@ -43,7 +43,7 @@ public class AdministradorRepositoryImpl implements AdministradorRepository {
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("email"),
+                        rs.getString("login"),
                         rs.getString("senha"));
                 clientes.add(c);
             }
@@ -54,7 +54,7 @@ public class AdministradorRepositoryImpl implements AdministradorRepository {
 
     @Override
     public void cadastrarCliente(Cliente cliente) {
-        String sql = "INSERT INTO Cliente (id, nome, telefone, email, senha) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Cliente (id, nome, telefone, login, senha) VALUES (?, ?, ?, ?, ?)";
         try(Connection conn = Database.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)){
 
@@ -83,7 +83,7 @@ public class AdministradorRepositoryImpl implements AdministradorRepository {
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("email"),
+                        rs.getString("login"),
                         rs.getString("senha"));
 
             }
@@ -106,7 +106,7 @@ public class AdministradorRepositoryImpl implements AdministradorRepository {
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("email"),
+                        rs.getString("login"),
                         rs.getString("senha"));
             }
         }catch (SQLException e){
@@ -163,7 +163,7 @@ public class AdministradorRepositoryImpl implements AdministradorRepository {
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("email"),
+                        rs.getString("login"),
                         rs.getString("senha"));
                 barbeiros.add(b);
             }
