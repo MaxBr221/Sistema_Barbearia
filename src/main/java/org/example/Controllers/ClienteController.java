@@ -37,8 +37,9 @@ public class ClienteController {
         Cliente cliente = clienteService.buscarPorLogin(login);
         if (cliente != null){
             logger.info("Cliente: " + login + " já está cadastrado!");
-            ctx.attribute("Erro", "Cliente já cadastrado!");
-            ctx.render("login");
+            ctx.sessionAttribute("Erro", "Cliente já cadastrado!");
+            ctx.redirect("/cadastro");
+            return;
         }
 
         Cliente cliente1 = new Cliente(UUID.randomUUID(), nome, telefone, login, senha);
@@ -50,7 +51,6 @@ public class ClienteController {
         logger.info("cliente " + nome + " cadastrado com sucesso!");
         ctx.sessionAttribute("ok", "Cliente cadastrado com sucesso!");
         ctx.redirect("login");
-        return;
     }
     public void listarClientes(Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());

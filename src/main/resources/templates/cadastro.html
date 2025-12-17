@@ -89,8 +89,8 @@
     <div class="form-box"  xmlns:th="http://www.w3.org/1999/xhtml">
         <h2>Crie sua conta</h2>
         <form th:action="@{/cadastro}" method="post"  onsubmit="return validarSenha()">
-        <div th:if="${Erro}" class="alert alert-danger" role="alert">
-            <p th:text="${Erro}"></p>
+        <div th:if="${session.Erro}" class="alert alert-danger" role="alert">
+            <p th:text="${session.Erro}"></p>
         </div>
         <div th:if="${info}" class="alert alert-info" role="alert">
             <p th:text="${info}"></p>
