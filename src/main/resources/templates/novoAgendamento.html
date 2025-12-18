@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Agendamento</title>
+
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/calendario.js" defer></script>
+
+    <style>
+
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="">
+        <h1>
+            Escolha seu Agendamento!
+        </h1>
+    </div>
+</header>
+
+<div class="box">
+    <label>Escolha o dia: </label>
+    <input type="date" name="date" id="date" onchange="carregarHorarios()">
+
+    <div class="horarios" id="horarios"></div>
+
+    <button onclick="confirmar()" >Confrimar Agendamento</button>
+</div>
+
+</body>
+</html>

@@ -30,6 +30,7 @@ public class LoginController {
         if (cliente != null){
             if (BCrypt.checkpw(senha, cliente.getSenha())) {
                 logger.info("Tentativa de login valida com sucesso!");
+                logger.info("Direcionando para tela de cliente");
                 ctx.redirect("/telaCliente");
                 return;
             }else {
