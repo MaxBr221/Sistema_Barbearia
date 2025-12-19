@@ -6,13 +6,17 @@ import io.javalin.http.staticfiles.Location;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import io.javalin.rendering.template.JavalinThymeleaf;
+import org.example.BancoDeDados.AgendamentoRepositoryImpl;
 import org.example.BancoDeDados.BarbeiroRepositoryImpl;
 import org.example.BancoDeDados.ClienteRepositoryImpl;
+import org.example.Controllers.AgendamentoController;
 import org.example.Controllers.BarbeiroController;
 import org.example.Controllers.ClienteController;
 import org.example.Controllers.LoginController;
+import org.example.Repositorys.AgendamentoRepository;
 import org.example.Repositorys.BarbeiroRepository;
 import org.example.Repositorys.ClienteRepository;
+import org.example.Services.AgendamentoService;
 import org.example.Services.BarbeiroService;
 import org.example.Services.ClienteService;
 import org.thymeleaf.TemplateEngine;
@@ -51,8 +55,11 @@ public class AppBarbearia {
         ClienteService clienteService = new ClienteService(clienteRepository);
         BarbeiroRepository barbeiroRepository = new BarbeiroRepositoryImpl();
         BarbeiroService barbeiroService = new BarbeiroService(barbeiroRepository);
+        AgendamentoRepository agendamentoRepository = new AgendamentoRepositoryImpl();
+        AgendamentoService agendamentoService = new AgendamentoService(agendamentoRepository);
         config.appData(Keys.CLIENTE_SERVICE.key(), clienteService);
         config.appData(Keys.BARBEIRO_SERVICE.key(), barbeiroService);
+        config.appData(Keys.AGENDAMENTO_SERVICE.key(), agendamentoService);
     }
     private TemplateEngine configurarThymeleaf() {
         ClassLoaderTemplateResolver resolver = new ClassLoaderTemplateResolver();
@@ -93,6 +100,12 @@ public class AppBarbearia {
         BarbeiroController barbeiroController = new BarbeiroController();
         app.get("listarClientes", barbeiroController :: listarCLientes);
         app.get("listarAgendamentos", barbeiroController :: listarAgendamentos);
+
+
+        AgendamentoController agendamentoController = new AgendamentoController();
+        app.get("/novoAgendamento", agendamentoController :: mostrarPaginaAgendamento);
+        app.post("/novoAgendamento", agendamentoController :: criarAgendamento);
+
     }
     private void configureJavalin(JavalinConfig config) {
         TemplateEngine templateEngine = configurarThymeleaf();

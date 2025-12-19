@@ -18,6 +18,11 @@ import java.util.UUID;
 public class AgendamentoController {
     private static final Logger logger = LogManager.getLogger(AgendamentoController.class);
 
+    public void mostrarPaginaAgendamento(Context ctx){
+        logger.info("Direcionando para tela de agendamento");
+        ctx.render("novoAgendamento");
+    }
+
     public void criarAgendamento(Context ctx){
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
         BarbeiroService barbeiroService = ctx.appData(Keys.BARBEIRO_SERVICE.key());

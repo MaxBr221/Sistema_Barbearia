@@ -1,8 +1,7 @@
 package org.example.Services;
 
 import org.example.Dominios.Cliente;
-import org.example.ClienteAtivo;
-import org.example.ClienteNaoAtivo;
+import org.example.Exceptions.ClienteNaoAtivo;
 import org.example.Repositorys.ClienteRepository;
 import java.util.ArrayList;
 import java.util.List;

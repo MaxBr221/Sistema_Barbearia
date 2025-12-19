@@ -1,9 +1,8 @@
 package org.example.Services;
 
 import org.example.Dominios.Agendamento;
-import org.example.AgendamentoNaoExistente;
-import org.example.AgendamentoReservado;
-import org.example.Dominios.Status;
+import org.example.Exceptions.AgendamentoNaoExistente;
+import org.example.Exceptions.AgendamentoReservado;
 import org.example.Repositorys.AgendamentoRepository;
 
 import java.util.List;

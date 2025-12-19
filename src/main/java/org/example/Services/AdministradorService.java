@@ -3,8 +3,8 @@ package org.example.Services;
 import org.example.Dominios.Administrador;
 import org.example.Dominios.Barbeiro;
 import org.example.Dominios.Cliente;
-import org.example.ClienteAtivo;
-import org.example.ClienteNaoAtivo;
+import org.example.Exceptions.ClienteAtivo;
+import org.example.Exceptions.ClienteNaoAtivo;
 import org.example.Repositorys.AdministradorRepository;
 
 import java.util.List;
