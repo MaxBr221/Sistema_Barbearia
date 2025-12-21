@@ -38,4 +38,9 @@ public class BarbeiroService {
         }
         return barbeiroRepository.buscarPorId(id);
     }
+    public Barbeiro buscarBarbeiroPadrao(){
+        return barbeiroRepository.buscarBarbeiroPadrao()
+                .orElseThrow(()-> new RuntimeException("barbeiro não encontrado."));
+    }
+
 }

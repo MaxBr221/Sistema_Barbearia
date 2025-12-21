@@ -9,7 +9,6 @@ import org.example.Services.AgendamentoService;
 import org.example.Services.BarbeiroService;
 import org.example.Services.ClienteService;
 import org.jetbrains.annotations.NotNull;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -27,28 +26,28 @@ public class AgendamentoController {
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
         BarbeiroService barbeiroService = ctx.appData(Keys.BARBEIRO_SERVICE.key());
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
+        logger.info("No metodo de criarAgendamento");
 
         String strData = ctx.formParam("data");
         String strHora = ctx.formParam("hora");
-        String barbeiroId = ctx.formParam("barbeiroId");
         String clienteId = ctx.formParam("clienteId");
-        String tipoServico = ctx.formParam("TipoServico");
+        List<String> tipoServico = ctx.formParams("servicos");
 
 
-        if (strData == null || strData.isBlank() || strHora == null || strHora.isBlank() || tipoServico == null || tipoServico.isBlank() || clienteId == null || clienteId.isBlank() || barbeiroId == null || barbeiroId.isBlank()){
+        if (strData == null || strData.isBlank() || strHora == null || strHora.isBlank() || tipoServico.isEmpty() || clienteId == null || clienteId.isBlank()){
             throw new IllegalArgumentException("Valores nulo/vazio.");
         }
 
         LocalDate data = LocalDate.parse(strData);
         LocalTime hora = LocalTime.parse(strHora);
-        UUID barbeiro = UUID.fromString(barbeiroId);
         UUID cliente = UUID.fromString(clienteId);
 
 
-        Barbeiro barbeiro1 = barbeiroService.buscarPorId(barbeiro);
+        Barbeiro barbeiro1 = barbeiroService.buscarBarbeiroPadrao();
+        UUID idBarbeiro = barbeiro1.getId();
         Cliente cliente1 = clienteService.buscarPorId(cliente);
 
-        TipoServico tipoServico1 = TipoServico.valueOf(tipoServico);
+        TipoServico tipoServico1 = TipoServico.valueOf(String.valueOf(tipoServico));
 
         Agendamento age = new Agendamento(
                 UUID.randomUUID(),
@@ -66,6 +65,7 @@ public class AgendamentoController {
             ctx.status(400).result(e.getMessage());
         }
     }
+
     public void listarAgendamentos(Context ctx){
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
         List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamento();
@@ -90,16 +90,5 @@ public class AgendamentoController {
             logger.info("Esse agendamento não está agendado");
             ctx.result("Esse agendamento não existe.");
         }
-
-
-
-
-
-
-
-
-
     }
-
-
 }

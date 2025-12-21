@@ -60,6 +60,30 @@
         border-radius: 8px;
         cursor: pointer;
         }
+        .select{
+            padding: 12px;
+            border-radius: 8px;
+            width: 400px;
+            height: 50px;
+            margin:10px 0;
+            display: flex;
+            align-items: center;
+            gap: 0px;
+
+        }
+        .select h2{
+            text-align: center;
+            font-style: initial;
+            width: 200px;
+            font-size: 16px;
+            padding: 5px;
+
+        }
+        #servicos {
+            width: 200px;
+            height: 100px;
+        }
+
 
 
     </style>
@@ -72,15 +96,37 @@
         </h1>
     </div>
 </header>
+<form action="/novoAgendamento" method="post" id="formAgendamento">
 
-<div class="box">
-    <label>Escolha o dia: </label>
-    <input type="date" name="date" id="date" onchange="carregarHorarios()">
+    <div class="box">
+        <label>Escolha o dia:</label>
+        <input type="date" name="data" id="data" onchange="carregarHorarios()">
 
-    <div class="horarios" id="horarios"></div>
+        <div class="horarios" id="horarios"></div>
 
-    <button onclick="confirmarAgendamento()" >Confrimar Agendamento</button>
-</div>
+        <!-- hora selecionada via JS -->
+        <input type="hidden" name="hora" id="hora">
+
+        <!-- cliente e barbeiro (exemplo) -->
+        <input type="hidden" name="clienteId" value="UUID_CLIENTE">
+        <input type="hidden" name="barbeiroId" value="UUID_BARBEIRO">
+
+        <div class="select">
+            <h2>Escolha os Serviços:</h2>
+            <select name="servicos" id="servicos" multiple>
+                <option value="CORTE_CABELO">Corte de Cabelo</option>
+                <option value="SOBRANCELHA">Sobrancelha</option>
+                <option value="BARBA">Barba</option>
+            </select>
+        </div>
+
+        <button onclick="confirmarAgendamento()">
+            Confirmar
+        </button>
+
+    </div>
+</form>
+
 
 </body>
 </html>

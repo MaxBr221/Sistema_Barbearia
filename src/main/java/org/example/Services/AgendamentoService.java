@@ -19,17 +19,7 @@ public class AgendamentoService {
         }
         agendamentoRepository.adicionarAgendamento(agendamento);
     }
-    public void adicionarAgendamento(Agendamento agendamento){
-        if (agendamento == null){
-            throw new IllegalArgumentException("Erro, agendamento nulo!");
-        }
-        for (Agendamento agendamento1:agendamentoRepository.listarAgendamentos()){
-            if(agendamento1.getId().equals(agendamento.getId())){
-                throw new AgendamentoReservado("Agendamento já existente!");
-            }
-        }
-        agendamentoRepository.adicionarAgendamento(agendamento);
-    }
+
     public void removerAgendamento(UUID id){
         if (id == null){
             throw new IllegalArgumentException("Não é permitido id nulo");

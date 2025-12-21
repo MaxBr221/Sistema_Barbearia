@@ -25,6 +25,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 import java.util.Properties;
 import java.util.function.Consumer;
 
@@ -105,6 +106,19 @@ public class AppBarbearia {
         AgendamentoController agendamentoController = new AgendamentoController();
         app.get("/novoAgendamento", agendamentoController :: mostrarPaginaAgendamento);
         app.post("/novoAgendamento", agendamentoController :: criarAgendamento);
+        app.get("/agendamentos/ocupados", ctx -> {
+            String data = ctx.queryParam("data");
+
+            if (data == null) {
+                ctx.status(400);
+                return;
+            }
+
+            // Exemplo fake por enquanto
+            List<String> ocupados = List.of("09:00", "10:30");
+
+            ctx.json(ocupados);
+        });
 
     }
     private void configureJavalin(JavalinConfig config) {

@@ -32,6 +32,7 @@ function gerarHorarios() {
     horarios.push(formataHora(h, 30));
   }
 
+
   for (let h = 15; h < 19; h++) {
     horarios.push(formataHora(h, 0));
     horarios.push(formataHora(h, 30));
@@ -46,7 +47,9 @@ function montarHorarios(horarios, ocupados) {
 
   horarios.forEach(hora => {
     const botao = document.createElement("button");
+    botao.type = "button";
     botao.innerText = hora;
+
 
     if (ocupados.includes(hora)) {
       botao.disabled = true;
@@ -61,6 +64,7 @@ function montarHorarios(horarios, ocupados) {
 
 function selecionarHorario(hora, botaoSelecionado) {
   horarioSelecionado = hora;
+  document.getElementById("hora").value = hora;
 
   document
     .querySelectorAll(".horarios button")
@@ -71,16 +75,16 @@ function selecionarHorario(hora, botaoSelecionado) {
 
 function confirmarAgendamento() {
   const data = document.getElementById("data").value;
+  const hora = document.getElementById("hora").value;
 
-  if (!data || !horarioSelecionado) {
+  if (!data || !hora) {
     alert("Selecione a data e o horário");
     return;
   }
 
-  console.log("Agendado:", data, horarioSelecionado);
-
-  alert(`Agendamento confirmado para ${data} às ${horarioSelecionado}`);
+  document.getElementById("formAgendamento").submit();
 }
+
 
 function formataHora(hora, minuto) {
   return `${String(hora).padStart(2, "0")}:${minuto === 0 ? "00" : "30"}`;

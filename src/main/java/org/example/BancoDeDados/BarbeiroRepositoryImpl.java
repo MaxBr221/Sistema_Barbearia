@@ -11,6 +11,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 
@@ -137,5 +138,31 @@ public class BarbeiroRepositoryImpl implements BarbeiroRepository {
         }catch (SQLException e){
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public Optional<Barbeiro> buscarBarbeiroPadrao() {
+        String sql = "SELECT * FROM Barbeiro WHERE padrao = true LIMIT 1";
+
+        try (Connection conn = Database.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            if (rs.next()) {
+                Barbeiro b = new Barbeiro(
+                        UUID.fromString(rs.getString("id")),
+                        rs.getString("nome"),
+                        rs.getString("telefone"),
+                        rs.getString("login"),
+                        rs.getString("senha")
+                );
+                return Optional.of(b);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao buscar barbeiro padrão", e);
+        }
+
+        return Optional.empty();
     }
 }
