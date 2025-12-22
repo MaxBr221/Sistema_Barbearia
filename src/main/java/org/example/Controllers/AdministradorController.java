@@ -34,7 +34,6 @@ public class AdministradorController {
             ctx.render("cadastro.html");
         }
         Barbeiro barbeiro1 = new Barbeiro(UUID.randomUUID(), nome, telefone, login, senha);
-        administradorService.cadastrarBarbeiro(barbeiro1);
         logger.info("Barbeiro " + nome + " cadastrado com sucesso!");
         ctx.attribute("Barbeiro", "Barbeiro cadastrado com sucesso!");
         ctx.redirect("barbeiro.html");
@@ -67,53 +66,53 @@ public class AdministradorController {
         ctx.redirect("cliente.html");
 
     }
-    public void removerbarbeiro(Context ctx){
-        AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
-        String strId = ctx.formParam("id");
-        UUID id = UUID.fromString(strId);
-
-        Barbeiro barbeiro = administradorService.buscarBarbeiroPorId(id);
-
-        try{
-            if(barbeiro != null){
-                administradorService.removerBarbeiro(id);
-                logger.info("Barbeiro removido com sucesso!");
-                ctx.result("Barbeiro removido com sucesso!");
-                ctx.redirect("barbeiroTela.html");
-            }
-        }catch (IllegalArgumentException e){
-            logger.info("Barbeiro não cadastrado!");
-            ctx.status(400).result("Barbeiro não existente.");
-            ctx.render("usuarioNaoEncontrado.html");
-        }
-    }
-    public void removerCliente(Context ctx){
-        AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
-        String strId = ctx.formParam("id");
-        UUID id = UUID.fromString(strId);
-
-        Cliente cliente = administradorService.buscarClientePorId(id);
-        try{
-            if(cliente != null) {
-                administradorService.removerCliente(cliente.getId());
-                logger.info("Cliente " + cliente.getNome() + " removido com sucesso!");
-                ctx.status(200).result("Cliente removido com sucesso!");
-                ctx.redirect("usuario.html");
-            }
-        }catch (IllegalArgumentException e){
-            logger.info("usuário não existente");
-            ctx.status(400).result("cliente não encontrado.");
-            ctx.render("usuarioNaoEncotrado.html");
-        }
-    }
-    public void listarBarbeiros(Context ctx){
-        AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
-        List<Barbeiro> barbeiros = administradorService.listarBarbeiros();
-        logger.info("Listando barbeiros");
-        ctx.attribute("barbeiros", barbeiros);
-        ctx.render("barbeiros.html", Map.of("barbeiros", barbeiros));
-
-    }
+//    public void removerbarbeiro(Context ctx){
+//        AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
+//        String strId = ctx.formParam("id");
+//        UUID id = UUID.fromString(strId);
+//
+//        Barbeiro barbeiro = administradorService.buscarBarbeiroPorId(id);
+//
+//        try{
+//            if(barbeiro != null){
+//                administradorService.removerBarbeiro(id);
+//                logger.info("Barbeiro removido com sucesso!");
+//                ctx.result("Barbeiro removido com sucesso!");
+//                ctx.redirect("barbeiroTela.html");
+//            }
+//        }catch (IllegalArgumentException e){
+//            logger.info("Barbeiro não cadastrado!");
+//            ctx.status(400).result("Barbeiro não existente.");
+//            ctx.render("usuarioNaoEncontrado.html");
+//        }
+//    }
+//    public void removerCliente(Context ctx){
+//        AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
+//        String strId = ctx.formParam("id");
+//        UUID id = UUID.fromString(strId);
+//
+//        Cliente cliente = administradorService.buscarClientePorId(id);
+//        try{
+//            if(cliente != null) {
+//                administradorService.removerCliente(cliente.getId());
+//                logger.info("Cliente " + cliente.getNome() + " removido com sucesso!");
+//                ctx.status(200).result("Cliente removido com sucesso!");
+//                ctx.redirect("usuario.html");
+//            }
+//        }catch (IllegalArgumentException e){
+//            logger.info("usuário não existente");
+//            ctx.status(400).result("cliente não encontrado.");
+//            ctx.render("usuarioNaoEncotrado.html");
+//        }
+//    }
+//    public void listarBarbeiros(Context ctx){
+//        AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
+//        List<Barbeiro> barbeiros = administradorService.listarBarbeiros();
+//        logger.info("Listando barbeiros");
+//        ctx.attribute("barbeiros", barbeiros);
+//        ctx.render("barbeiros.html", Map.of("barbeiros", barbeiros));
+//
+//    }
     public void listarClientes(Context ctx){
         AdministradorService administradorService = ctx.appData(Keys.ADMINISTRADOR_SERVICE.key());
         List<Cliente> clientes = administradorService.listarClientes();

@@ -41,7 +41,7 @@ public class BarbeiroController {
         try {
             UUID id = UUID.fromString(idStr);
             Cliente cliente = clienteService.buscarPorId(id);
-            barbeiroService.removerCliente(cliente.getId());
+//            clienteService.removerCliente(cliente.getId());
             logger.info("Cliente removido com sucesso!");
         }
         catch (IllegalArgumentException e){

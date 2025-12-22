@@ -5,6 +5,8 @@ import org.example.Exceptions.AgendamentoNaoExistente;
 import org.example.Exceptions.AgendamentoReservado;
 import org.example.Repositorys.AgendamentoRepository;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,21 +16,24 @@ public class AgendamentoService {
     public AgendamentoService(AgendamentoRepository agendamentoRepository) {
         this.agendamentoRepository = agendamentoRepository;
     }public void criar(Agendamento agendamento){
-        if(agendamentoRepository.existeAgendamento(agendamento.getData(), agendamento.getHora(), agendamento.getBarbeiro().getId())){
+        if(agendamentoRepository.existeAgendamento(agendamento.getData(), agendamento.getHora())){
             throw new AgendamentoReservado("Agendamento já reservado nesse horario.");
         }
         agendamentoRepository.adicionarAgendamento(agendamento);
     }
 
     public void removerAgendamento(UUID id){
-        if (id == null){
-            throw new IllegalArgumentException("Não é permitido id nulo");
-        }
-        for (Agendamento agendamento: agendamentoRepository.listarAgendamentos()){
-            if (!agendamento.getId().equals(id)){
-                throw new AgendamentoNaoExistente("O agendamento com o id " + id + " não está cadastrado!");
+        boolean encontrado = false;
+        for (Agendamento agendamento : agendamentoRepository.listarAgendamentos()) {
+            if (agendamento.getId().equals(id)) {
+                encontrado = true;
+                break;
             }
-        }agendamentoRepository.removerAgendamento(id);
+        }
+        if (!encontrado) {
+            throw new AgendamentoNaoExistente("O agendamento com o id " + id + " não está cadastrado!");
+        }
+        agendamentoRepository.removerAgendamento(id);
     }
     public Agendamento buscarAgendamentoPorId(UUID id){
         if (id == null){
@@ -38,5 +43,17 @@ public class AgendamentoService {
     }
     public List<Agendamento> listarAgendamento(){
         return agendamentoRepository.listarAgendamentos();
+    }
+    public List<LocalTime> buscarHorarisoOcupados(LocalDate data){
+        if (data == null){
+            throw new IllegalArgumentException("Não é permitido data nula");
+        }
+        return agendamentoRepository.buscarHorariosOcupadosPorData(data);
+    }
+    public boolean existeAgendamento(LocalDate data, LocalTime hora){
+        if (data == null || hora == null){
+            throw new IllegalArgumentException("Não é permitido data/hora nula");
+        }
+         return agendamentoRepository.existeAgendamento(data, hora);
     }
 }

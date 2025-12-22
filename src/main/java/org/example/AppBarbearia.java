@@ -25,6 +25,8 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Properties;
 import java.util.function.Consumer;
@@ -55,8 +57,9 @@ public class AppBarbearia {
         ClienteRepository clienteRepository = new ClienteRepositoryImpl();
         ClienteService clienteService = new ClienteService(clienteRepository);
         BarbeiroRepository barbeiroRepository = new BarbeiroRepositoryImpl();
-        BarbeiroService barbeiroService = new BarbeiroService(barbeiroRepository);
         AgendamentoRepository agendamentoRepository = new AgendamentoRepositoryImpl();
+        BarbeiroService barbeiroService = new BarbeiroService(barbeiroRepository, agendamentoRepository, clienteRepository);
+
         AgendamentoService agendamentoService = new AgendamentoService(agendamentoRepository);
         config.appData(Keys.CLIENTE_SERVICE.key(), clienteService);
         config.appData(Keys.BARBEIRO_SERVICE.key(), barbeiroService);
@@ -83,9 +86,7 @@ public class AppBarbearia {
 
         app.get("/login", loginController::mostrarPaginaLogin);
         app.post("/login", loginController::processarLogin);
-        app.get("/telaCliente", ctx-> {
-            ctx.render("telaCliente");
-        });
+        app.get("telaCliente", loginController::mostrarPaginaCliente);
         app.get("/logOut", loginController::logOut);
 
 
@@ -104,20 +105,22 @@ public class AppBarbearia {
 
 
         AgendamentoController agendamentoController = new AgendamentoController();
-        app.get("/novoAgendamento", agendamentoController :: mostrarPaginaAgendamento);
+        app.get("/novoAgendamento/{clienteId}", agendamentoController :: mostrarPaginaAgendamento);
         app.post("/novoAgendamento", agendamentoController :: criarAgendamento);
         app.get("/agendamentos/ocupados", ctx -> {
-            String data = ctx.queryParam("data");
+            String dataStr = ctx.queryParam("data");
 
-            if (data == null) {
+            if (dataStr == null) {
                 ctx.status(400);
                 return;
             }
+            LocalDate data = LocalDate.parse(dataStr);
 
-            // Exemplo fake por enquanto
-            List<String> ocupados = List.of("09:00", "10:30");
+            AgendamentoRepositoryImpl agendamentoRepository = new AgendamentoRepositoryImpl();
 
-            ctx.json(ocupados);
+            List<LocalTime> horariosOcupados = agendamentoRepository.buscarHorariosOcupadosPorData(data);
+
+            ctx.json(horariosOcupados);
         });
 
     }

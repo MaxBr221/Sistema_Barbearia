@@ -18,51 +18,60 @@ public class AgendamentoController {
     private static final Logger logger = LogManager.getLogger(AgendamentoController.class);
 
     public void mostrarPaginaAgendamento(Context ctx){
+        String clienteId = ctx.pathParam("clienteId");
+        ctx.attribute("clienteId", clienteId);
         logger.info("Direcionando para tela de agendamento");
-        ctx.render("novoAgendamento");
+        ctx.render("novoAgendamento.html");
     }
 
-    public void criarAgendamento(Context ctx){
+    public void criarAgendamento(Context ctx) {
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
         BarbeiroService barbeiroService = ctx.appData(Keys.BARBEIRO_SERVICE.key());
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
-        logger.info("No metodo de criarAgendamento");
 
-        String strData = ctx.formParam("data");
-        String strHora = ctx.formParam("hora");
-        String clienteId = ctx.formParam("clienteId");
-        List<String> tipoServico = ctx.formParams("servicos");
+        logger.info("No metodo criarAgendamento");
 
+        try {
+            String strData = ctx.formParam("data");
+            String strHora = ctx.formParam("hora");
+            String clienteId = ctx.formParam("clienteId");
+            String tipoServicoStr = ctx.formParam("servicos");
 
-        if (strData == null || strData.isBlank() || strHora == null || strHora.isBlank() || tipoServico.isEmpty() || clienteId == null || clienteId.isBlank()){
-            throw new IllegalArgumentException("Valores nulo/vazio.");
-        }
+            if (strData == null || strHora == null || clienteId == null || tipoServicoStr == null ||
+                    strData.isBlank() || strHora.isBlank() || clienteId.isBlank()) {
+                ctx.status(400).result("Campos obrigatórios não preenchidos");
+                return;
+            }
 
-        LocalDate data = LocalDate.parse(strData);
-        LocalTime hora = LocalTime.parse(strHora);
-        UUID cliente = UUID.fromString(clienteId);
+            LocalDate data = LocalDate.parse(strData);
+            LocalTime hora = LocalTime.parse(strHora);
+            UUID clienteUUID = UUID.fromString(clienteId);
 
+            if (agendamentoService.existeAgendamento(data, hora)) {
+                ctx.status(400).result("Horário já ocupado");
+                return;
+            }
 
-        Barbeiro barbeiro1 = barbeiroService.buscarBarbeiroPadrao();
-        UUID idBarbeiro = barbeiro1.getId();
-        Cliente cliente1 = clienteService.buscarPorId(cliente);
+            Barbeiro barbeiro = barbeiroService.buscarBarbeiroPadrao();
+            Cliente cliente = clienteService.buscarPorId(clienteUUID);
+            TipoServico tipoServico = TipoServico.valueOf(tipoServicoStr);
 
-        TipoServico tipoServico1 = TipoServico.valueOf(String.valueOf(tipoServico));
+            Agendamento agendamento = new Agendamento(
+                    UUID.randomUUID(),
+                    data,
+                    hora,
+                    barbeiro,
+                    cliente,
+                    Status.RESERVADO,
+                    tipoServico
+            );
 
-        Agendamento age = new Agendamento(
-                UUID.randomUUID(),
-                data,
-                hora,
-                barbeiro1,
-                cliente1,
-                Status.RESERVADO,
-                tipoServico1);
-        try{
-            agendamentoService.criar(age);
-            logger.info("Agendamento criado com sucesso!");
-            ctx.result("Agendado com sucesso!");
-        }catch (IllegalArgumentException e){
-            ctx.status(400).result(e.getMessage());
+            agendamentoService.criar(agendamento);
+            ctx.result("Agendamento criado com sucesso!");
+
+        } catch (Exception e) {
+            logger.error("Erro ao criar agendamento", e);
+            ctx.status(400).result("Erro ao criar agendamento");
         }
     }
 

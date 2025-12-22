@@ -15,7 +15,7 @@ import java.util.UUID;
 public class AgendamentoRepositoryImpl implements AgendamentoRepository {
     @Override
     public void adicionarAgendamento(Agendamento agendamento) {
-        String sql = "INSERT INTO Agendamento (id, data, hora, barbeiro, cliente, servico, status, tipoServico) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Agendamento (id, dat, hora, barbeiro, cliente, status, tipoServico) VALUES (?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -69,7 +69,7 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
                 Cliente cliente = new Cliente(UUID.fromString(rs.getString("cliente_id")));
                 Agendamento ag = new Agendamento(
                         UUID.fromString(rs.getString("id")),
-                        rs.getDate("data").toLocalDate(),
+                        rs.getDate("dat").toLocalDate(),
                         rs.getTime("hora").toLocalTime(),
                         barbeiro,
                         cliente,
@@ -98,7 +98,7 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
                 Cliente cliente = new Cliente(UUID.fromString(rs.getString("cliente_id")));
                 return new Agendamento(
                         UUID.fromString(rs.getString("id")),
-                        rs.getDate("data").toLocalDate(),
+                        rs.getDate("dat").toLocalDate(),
                         rs.getTime("hora").toLocalTime(),
                         barbeiro,
                         cliente,
@@ -112,14 +112,13 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
     }
 
     @Override
-    public boolean existeAgendamento(LocalDate localDate, LocalTime localTime, UUID barbeiroId) {
-        String sql = "SELECT * FROM Agendamento WHERE data = ? and hora = ? and barberiro_id";
+    public boolean existeAgendamento(LocalDate localDate, LocalTime localTime) {
+        String sql = "SELECT * FROM Agendamento WHERE dat = ? and hora = ?";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setObject(1, localDate);
             stmt.setObject(2, localTime);
-            stmt.setObject(3, barbeiroId);
 
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
@@ -128,5 +127,33 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
         } catch (SQLException e) {
             throw new RuntimeException("Erro ao verificar agendamento", e);
         }return false;
+    }
+
+    @Override
+    public List<LocalTime> buscarHorariosOcupadosPorData(LocalDate data) {
+        List<LocalTime> horarios = new ArrayList<>();
+
+        String sql = """
+        SELECT hora
+        FROM Agendamento
+        WHERE dat = ?
+          AND status <> 'CANCELADO'
+    """;
+
+        try (Connection conn = Database.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setObject(1, data);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                horarios.add(rs.getTime("hora").toLocalTime());
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao buscar horários ocupados", e);
+        }
+
+        return horarios;
     }
 }

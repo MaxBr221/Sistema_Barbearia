@@ -1,6 +1,7 @@
 package org.example.Controllers;
 
 import io.javalin.http.Context;
+import ognl.EnumerationIterator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Dominios.Barbeiro;
@@ -18,6 +19,18 @@ public class LoginController {
         logger.info("Direcionado para tela de login");
         ctx.render("login.html");
     }
+    public void mostrarPaginaCliente(Context ctx){
+        Cliente cliente = ctx.sessionAttribute("cliente");
+
+        if(cliente == null){
+            ctx.redirect("/login");
+            return;
+        }
+        logger.info("Direcionando para tela do cliente");
+        ctx.attribute("clienteId", cliente.getId().toString());
+        ctx.attribute("cliente", cliente);
+        ctx.render("telaCliente");
+    }
 
     public void processarLogin(Context ctx){
         String login = ctx.formParam("login");
@@ -30,7 +43,7 @@ public class LoginController {
         if (cliente != null){
             if (BCrypt.checkpw(senha, cliente.getSenha())) {
                 logger.info("Tentativa de login valida com sucesso!");
-                logger.info("Direcionando para tela de cliente");
+                ctx.sessionAttribute("cliente", cliente);
                 ctx.redirect("/telaCliente");
                 return;
             }else {

@@ -33,7 +33,7 @@ function gerarHorarios() {
   }
 
 
-  for (let h = 15; h < 19; h++) {
+  for (let h = 15; h < 19; h ++) {
     horarios.push(formataHora(h, 0));
     horarios.push(formataHora(h, 30));
   }
@@ -65,6 +65,7 @@ function montarHorarios(horarios, ocupados) {
 function selecionarHorario(hora, botaoSelecionado) {
   horarioSelecionado = hora;
   document.getElementById("hora").value = hora;
+
 
   document
     .querySelectorAll(".horarios button")
