@@ -34,36 +34,34 @@ public class BarbeiroRepositoryImpl implements BarbeiroRepository {
         return null;
     }
 
-
     @Override
     public Optional<Barbeiro> buscarBarbeiroPadrao() {
-        String sql = "SELECT * FROM Barbeiro LIMIT 1";
-
+        String sql = "SELECT id, nome, telefone, login, senha FROM barbeiro LIMIT 1";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 
-            if (rs.next()) {
-                String idStr = rs.getString("id");
-                if (idStr == null || idStr.trim().isEmpty()) {
-                    throw new RuntimeException("ID do barbeiro inválido no banco!");
-                }
-
-                Barbeiro b = new Barbeiro(
-                        UUID.fromString(idStr.trim()), // remove espaços
-                        rs.getString("nome"),
-                        rs.getString("telefone"),
-                        rs.getString("login"),
-                        rs.getString("senha")
-                );
-                return Optional.of(b);
+            if (!rs.next()) {
+                return Optional.empty();
             }
+
+            String idStr = rs.getString("id");
+            if (idStr == null || idStr.isBlank()) {
+                throw new RuntimeException("ID do barbeiro veio vazio do banco!");
+            }
+
+            return Optional.of(
+                    new Barbeiro(
+                            UUID.fromString(idStr),
+                            rs.getString("nome"),
+                            rs.getString("telefone"),
+                            rs.getString("login"),
+                            rs.getString("senha")
+                    )
+            );
 
         } catch (SQLException e) {
             throw new RuntimeException("Erro ao buscar barbeiro padrão", e);
         }
-
-        return Optional.empty(); // Se não houver registros
     }
-
 }
