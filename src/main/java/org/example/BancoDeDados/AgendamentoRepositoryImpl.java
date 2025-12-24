@@ -131,6 +131,8 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
 
             return rs.getInt(1) > 0;
 
+
+
         } catch (SQLException e) {
             throw new RuntimeException("Erro ao verificar agendamento", e);
         }

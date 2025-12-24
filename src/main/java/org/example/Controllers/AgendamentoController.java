@@ -69,6 +69,7 @@ public class AgendamentoController {
             agendamentoService.criar(agendamento);
             ctx.sessionAttribute("msg","Agendamento criado com sucesso!");
             ctx.render("/novoAgendamento");
+            return;
 
         } catch (Exception e) {
             logger.error("Erro ao criar agendamento", e);
