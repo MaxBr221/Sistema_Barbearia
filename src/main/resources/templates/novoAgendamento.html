@@ -99,6 +99,10 @@
 <form action="/novoAgendamento" method="post" id="formAgendamento">
 
     <div class="box">
+        <div th:if="${msg}" class="alert alert-danger" role="alert">
+            <p th:text="${msg}"></p>
+
+        </div>
         <label>Escolha o dia:</label>
         <input type="date" name="data" id="data" onchange="carregarHorarios()">
 

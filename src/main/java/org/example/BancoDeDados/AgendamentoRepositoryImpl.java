@@ -15,7 +15,7 @@ import java.util.UUID;
 public class AgendamentoRepositoryImpl implements AgendamentoRepository {
     @Override
     public void adicionarAgendamento(Agendamento agendamento) {
-        String sql = "INSERT INTO Agendamento (id, dat, hora, barbeiro, cliente, status, tipoServico) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Agendamento (id, dat, hora, barbeiro_id, cliente_id, status, tipo_servico) VALUES (?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -30,7 +30,6 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
         } catch (SQLException e) {
             System.out.println("Erro ao cadastrar " + e.getMessage());
         }
-
     }
 
     @Override
@@ -113,21 +112,30 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
 
     @Override
     public boolean existeAgendamento(LocalDate localDate, LocalTime localTime) {
-        String sql = "SELECT * FROM Agendamento WHERE dat = ? and hora = ?";
+        String sql = """
+        SELECT COUNT(*) 
+        FROM Agendamento 
+        WHERE dat = ? 
+          AND hora = ?
+          AND status <> 'CANCELADO'
+    """;
+
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setObject(1, localDate);
-            stmt.setObject(2, localTime);
+            stmt.setDate(1, Date.valueOf(localDate));
+            stmt.setTime(2, Time.valueOf(localTime));
 
             ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                return rs.getInt(1) > 0;
-            }
+            rs.next();
+
+            return rs.getInt(1) > 0;
+
         } catch (SQLException e) {
             throw new RuntimeException("Erro ao verificar agendamento", e);
-        }return false;
+        }
     }
+
 
     @Override
     public List<LocalTime> buscarHorariosOcupadosPorData(LocalDate data) {

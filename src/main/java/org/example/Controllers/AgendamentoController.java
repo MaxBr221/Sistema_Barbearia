@@ -65,11 +65,10 @@ public class AgendamentoController {
                     Status.RESERVADO,
                     tipoServico
             );
-
+            logger.info("Agendamento criado com sucesso!");
             agendamentoService.criar(agendamento);
-            ctx.result("Agendamento criado com sucesso!");
-            System.out.println("ID do cliente recebido: " + ctx.formParam("clienteId"));
-
+            ctx.sessionAttribute("msg","Agendamento criado com sucesso!");
+            ctx.render("/novoAgendamento");
 
         } catch (Exception e) {
             logger.error("Erro ao criar agendamento", e);
