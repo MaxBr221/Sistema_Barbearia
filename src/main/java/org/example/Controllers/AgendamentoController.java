@@ -21,6 +21,18 @@ public class AgendamentoController {
         String clienteId = ctx.pathParam("clienteId");
         ctx.attribute("clienteId", clienteId);
         logger.info("Direcionando para tela de agendamento");
+
+        String msg = ctx.sessionAttribute("msg");
+        String msgErro = ctx.sessionAttribute("msg_erro");
+
+        if(msg == null || msg.isBlank()){
+            ctx.attribute("msg", msg);
+            ctx.sessionAttribute("msg", null);
+        }
+        if(msgErro == null || msgErro.isBlank()){
+            ctx.attribute("msg_erro", msgErro);
+            ctx.sessionAttribute("msg_erro", msgErro);
+        }
         ctx.render("novoAgendamento.html");
     }
 
@@ -48,7 +60,9 @@ public class AgendamentoController {
             UUID clienteUUID = UUID.fromString(clienteId);
 
             if (agendamentoService.existeAgendamento(data, hora)) {
-                ctx.status(400).result("Horário já ocupado");
+//                ctx.status(400).result("Horário já ocupado");
+                logger.info("Horario ocupado!");
+                ctx.render("horarioJaOcupado");
                 return;
             }
 
@@ -65,15 +79,16 @@ public class AgendamentoController {
                     Status.RESERVADO,
                     tipoServico
             );
-            logger.info("Agendamento criado com sucesso!");
             agendamentoService.criar(agendamento);
+            logger.info("Agendamento criado com sucesso!");
             ctx.sessionAttribute("msg","Agendamento criado com sucesso!");
-            ctx.render("/novoAgendamento");
+            ctx.redirect("/novoAgendamento");
             return;
-
         } catch (Exception e) {
             logger.error("Erro ao criar agendamento", e);
-            ctx.status(400).result("Erro ao criar agendamento");
+            ctx.sessionAttribute("msg_erro", "Erro ao criar agendamento.");
+            ctx.redirect("/novoAgendamento");
+
         }
     }
 

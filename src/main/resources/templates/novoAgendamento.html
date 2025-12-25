@@ -83,9 +83,6 @@
             width: 200px;
             height: 100px;
         }
-
-
-
     </style>
 </head>
 <body>
@@ -99,8 +96,11 @@
 <form action="/novoAgendamento" method="post" id="formAgendamento">
 
     <div class="box">
-        <div th:if="${msg}" class="alert alert-danger" role="alert">
-            <p th:text="${msg}"></p>
+        <div th:if="${msg}" class="alert-sucesso" th:text="${msg}"></div>
+            <h2 th:text="${msg}"></h2>
+
+        <div th:if="${msg_erro}" class="alert alert-danger" role="alert">
+            <h2 th:text="${msg_erro}"></h2>
 
         </div>
         <label>Escolha o dia:</label>
@@ -111,10 +111,6 @@
         <input type="hidden" name="hora" id="hora">
 
         <input type="hidden" name="clienteId" th:value="${clienteId}">
-
-
-
-
 
         <div class="select">
             <h2>Escolha os Serviços:</h2>
