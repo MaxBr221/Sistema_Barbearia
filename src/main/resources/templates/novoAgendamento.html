@@ -96,12 +96,11 @@
 <form action="/novoAgendamento" method="post" id="formAgendamento">
 
     <div class="box">
-        <div th:if="${msg}" class="alert-sucesso" th:text="${msg}"></div>
+        <div th:if="${msg}" class="alert-sucesso">
             <h2 th:text="${msg}"></h2>
-
+        </div>
         <div th:if="${msg_erro}" class="alert alert-danger" role="alert">
             <h2 th:text="${msg_erro}"></h2>
-
         </div>
         <label>Escolha o dia:</label>
         <input type="date" name="data" id="data" onchange="carregarHorarios()">

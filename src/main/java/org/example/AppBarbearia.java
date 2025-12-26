@@ -109,7 +109,6 @@ public class AppBarbearia {
         app.post("/novoAgendamento", agendamentoController :: criarAgendamento);
         app.get("/agendamentos/ocupados", ctx -> {
             String dataStr = ctx.queryParam("data");
-
             if (dataStr == null) {
                 ctx.status(400);
                 return;
