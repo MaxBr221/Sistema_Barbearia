@@ -102,6 +102,11 @@
         <div th:if="${msg_erro}" class="alert alert-danger" role="alert">
             <h2 th:text="${msg_erro}"></h2>
         </div>
+        <div th:if="${ocupado}" class="alert-ocupado">
+            <p th:text="${ocupado}"></p>
+        </div>
+
+
         <label>Escolha o dia:</label>
         <input type="date" name="data" id="data" onchange="carregarHorarios()">
 

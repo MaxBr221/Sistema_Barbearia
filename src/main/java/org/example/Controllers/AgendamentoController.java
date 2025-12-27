@@ -33,7 +33,9 @@ public class AgendamentoController {
             ctx.attribute("msg_erro", msgErro);
             ctx.sessionAttribute("msg_erro", msgErro);
         }
-        ctx.render("novoAgendamento.html");
+        String ocupado = ctx.consumeSessionAttribute("ocupado");
+        ctx.attribute("ocupado", ocupado);
+        ctx.render("novoAgendamento");
     }
 
     public void criarAgendamento(Context ctx) {
@@ -61,7 +63,8 @@ public class AgendamentoController {
 
             if (agendamentoService.existeAgendamento(data, hora)) {
                 logger.warn("Horario ocupado!");
-                ctx.render("horarioJaOcupado");
+                ctx.sessionAttribute("ocupado", "Erro, esse horário já está ocupado!");
+                ctx.redirect("/novoAgendamento/" + clienteId);
                 return;
             }
 
@@ -83,7 +86,6 @@ public class AgendamentoController {
             logger.info("Agendamento criado com sucesso!");
             ctx.sessionAttribute("msg","Agendamento criado com sucesso!");
             ctx.redirect("/novoAgendamento/" + id);
-            return;
         } catch (Exception e) {
             logger.error("Erro ao criar agendamento", e);
             ctx.sessionAttribute("msg_erro", "Erro ao criar agendamento.");
