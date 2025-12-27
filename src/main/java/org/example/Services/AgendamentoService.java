@@ -56,4 +56,10 @@ public class AgendamentoService {
         }
          return agendamentoRepository.existeAgendamento(data, hora);
     }
+    public List<Agendamento> listarAgendamentosAtivos(UUID clienteId){
+        if (clienteId == null){
+            throw new IllegalArgumentException("não é permitido id nulo");
+        }
+        return agendamentoRepository.listarAgendamentoAtivos(clienteId);
+    }
 }

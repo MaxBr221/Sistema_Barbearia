@@ -12,6 +12,11 @@ public class Cliente extends Usuario {
 
     }
 
+    public Cliente(UUID id, String nome) {
+        super(nome);
+        this.id = id;
+    }
+
     public Cliente(String nome, String telefone, String login, String senha) {
         super(nome, telefone, login, senha);
     }
@@ -22,6 +27,8 @@ public class Cliente extends Usuario {
 
     public Cliente() {
     }
+
+
 
     public UUID getId() {
         return id;

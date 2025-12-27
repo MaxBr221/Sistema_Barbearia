@@ -96,7 +96,9 @@ public class AgendamentoController {
 
     public void listarAgendamentos(Context ctx){
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
-        List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamento();
+        String strId = ctx.formParam("clienteId");
+        UUID id = UUID.fromString(strId);
+        List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamentosAtivos(id);
         logger.info("Listando agendamentos..");
         ctx.attribute("listaAgendamentos", listaAgendamentos);
         ctx.render("listaDeAgendamentos");
