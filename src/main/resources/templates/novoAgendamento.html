@@ -83,6 +83,35 @@
             width: 200px;
             height: 100px;
         }
+        .top-bar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: red;
+        }
+        .top-bar h2{
+            color: white;
+            position: absolute;
+            top: 20px;
+            left: 5px;
+        }
+        .form-box{
+            background-color: white;
+            padding: 6px 0;
+            border-radius: 8px;
+
+        }
+        .form-box a{
+            margin: 6px 0;
+            color: black;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            position:absolute ;
+            top: 15px;
+            left: 10px;
+
+        }
     </style>
 </head>
 <body>
@@ -129,6 +158,12 @@
             Confirmar
         </button>
 
+    </div>
+    <div class="top-bar">
+        <h2>Voltar para tela de Cliente</h2>
+        <div class="form-box">
+            <a href="/telaCliente">Voltar</a>
+        </div>
     </div>
 </form>
 

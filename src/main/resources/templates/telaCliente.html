@@ -74,7 +74,8 @@
 
 <div class="form-container">
     <h2>Agendamentos</h2>
-    <a href="/meusAgendamentos">Meus Agendamentos</a>
+    <a th:href="@{/meusAgendamentos/{clienteId}(clienteId=${clienteId})}">
+        Meus Agendamentos</a>
     <a th:href="@{/novoAgendamento/{clienteId}(clienteId=${clienteId})}">
         Novo Agendamento
     </a>
