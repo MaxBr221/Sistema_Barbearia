@@ -167,32 +167,32 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
     }
     @Override
     public List<Agendamento> listarAgendamentoAtivos(UUID clienteId) {
-
         String sql = """
-        SELECT 
-            a.id AS ag_id,
-            a.data,
-            a.hora,
-            a.status,
+        SELECT
+           a.id AS ag_id,
+           a.dat,
+           a.hora,
+           a.status,
+           a.tipo_servico,
 
-            c.id AS c_id,
-            c.nome,
-            c.telefone,
-            c.login,
-            c.senha,
+           c.id AS c_id,
+           c.nome,
+           c.telefone,
+           c.login,
+           c.senha,
 
-            b.id AS b_id,
-            b.nome AS b_nome,
-            b.telefone AS b_telefone,
-            b.login AS b_login,
-            b.senha AS b_senha
+           b.id AS b_id,
+           b.nome AS b_nome,
+           b.telefone AS b_telefone,
+           b.login AS b_login,
+           b.senha AS b_senha
 
-        FROM agendamento a
-        JOIN cliente c ON c.id = a.cliente_id
-        JOIN barbeiro b ON b.id = a.barbeiro_id
-        WHERE a.cliente_id = ?
-          AND a.status = 'RESERVADO'
-        ORDER BY a.data, a.hora
+       FROM agendamento a
+       JOIN cliente c ON c.id = a.cliente_id
+       JOIN barbeiro b ON b.id = a.barbeiro_id
+       WHERE a.cliente_id = ?
+       AND a.status = 'RESERVADO'
+       ORDER BY a.dat, a.hora;
     """;
 
         List<Agendamento> agendamentos = new ArrayList<>();
@@ -222,13 +222,12 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
                 );
 
                 Agendamento agendamento = new Agendamento(UUID.fromString(rs.getString("ag_id")),
-                        rs.getDate("data").toLocalDate(),
+                        rs.getDate("dat").toLocalDate(),
                         rs.getTime("hora").toLocalTime(),
                         barbeiro,
                         cliente,
-                        Status.valueOf(rs.getString("status"),
-                                TipoServico.valueOf(rs.getString("TipoServico"));
-
+                        Status.valueOf(rs.getString("status")),
+                        TipoServico.valueOf(rs.getString("tipo_servico")));
                 agendamentos.add(agendamento);
             }
 

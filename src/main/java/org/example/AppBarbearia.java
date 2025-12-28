@@ -121,6 +121,7 @@ public class AppBarbearia {
 
             ctx.json(horariosOcupados);
         });
+        app.get("/meusAgendamentos/{clienteId}", agendamentoController::listarAgendamentos);
 
     }
     private void configureJavalin(JavalinConfig config) {
