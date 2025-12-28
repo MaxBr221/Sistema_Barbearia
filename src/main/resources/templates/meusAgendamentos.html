@@ -1,23 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Agendamentos</title>
     <style>
         body{
-            color: blue;
+            background-color: rgb(51, 0, 255);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
         }
         header{
-            width: 100px;
             border-radius: 10px;
-            color: rgb(0, 0, 255);
+            color: rgb(255, 255, 255);
             text-align: center;
+            max-height: 200px;
 
         }
         .form-container{
-            color: yellow;
+            color: rgb(0, 0, 0);
+            margin-top: 60px;
+
         }
+        .tabela{
+            background-color: yellow;
+            border-radius: 8px;
+            padding: 40px;
+            margin: 30px auto;
+            align-items: center;
+
+        }
+        .tabela th,
+        .tabela td{
+            border: 1px solid #000;
+            padding: 10px 15px;
+            text-align: center;
+            padding: 40px;
+        }
+
     </style>
 </head>
 <body>
@@ -30,11 +52,22 @@
 </header>
 
 <div class="form-container">
-
-
-
-
+    <table class="tabela">
+        <thead>
+        <tr>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Serviço</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="a : ${agendamentos}">
+            <td th:text="${a.data}"></td>
+            <td th:text="${a.hora}"></td>
+            <td th:text="${a.tipoServico}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-
 </body>
 </html>
