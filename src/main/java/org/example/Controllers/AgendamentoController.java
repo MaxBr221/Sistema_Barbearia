@@ -99,9 +99,9 @@ public class AgendamentoController {
         String strId = ctx.pathParam("clienteId");
         UUID id = UUID.fromString(strId);
         List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamentosAtivos(id);
-        logger.info("Listando agendamentos..");
-        ctx.attribute("clientes", listaAgendamentos);
+        ctx.attribute("agendamentos", listaAgendamentos);
         ctx.render("meusAgendamentos");
+        logger.info("Listando agendamentos..");
 
     }
     public void removerAgendamento(@NotNull Context ctx){
