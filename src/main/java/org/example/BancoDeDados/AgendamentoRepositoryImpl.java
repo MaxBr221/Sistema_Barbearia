@@ -168,32 +168,33 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
     @Override
     public List<Agendamento> listarAgendamentoAtivos(UUID clienteId) {
         String sql = """
-        SELECT
-           a.id AS ag_id,
-           a.dat,
-           a.hora,
-           a.status,
-           a.tipo_servico,
+    SELECT
+       a.id AS ag_id,
+       a.dat,
+       a.hora,
+       a.status,
+       a.tipo_servico,
 
-           c.id AS c_id,
-           c.nome,
-           c.telefone,
-           c.login,
-           c.senha,
+       c.id AS c_id,
+       c.nome,
+       c.telefone,
+       c.login,
+       c.senha,
 
-           b.id AS b_id,
-           b.nome AS b_nome,
-           b.telefone AS b_telefone,
-           b.login AS b_login,
-           b.senha AS b_senha
+       b.id AS b_id,
+       b.nome AS b_nome,
+       b.telefone AS b_telefone,
+       b.login AS b_login,
+       b.senha AS b_senha
 
-       FROM agendamento a
-       JOIN cliente c ON c.id = a.cliente_id
-       JOIN barbeiro b ON b.id = a.barbeiro_id
-       WHERE a.cliente_id = ?
-       AND a.status = 'RESERVADO'
-       ORDER BY a.dat, a.hora;
-    """;
+   FROM agendamento a
+   JOIN cliente c ON c.id = a.cliente_id
+   JOIN barbeiro b ON b.id = a.barbeiro_id
+   WHERE a.cliente_id = ?
+     AND a.status = 'RESERVADO'
+     AND CONCAT(a.dat, ' ', a.hora) >= NOW()
+   ORDER BY a.dat, a.hora;
+""";
 
         List<Agendamento> agendamentos = new ArrayList<>();
 

@@ -90,7 +90,6 @@ public class AgendamentoController {
             logger.error("Erro ao criar agendamento", e);
             ctx.sessionAttribute("msg_erro", "Erro ao criar agendamento.");
             ctx.redirect("/novoAgendamento");
-
         }
     }
 
