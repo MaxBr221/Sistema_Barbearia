@@ -103,6 +103,15 @@ public class AgendamentoController {
         logger.info("Listando agendamentos..");
 
     }
+    public void listarHistoricoDeAgendamento(Context ctx){
+        AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
+        String strId = ctx.pathParam("clienteId");
+        UUID id = UUID.fromString(strId);
+        List<Agendamento> listarHistorico = agendamentoService.listarHistorico(id);
+        ctx.attribute("historicos", listarHistorico);
+        ctx.render("historico");
+        logger.info("listando histórico");
+    }
     public void removerAgendamento(@NotNull Context ctx){
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
         String strId = ctx.formParam("id");

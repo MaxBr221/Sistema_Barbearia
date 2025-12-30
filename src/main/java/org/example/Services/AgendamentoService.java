@@ -62,4 +62,10 @@ public class AgendamentoService {
         }
         return agendamentoRepository.listarAgendamentoAtivos(clienteId);
     }
+    public List<Agendamento> listarHistorico(UUID clienteId){
+        if (clienteId == null){
+            throw new IllegalArgumentException("não é permitido id nulo");
+        }
+        return agendamentoRepository.listarHistorico(clienteId);
+    }
 }

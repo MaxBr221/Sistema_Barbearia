@@ -61,7 +61,7 @@
         </thead>
 
         <tbody>
-        <tr th: each="a: {agendamentos}">
+        <tr th:each="a: ${historicos}">
             <td th:text="${a.data}"></td>
             <td th:text="${a.hora}"></td>
             <td th:text="${a.tipoServico}"></td>

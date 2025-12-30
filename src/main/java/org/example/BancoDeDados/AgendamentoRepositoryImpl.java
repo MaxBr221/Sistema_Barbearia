@@ -2,7 +2,6 @@ package org.example.BancoDeDados;
 
 import org.example.Dominios.*;
 import org.example.Repositorys.AgendamentoRepository;
-import org.jetbrains.annotations.NotNull;
 
 import java.sql.*;
 import java.sql.Date;
@@ -239,4 +238,68 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
         return agendamentos;
     }
 
+    @Override
+    public List<Agendamento> listarHistorico(UUID clienteId) {
+        String sql = """
+    SELECT
+        a.id AS ag_id,
+        a.dat,
+        a.hora,
+        a.status,
+        a.tipo_servico,
+    
+        c.id AS c_id,
+        c.nome, c.telefone,
+        c.login,
+        c.senha,
+    
+        b.id AS b_id,
+        b.nome AS b_nome,
+        b.telefone AS b_telefone,
+        b.login AS b_login,
+        b.senha AS b_senha
+    
+    FROM agendamento a
+    JOIN cliente c ON c.id = a.cliente_id
+    JOIN barbeiro b ON b.id = a.barbeiro_id
+    WHERE a.cliente_id = ?
+        AND a.status = 'RESERVADO'
+        ORDER BY a.dat, a.hora;""";
+        List<Agendamento> listarHistorico = new ArrayList<>();
+        try(Connection conn = Database.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, clienteId.toString());
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Cliente cliente = new Cliente(
+                        UUID.fromString(rs.getString("c_id")),
+                        rs.getString("nome"),
+                        rs.getString("telefone"),
+                        rs.getString("login"),
+                        rs.getString("senha")
+                );
+
+                Barbeiro barbeiro = new Barbeiro(
+                        UUID.fromString(rs.getString("b_id")),
+                        rs.getString("b_nome"),
+                        rs.getString("b_telefone"),
+                        rs.getString("b_login"),
+                        rs.getString("b_senha")
+                );
+
+                Agendamento agendamento = new Agendamento(UUID.fromString(rs.getString("ag_id")),
+                        rs.getDate("dat").toLocalDate(),
+                        rs.getTime("hora").toLocalTime(),
+                        barbeiro,
+                        cliente,
+                        Status.valueOf(rs.getString("status")),
+                        TipoServico.valueOf(rs.getString("tipo_servico")));
+                listarHistorico.add(agendamento);
+            }
+        }catch (SQLException e){
+            throw new RuntimeException("Erro ao listar histórico");
+        }return listarHistorico;
+    }
 }

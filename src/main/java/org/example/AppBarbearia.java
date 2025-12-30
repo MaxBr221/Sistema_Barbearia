@@ -122,6 +122,7 @@ public class AppBarbearia {
             ctx.json(horariosOcupados);
         });
         app.get("/meusAgendamentos/{clienteId}", agendamentoController::listarAgendamentos);
+        app.get("/historico/{clienteId}", agendamentoController:: listarHistoricoDeAgendamento);
 
     }
     private void configureJavalin(JavalinConfig config) {

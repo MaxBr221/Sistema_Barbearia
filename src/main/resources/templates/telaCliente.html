@@ -77,9 +77,9 @@
     <a th:href="@{/meusAgendamentos/{clienteId}(clienteId=${clienteId})}">
         Meus Agendamentos</a>
     <a th:href="@{/novoAgendamento/{clienteId}(clienteId=${clienteId})}">
-        Novo Agendamento
-    </a>
-    <a href="/historico">Histórico de Serviço</a>
+        Novo Agendamento</a>
+    <a th:href="@{/historico/{clienteId}(clienteId=${clienteId})}">
+        Histórico de Serviço</a>
 </div>
 
 <footer>

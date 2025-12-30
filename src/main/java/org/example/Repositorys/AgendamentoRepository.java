@@ -15,5 +15,6 @@ public interface AgendamentoRepository {
     boolean existeAgendamento(LocalDate localDate, LocalTime localTime);
     List<LocalTime> buscarHorariosOcupadosPorData(LocalDate data);
     List<Agendamento> listarAgendamentoAtivos(UUID clienteId);
+    List<Agendamento> listarHistorico(UUID clienteId);
 
 }
