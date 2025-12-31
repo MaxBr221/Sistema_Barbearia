@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbeiro</title>
+
+    <style>
+        body{
+            background-color: blue;
+        }
+        header{
+            text-align: center;
+            color: white;
+        }
+        .agendamento-card{
+            color: rgb(0, 0, 0);
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <h1>Igor barbeiro</h1>
+    </div>
+</header>
+
+<div>
+    <h2>Agendamentos</h2>
+</div>
+<div th:if="${#lists.isEmpty(agendamento)}">
+    <p>Nenhum agendamento encontrado.</p>
+</div>
+
+<div th:each="ag : ${agendamento}" class="agendamento-card">
+    <p><strong>Data:</strong> <span th:text="${ag.data}"></span></p>
+    <p><strong>Hora:</strong><span th:text="${ag.hora}"></span></p>
+    <p><strong>Nome:</strong><span th:text="${ag.nome}"></span></p>
+    <p><strong>Serviço:</strong><span th:text="${ag.servico}"></span></p>
+    <p><strong>Status:</strong><span th:text="${ag.status}"></span></p>
+</div>
+</body>
+</html>
