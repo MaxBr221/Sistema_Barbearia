@@ -101,7 +101,6 @@ public class AppBarbearia {
 
         BarbeiroController barbeiroController = new BarbeiroController();
         app.get("/barbeiro", barbeiroController :: mostrarTelaBarbeiro);
-        app.get("/listarClientes", barbeiroController :: listarCLientes);
         app.get("/listarAgendamentos", barbeiroController :: listarAgendamentos);
 
 

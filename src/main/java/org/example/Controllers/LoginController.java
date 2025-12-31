@@ -58,7 +58,7 @@ public class LoginController {
             if (BCrypt.checkpw(senha, barbeiro.getSenha())){
                 logger.info("Tentativa de login valida com sucesso!");
                 ctx.sessionAttribute("barbeiro", barbeiro);
-                ctx.redirect("barbeiro.html");
+                ctx.redirect("/barbeiro");
                 return;
             }else {
                 logger.warn("Tentativa de login com erro.");

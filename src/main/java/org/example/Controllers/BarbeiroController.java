@@ -24,6 +24,7 @@ public class BarbeiroController {
     }
 
 
+
     public void listarCLientes(Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
         List<Cliente> listarClientes = clienteService.listarClientes();
