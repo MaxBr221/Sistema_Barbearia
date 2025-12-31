@@ -18,6 +18,11 @@ import java.util.UUID;
 public class BarbeiroController {
     private static final Logger logger = LogManager.getLogger(BarbeiroController.class);
 
+    public void mostrarTelaBarbeiro(Context ctx){
+        logger.info("Renderizando Tela de Barbeiro");
+        ctx.render("barbeiro");
+    }
+
 
     public void listarCLientes(Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
