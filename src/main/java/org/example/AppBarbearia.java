@@ -86,7 +86,8 @@ public class AppBarbearia {
 
         app.get("/login", loginController::mostrarPaginaLogin);
         app.post("/login", loginController::processarLogin);
-        app.get("telaCliente", loginController::mostrarPaginaCliente);
+        app.get("/telaCliente", loginController::mostrarPaginaCliente);
+        app.get("/perfil/{clienteId}", loginController::mostrarPerfil);
         app.get("/logOut", loginController::logOut);
 
 

@@ -66,7 +66,7 @@
     <div class="top-bar">
         <h1>Painel do Cliente</h1>
         <div class="form-box">
-            <a href="/perfilUser">Perfil</a>
+            <a th:href="@{/perfil/{clienteId}(clienteId=${clienteId})}">Perfil</a>
             <a href="/logOut">Sair</a>
         </div>
     </div>

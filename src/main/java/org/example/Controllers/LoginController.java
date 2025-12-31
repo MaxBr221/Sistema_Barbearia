@@ -11,6 +11,8 @@ import org.example.Services.BarbeiroService;
 import org.example.Services.ClienteService;
 import org.mindrot.jbcrypt.BCrypt;
 
+import java.util.UUID;
+
 public class LoginController {
     private static final Logger logger = LogManager.getLogger(LoginController.class);
 
@@ -70,6 +72,16 @@ public class LoginController {
         logger.warn(login + " não está cadastrado.");
         ctx.attribute("Erro", "usuario não está cadastrado!");
         ctx.render("login");
+    }
+    public void mostrarPerfil(Context ctx){
+        ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
+        String strId = ctx.pathParam("clienteId");
+        UUID id = UUID.fromString(strId);
+        Cliente cliente = clienteService.buscarPorId(id);
+        ctx.attribute("clienteId", cliente);
+        ctx.render("perfil");
+        logger.info("Mostrando tela perfil");
+
     }
     public void logOut(Context ctx){
         ctx.attribute("usuario", null);
