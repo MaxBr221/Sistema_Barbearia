@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+        .form-container{
+            background-color: chartreuse;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 100px auto;
+            max-width: 400px;
+            height: 150px;
+        }
+        header{
+            text-align: center;
+            color: rgb(194, 194, 194);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <h1>Perfil</h1>
+    </div>
+</header>
+
+<div  th:each="c : ${clienteId}" class="form-container">
+    <p><strong>Login: </strong> <span th:text="${c.login}"></span></p>
+    <p><strong>Telefone: </strong><span th:text="${c.telefone}"></span></p>
+    <p><strong>Nome: </strong><span th:text="${c.nome}"></span></p>
+</div>
+</body>
+</html>
