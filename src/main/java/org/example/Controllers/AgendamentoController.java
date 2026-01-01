@@ -31,7 +31,7 @@ public class AgendamentoController {
         }
         if(msgErro != null){
             ctx.attribute("msg_erro", msgErro);
-            ctx.sessionAttribute("msg_erro", msgErro);
+            ctx.sessionAttribute("msg_erro", null);
         }
         String ocupado = ctx.consumeSessionAttribute("ocupado");
         ctx.attribute("ocupado", ocupado);
@@ -45,11 +45,12 @@ public class AgendamentoController {
 
         logger.info("No metodo criarAgendamento");
 
+        String strData = ctx.formParam("data");
+        String strHora = ctx.formParam("hora");
+        String clienteId = ctx.formParam("clienteId");
+        String tipoServicoStr = ctx.formParam("servicos");
+
         try {
-            String strData = ctx.formParam("data");
-            String strHora = ctx.formParam("hora");
-            String clienteId = ctx.formParam("clienteId");
-            String tipoServicoStr = ctx.formParam("servicos");
 
             if (strData == null || strHora == null || clienteId == null || tipoServicoStr == null ||
                     strData.isBlank() || strHora.isBlank() || clienteId.isBlank()) {
@@ -57,9 +58,12 @@ public class AgendamentoController {
                 return;
             }
 
+
             LocalDate data = LocalDate.parse(strData);
             LocalTime hora = LocalTime.parse(strHora);
             UUID clienteUUID = UUID.fromString(clienteId);
+
+            agendamentoService.validarData(data);
 
             if (agendamentoService.existeAgendamento(data, hora)) {
                 logger.warn("Horario ocupado!");
@@ -88,8 +92,8 @@ public class AgendamentoController {
             ctx.redirect("/novoAgendamento/" + id);
         } catch (Exception e) {
             logger.error("Erro ao criar agendamento", e);
-            ctx.sessionAttribute("msg_erro", "Erro ao criar agendamento.");
-            ctx.redirect("/novoAgendamento");
+            ctx.sessionAttribute("msg_erro", e.getMessage());
+            ctx.redirect("/novoAgendamento/" + clienteId);
         }
     }
 

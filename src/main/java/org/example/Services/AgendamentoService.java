@@ -15,7 +15,9 @@ public class AgendamentoService {
 
     public AgendamentoService(AgendamentoRepository agendamentoRepository) {
         this.agendamentoRepository = agendamentoRepository;
+
     }public void criar(Agendamento agendamento){
+        validarData(agendamento.getData());
         if(agendamentoRepository.existeAgendamento(agendamento.getData(), agendamento.getHora())){
             throw new AgendamentoReservado("Agendamento já reservado nesse horario.");
         }
@@ -67,5 +69,12 @@ public class AgendamentoService {
             throw new IllegalArgumentException("não é permitido id nulo");
         }
         return agendamentoRepository.listarHistorico(clienteId);
+    }
+    public void validarData(LocalDate date){
+        LocalDate hoje = LocalDate.now();
+
+        if(date.isBefore(hoje)){
+            throw new IllegalArgumentException("Não é permitido cadastrar datas passadas.");
+        }
     }
 }

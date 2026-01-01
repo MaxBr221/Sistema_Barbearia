@@ -22,22 +22,18 @@ public class BarbeiroController {
         logger.info("Renderizando Tela de Barbeiro");
         ctx.render("barbeiro");
     }
-
-
-
+    public void listarAgendamentos(Context ctx){
+        AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
+        List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamento();
+        logger.info("Listando agendamentos");
+        ctx.attribute("listarAgendamento", listaAgendamentos);
+    }
     public void listarCLientes(Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
         List<Cliente> listarClientes = clienteService.listarClientes();
         logger.info("Listando clientes...");
         ctx.attribute("listarClientes", listarClientes);
         ctx.render("/listarClientes.html", Map.of("listarClientes", listarClientes));
-    }
-
-    public void listarAgendamentos(Context ctx){
-        AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
-        List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamento();
-        logger.info("Listando agendamentos");
-        ctx.attribute("listarAgendamento", listaAgendamentos);
     }
 
     public void removerCliente(@NotNull Context ctx){
