@@ -68,7 +68,7 @@ function selecionarHorario(hora, botaoSelecionado) {
 
 
   document
-    .querySelectorAll(".horarios button")
+    .querySelectorAll("#horarios button")
     .forEach(btn => btn.classList.remove("selecionado"));
 
   botaoSelecionado.classList.add("selecionado");

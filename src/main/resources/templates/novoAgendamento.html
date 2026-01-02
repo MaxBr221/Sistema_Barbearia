@@ -21,6 +21,20 @@
             font-style:oblique;
             text-align: center;
         }
+        .horarios button.selecionado {
+            background-color: #1e90ff;
+            color: white;
+            border: 3px solid #0b5ed7;
+            transform: scale(1.05);
+        }
+        .horarios button.ocupado {
+            background-color: #ccc;
+            color: #666;
+            cursor: not-allowed;
+            border: 2px dashed #999;
+        }
+
+
         .box{
             background-color: rgb(192, 195, 6);
             color: white;
@@ -36,10 +50,10 @@
 
 
         }.box input[type="date"] {
-        width: 180px;
-        height: 40px;
-        font-size: 16px;
-        margin: 10px 0;
+            width: 180px;
+            height: 40px;
+            font-size: 16px;
+            margin: 10px 0;
         }
 
         .box button{
@@ -48,17 +62,17 @@
             padding: 8px;
             border-radius: 12px;
         }
-        .horarios {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin: 20px 0;
+            .horarios {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
         }
 
         .horarios button {
-        padding: 10px;
-        border-radius: 8px;
-        cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
         }
         .select{
             padding: 12px;
@@ -83,34 +97,29 @@
             width: 200px;
             height: 100px;
         }
-        .top-bar{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: red;
-        }
-        .top-bar h2{
-            color: white;
-            position: absolute;
-            top: 20px;
-            left: 5px;
-        }
-        .form-box{
+        .voltar-btn {
+            position: fixed;
+            top: 12px;
+            left: 12px;
             background-color: white;
-            padding: 6px 0;
-            border-radius: 8px;
-
-        }
-        .form-box a{
-            margin: 6px 0;
             color: black;
-            text-decoration: none;
-            display: block;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 14px;
             font-weight: bold;
-            position:absolute ;
-            top: 15px;
-            left: 10px;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
 
+        .voltar-btn:hover {
+            background-color: #f2f2f2;
+        }
+
+        .box p{
+            font-style: normal;
+            font-size: x-large;
+            color: black;
         }
     </style>
 </head>
@@ -145,13 +154,23 @@
 
         <input type="hidden" name="clienteId" th:value="${clienteId}">
 
-        <div class="select">
+        <div class="servicos">
             <h2>Escolha os Serviços:</h2>
-            <select name="servicos" id="servicos" multiple>
-                <option value="CORTE_CABELO">Corte de Cabelo</option>
-                <option value="SOBRANCELHA">Sobrancelha</option>
-                <option value="BARBA">Barba</option>
-            </select>
+
+            <label class="servico-btn">
+                <input type="checkbox" name="servicos" value="CORTE_CABELO">
+                Corte de Cabelo
+            </label>
+
+            <label class="servico-btn">
+                <input type="checkbox" name="servicos" value="SOBRANCELHA">
+                Sobrancelha
+            </label>
+
+            <label class="servico-btn">
+                <input type="checkbox" name="servicos" value="BARBA">
+                Barba
+            </label>
         </div>
 
         <button type="button" onclick="confirmarAgendamento()">
@@ -159,14 +178,9 @@
         </button>
 
     </div>
-    <div class="top-bar">
-        <h2>Voltar para tela de Cliente</h2>
-        <div class="form-box">
-            <a href="/telaCliente">Voltar</a>
-        </div>
+    <div class="form-box">
+        <a href="/telaCliente" class="voltar-btn">Voltar</a>
     </div>
 </form>
-
-
 </body>
 </html>
