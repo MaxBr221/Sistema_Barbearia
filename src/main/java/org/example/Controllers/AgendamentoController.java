@@ -67,7 +67,7 @@ public class AgendamentoController {
 
             if (agendamentoService.existeAgendamento(data, hora)) {
                 logger.warn("Horario ocupado!");
-                ctx.sessionAttribute("ocupado", "Erro, esse horário já está ocupado!");
+                ctx.sessionAttribute("ocupado", "Esse horário já está ocupado!");
                 ctx.redirect("/novoAgendamento/" + clienteId);
                 return;
             }

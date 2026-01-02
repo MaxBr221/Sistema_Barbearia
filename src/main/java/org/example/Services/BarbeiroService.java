@@ -3,10 +3,12 @@ package org.example.Services;
 import org.example.Dominios.Agendamento;
 import org.example.Dominios.Barbeiro;
 import org.example.Dominios.Cliente;
+import org.example.Dominios.Status;
 import org.example.Repositorys.AgendamentoRepository;
 import org.example.Repositorys.BarbeiroRepository;
 import org.example.Repositorys.ClienteRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -22,6 +24,12 @@ public class BarbeiroService {
 
     }
     public List<Agendamento> listarAgendamento(){
+        List<Agendamento> filtro = new ArrayList<>();
+        for (Agendamento agendamento: agendamentoRepository.listarAgendamentos()){
+            if (agendamento.getStatus().equals(Status.RESERVADO)){
+                filtro.add(agendamento);
+            }
+        }
         return agendamentoRepository.listarAgendamentos();
     }
     public List<Cliente> listarClientes(){

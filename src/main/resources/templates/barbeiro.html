@@ -35,10 +35,10 @@
 </div>
 
 <div th:each="ag : ${agendamento}" class="agendamento-card">
-    <p><strong>Data:</strong> <span th:text="${ag.data}"></span></p>
+    <p><strong>Nome:</strong> <span th:text="${ag.cliente.nome}"></span></p>
     <p><strong>Hora:</strong><span th:text="${ag.hora}"></span></p>
-    <p><strong>Nome:</strong><span th:text="${ag.nome}"></span></p>
-    <p><strong>Serviço:</strong><span th:text="${ag.servico}"></span></p>
+    <p><strong>Data:</strong><span th:text="${ag.data}"></span></p>
+    <p><strong>Serviço:</strong><span th:text="${ag.tipoServico}"></span></p>
     <p><strong>Status:</strong><span th:text="${ag.status}"></span></p>
 </div>
 </body>

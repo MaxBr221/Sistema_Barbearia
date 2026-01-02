@@ -18,16 +18,16 @@ import java.util.UUID;
 public class BarbeiroController {
     private static final Logger logger = LogManager.getLogger(BarbeiroController.class);
 
-    public void mostrarTelaBarbeiro(Context ctx){
-        logger.info("Renderizando Tela de Barbeiro");
-        ctx.render("barbeiro");
-    }
     public void listarAgendamentos(Context ctx){
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
         List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamento();
-        logger.info("Listando agendamentos");
-        ctx.attribute("listarAgendamento", listaAgendamentos);
+        ctx.attribute("agendamento", listaAgendamentos);
+        ctx.render("barbeiro");
+        logger.info("Listando agendamentos na tela de barbeiro");
+
     }
+
+
     public void listarCLientes(Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
         List<Cliente> listarClientes = clienteService.listarClientes();

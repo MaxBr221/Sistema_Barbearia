@@ -55,7 +55,22 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
     @Override
     public List<Agendamento> listarAgendamentos() {
         List<Agendamento> agendamentos = new ArrayList<>();
-        String sql = "SELECT * FROM Agendamento";
+        String sql = """
+        SELECT 
+            a.id            AS ag_id,
+            a.dat           AS ag_data,
+            a.hora          AS ag_hora,
+            a.status        AS ag_status,
+            a.tipo_servico  AS ag_tipo_servico,
+
+            c.id            AS cliente_id,
+            c.nome          AS cliente_nome,
+
+            b.id            AS barbeiro_id
+        FROM agendamento a
+        JOIN cliente c   ON c.id = a.cliente_id
+        JOIN barbeiro b  ON b.id = a.barbeiro_id
+    """;
 
         try (Connection conn = Database.getConnection();
              Statement stmt = conn.createStatement();
@@ -63,16 +78,19 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
 
             while (rs.next()) {
                 Barbeiro barbeiro = new Barbeiro(UUID.fromString(rs.getString("barbeiro_id")));
-                Cliente cliente = new Cliente(UUID.fromString(rs.getString("cliente_id")));
-                Agendamento ag = new Agendamento(
-                        UUID.fromString(rs.getString("id")),
-                        rs.getDate("dat").toLocalDate(),
-                        rs.getTime("hora").toLocalTime(),
+                Cliente cliente = new Cliente(UUID.fromString(rs.getString("cliente_id")),
+                        rs.getString("cliente_nome"));
+
+                Agendamento agendamento = new Agendamento(
+                        UUID.fromString(rs.getString("ag_id")),
+                        rs.getDate("ag_data").toLocalDate(),
+                        rs.getTime("ag_hora").toLocalTime(),
                         barbeiro,
                         cliente,
-                        Status.valueOf(rs.getString("status")),
-                        TipoServico.valueOf(rs.getString("tipoServico")));
-                agendamentos.add(ag);
+                        Status.valueOf(rs.getString("ag_status")),
+                        TipoServico.valueOf(rs.getString("ag_tipo_servico"))
+                );
+                agendamentos.add(agendamento);
             }
         } catch (SQLException e) {
             System.out.println("Erro na listagem de agendamentos" + e.getMessage());
@@ -100,7 +118,7 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
                         barbeiro,
                         cliente,
                         Status.valueOf(rs.getString("status")),
-                        TipoServico.valueOf(rs.getString("tipoServico")));
+                        TipoServico.valueOf(rs.getString("tipo_servico")));
 
             }
         } catch (SQLException e) {
