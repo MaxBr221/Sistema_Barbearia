@@ -10,11 +10,39 @@
             background-color: blue;
         }
         header{
-            text-align: center;
             color: white;
         }
-        .agendamento-card{
+        h2{
+            text-align: center;
+            border-radius: 8px;
+            font-style: normal;
+            color: aliceblue;
+            font-size: xx-large;
+
+        }
+        p{
+            text-align: center;
             color: rgb(0, 0, 0);
+            margin: 6px 0;
+            font-style:initial;
+            font-size: larger;
+
+        }.agendamento-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .agendamento-card{
+            width: 300px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(234, 255, 0);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 10px white;
+
+
         }
 
 
@@ -33,13 +61,14 @@
 <div th:if="${#lists.isEmpty(agendamento)}">
     <p>Nenhum agendamento encontrado.</p>
 </div>
-
-<div th:each="ag : ${agendamento}" class="agendamento-card">
-    <p><strong>Nome:</strong> <span th:text="${ag.cliente.nome}"></span></p>
-    <p><strong>Hora:</strong><span th:text="${ag.hora}"></span></p>
-    <p><strong>Data:</strong><span th:text="${ag.data}"></span></p>
-    <p><strong>Serviço:</strong><span th:text="${ag.tipoServico}"></span></p>
-    <p><strong>Status:</strong><span th:text="${ag.status}"></span></p>
+<div class="agendamento-container">
+    <div th:each="ag : ${agendamento}" class="agendamento-card">
+        <p><strong>Nome: </strong> <span th:text="${ag.cliente.nome}"></span></p>
+        <p><strong>Hora: </strong><span th:text="${ag.hora}"></span></p>
+        <p><strong>Data: </strong><span th:text="${ag.data}"></span></p>
+        <p><strong>Serviço: </strong><span th:text="${ag.tipoServico}"></span></p>
+        <p><strong>Status: </strong><span th:text="${ag.status}"></span></p>
+    </div>
 </div>
 </body>
 </html>
