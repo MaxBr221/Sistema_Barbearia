@@ -25,25 +25,31 @@ Projeto desenvolvido com foco acadêmico e prático, servindo também como item 
 
 🏗️ Arquitetura do Projeto
 
+## 📁 Estrutura do Projeto
+
 O projeto segue uma organização inspirada no padrão MVC, com separação clara de responsabilidades:
 
-src
- ┣ controller
- ┃ └── Controladores das rotas Javalin
- ┣ service
- ┃ └── Regras de negócio
- ┣ repository
- ┃ └── Interfaces Repository
- ┣ BancoDeDados
- ┃ └── Implementações JDBC dos repositórios
- ┣ model
- ┃ └── Entidades do sistema
- ┣ enums
- ┃ └── Status e tipos de serviço
- ┣ util
- ┃ └── Conexão com banco e utilidades
- ┗ resources
-   ┗── Templates Thymeleaf (HTML)
+- **controller**
+  - Controladores das rotas Javalin
+
+- **service**
+  - Regras de negócio
+
+- **repository**
+  - Interfaces Repository
+
+- **BancoDeDados**
+  - Implementações JDBC dos repositórios
+
+- **model**
+  - Entidades do sistema
+
+- **enums**
+  - Status e tipos de serviço
+
+- **resources**
+  - Templates Thymeleaf (HTML)
+
 
    
 🛠️ Tecnologias Utilizadas
