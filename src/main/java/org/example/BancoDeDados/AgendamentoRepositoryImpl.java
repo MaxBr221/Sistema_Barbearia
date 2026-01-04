@@ -61,16 +61,21 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
             a.hora          AS ag_hora,
             a.status        AS ag_status,
             a.tipo_servico  AS ag_tipo_servico,
-
+    
             c.id            AS cliente_id,
             c.nome          AS cliente_nome,
-
+    
             b.id            AS barbeiro_id
         FROM agendamento a
         JOIN cliente c   ON c.id = a.cliente_id
         JOIN barbeiro b  ON b.id = a.barbeiro_id
+        WHERE 
+            (
+                a.dat > CURDATE()
+                OR (a.dat = CURDATE() AND a.hora >= CURTIME())
+            )
+        ORDER BY a.dat, a.hora
     """;
-
         try (Connection conn = Database.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
