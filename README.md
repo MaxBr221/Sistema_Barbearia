@@ -40,8 +40,11 @@ src
  ┃ └── Entidades do sistema
  ┣ enums
  ┃ └── Status e tipos de serviço
+ ┣ util
+ ┃ └── Conexão com banco e utilidades
  ┗ resources
    ┗── Templates Thymeleaf (HTML)
+
 
 🛠️ Tecnologias Utilizadas
 
