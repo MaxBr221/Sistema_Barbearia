@@ -41,7 +41,6 @@ public class AgendamentoRepositoryImpl implements AgendamentoRepository {
             int linhaAfetada = stmt.executeUpdate();
 
             if (linhaAfetada > 0) {
-                System.out.println("Removido com sucesso");
             } else {
                 System.out.println("Erro, id incorreto!");
             }

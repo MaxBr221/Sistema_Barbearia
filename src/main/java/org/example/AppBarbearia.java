@@ -123,6 +123,7 @@ public class AppBarbearia {
         });
         app.get("/meusAgendamentos/{clienteId}", agendamentoController::listarAgendamentos);
         app.get("/historico/{clienteId}", agendamentoController:: listarHistoricoDeAgendamento);
+        app.delete("/agendamentos/{id}", agendamentoController::removerAgendamento);
 
     }
     private void configureJavalin(JavalinConfig config) {

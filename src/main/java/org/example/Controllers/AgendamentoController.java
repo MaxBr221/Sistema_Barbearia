@@ -117,21 +117,20 @@ public class AgendamentoController {
         logger.info("listando histórico");
     }
     public void removerAgendamento(@NotNull Context ctx){
+        logger.info("No metodo remover Agendamento");
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
-        String strId = ctx.formParam("id");
-        if(strId == null || strId.isBlank()){
-            throw new IllegalArgumentException("Não é permitido id nulo/vazio");
-        }
+        String strId = ctx.pathParam("id");
         UUID id = UUID.fromString(strId);
-
-        Agendamento agendamento = agendamentoService.buscarAgendamentoPorId(id);
-        if(agendamento.getStatus().equals(Status.RESERVADO)){
-            agendamentoService.removerAgendamento(agendamento.getId());
+        Agendamento agendamentos = agendamentoService.buscarAgendamentoPorId(id);
+        if(agendamentos.getStatus().equals(Status.RESERVADO)){
+            agendamentoService.removerAgendamento(id);
             logger.info("Agendamento removido com sucesso!");
-            ctx.result("Agendamento removido com sucesso!");
-        }else{
+            ctx.attribute("agendamentos", agendamentos);
+            ctx.render("meusAgendamentos");
+        }else {
             logger.info("Esse agendamento não está agendado");
             ctx.result("Esse agendamento não existe.");
         }
+
     }
 }

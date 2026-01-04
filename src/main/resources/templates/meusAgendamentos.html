@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Agendamentos</title>
+    <script src="/js/agendamentos.js" defer></script>
+
     <style>
         body{
             background-color: rgb(51, 0, 255);
@@ -76,6 +78,7 @@
             <th>Data</th>
             <th>Hora</th>
             <th>Serviço</th>
+            <th>Ação</th>
         </tr>
         </thead>
         <tbody>
@@ -83,6 +86,10 @@
             <td th:text="${a.data}"></td>
             <td th:text="${a.hora}"></td>
             <td th:text="${a.tipoServico}"></td>
+            <td>
+                <button type="button" class="cancel-btn" th:attr="data-id=${a.id}">Cancelar</button>
+            </td>
+
         </tr>
         </tbody>
     </table>
