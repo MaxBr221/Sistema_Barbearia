@@ -9,7 +9,7 @@
 
     <style>
         body{
-            background-color: rgb(51, 0, 255);
+            background-image: url("/favicon_io/android-chrome-512x512.png");
             text-align: center;
             font-family: Arial, sans-serif;
             display: flex;
@@ -28,7 +28,7 @@
 
         }
         .tabela{
-            background-color: yellow;
+            background-color: white;
             border-radius: 8px;
             padding: 40px;
             margin: 30px auto;
@@ -84,7 +84,11 @@
         </thead>
         <tbody>
         <tr th:each="a : ${agendamentos}">
-            <td th:text="${a.data}"></td>
+            <td>
+                <strong th:text="${a.diaSemana}"></strong><br>
+                <span th:text="${a.dataFormatada}"></span>
+            </td>
+
             <td th:text="${a.hora}"></td>
             <td th:text="${a.tipoServico}"></td>
             <td>

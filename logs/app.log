@@ -24712,3 +24712,1033 @@ java.lang.IllegalArgumentException: 'clienteId' is not a valid path-param for '/
 2026-01-05 22:29:12 INFO  LoginController:47 - Tentativa de login valida com sucesso!
 2026-01-05 22:29:12 INFO  LoginController:31 - Direcionando para tela do cliente
 2026-01-05 22:29:13 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-05 22:33:52 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-05 22:33:52 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-05 22:33:52 INFO  Javalin:16 - Starting Javalin ...
+2026-01-05 22:33:52 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-05 22:33:53 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-05 22:33:53 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-05 22:33:53 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-05 22:33:53 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @3734ms
+2026-01-05 22:33:53 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-05 22:33:53 INFO  Javalin:16 - Javalin started in 696ms \o/
+2026-01-05 22:33:54 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-05 22:33:54 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-05 22:33:54 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-05 22:33:56 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-05 22:34:11 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-05 22:34:11 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-05 22:34:13 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-05 22:34:17 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-05 22:34:18 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-05 22:34:19 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-05 22:34:21 INFO  AgendamentoController:117 - listando histórico
+2026-01-05 22:34:22 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-05 22:34:24 INFO  LoginController:83 - Mostrando tela perfil
+2026-01-05 22:34:25 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-05 22:34:27 INFO  LoginController:88 - Direcionando para saida..
+2026-01-05 22:34:27 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-05 22:34:28 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-06 12:53:51 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 12:53:53 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 12:53:53 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 12:53:53 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 12:53:53 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 12:53:53 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 12:53:54 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 12:53:54 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @6919ms
+2026-01-06 12:53:54 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 12:53:54 INFO  Javalin:16 - Javalin started in 1595ms \o/
+2026-01-06 12:53:56 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 12:53:56 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 12:53:56 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 12:54:05 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 12:54:28 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 12:54:28 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 12:54:29 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 12:54:31 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 12:58:05 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 12:58:06 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:00:39 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:00:41 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:00:41 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:00:41 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:00:41 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:00:41 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:00:41 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:00:41 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5640ms
+2026-01-06 13:00:41 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:00:41 INFO  Javalin:16 - Javalin started in 1228ms \o/
+2026-01-06 13:00:43 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:00:43 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:00:43 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:00:46 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:00:56 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:00:56 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:00:58 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:01:01 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:01:46 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:01:47 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:01:47 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:01:47 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:01:47 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:01:47 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:01:47 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:01:47 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5431ms
+2026-01-06 13:01:47 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:01:47 INFO  Javalin:16 - Javalin started in 998ms \o/
+2026-01-06 13:01:49 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:01:49 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:01:49 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:01:51 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:02:01 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:02:01 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:02:04 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:02:26 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:02:29 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:02:33 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:04:16 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:04:17 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:04:17 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:04:17 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:04:17 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:04:17 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:04:18 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:04:18 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @7000ms
+2026-01-06 13:04:18 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:04:18 INFO  Javalin:16 - Javalin started in 985ms \o/
+2026-01-06 13:04:19 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:04:19 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:04:19 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:04:22 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:04:33 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:04:33 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:04:36 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:04:38 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:04:40 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:04:43 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:04:45 INFO  AgendamentoController:117 - listando histórico
+2026-01-06 13:04:51 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:05:46 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:05:58 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:06:00 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:07:58 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:07:59 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:07:59 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:07:59 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:07:59 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:07:59 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:08:00 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:08:00 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5639ms
+2026-01-06 13:08:00 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:08:00 INFO  Javalin:16 - Javalin started in 1320ms \o/
+2026-01-06 13:08:01 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:08:01 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:08:01 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:08:05 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:08:34 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:08:34 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:08:39 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:09:33 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:16:10 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:16:12 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:16:12 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:16:12 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:16:13 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:16:13 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:16:13 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:16:13 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @9543ms
+2026-01-06 13:16:13 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:16:13 INFO  Javalin:16 - Javalin started in 2233ms \o/
+2026-01-06 13:16:16 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:16:17 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:16:17 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:16:22 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:16:30 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:16:30 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:16:41 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:17:25 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:17:26 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:17:26 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:17:26 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:17:26 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:17:26 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:17:26 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:17:26 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @4494ms
+2026-01-06 13:17:26 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:17:26 INFO  Javalin:16 - Javalin started in 835ms \o/
+2026-01-06 13:17:27 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:17:27 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:17:27 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:17:30 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:17:37 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:17:37 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:17:39 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:19:03 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:19:05 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:19:05 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:19:05 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:19:05 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:19:05 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:19:05 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:19:05 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5049ms
+2026-01-06 13:19:05 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:19:05 INFO  Javalin:16 - Javalin started in 919ms \o/
+2026-01-06 13:19:06 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:19:06 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:19:06 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:19:08 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:19:17 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:19:17 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:19:21 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:26:34 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:26:35 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:26:35 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:26:35 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:26:36 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:26:36 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:26:36 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:26:36 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @7661ms
+2026-01-06 13:26:36 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:26:36 INFO  Javalin:16 - Javalin started in 1319ms \o/
+2026-01-06 13:26:38 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:26:38 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:26:38 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:26:41 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:26:53 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:26:53 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:26:55 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:28:32 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:28:33 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:28:33 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:28:33 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:28:34 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:28:34 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:28:34 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:28:34 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5539ms
+2026-01-06 13:28:34 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:28:34 INFO  Javalin:16 - Javalin started in 1259ms \o/
+2026-01-06 13:28:35 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:28:35 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:28:35 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:28:39 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:28:50 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:28:50 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:28:52 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:29:32 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:32:38 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:32:41 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:32:41 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:32:41 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:32:42 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:32:42 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:32:43 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:32:43 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @18215ms
+2026-01-06 13:32:43 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:32:43 INFO  Javalin:16 - Javalin started in 3951ms \o/
+2026-01-06 13:32:47 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:32:47 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:32:47 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:32:48 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:32:52 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:32:58 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:32:58 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:33:02 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:33:04 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:33:05 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:37:44 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:37:45 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:37:45 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:37:45 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:37:45 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:37:45 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:37:45 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:37:45 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5220ms
+2026-01-06 13:37:45 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:37:45 INFO  Javalin:16 - Javalin started in 934ms \o/
+2026-01-06 13:37:46 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:37:46 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:37:46 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:37:49 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:37:56 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:37:57 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:37:58 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:38:00 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:38:02 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:38:12 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-06 13:38:12 INFO  AgendamentoController:90 - Agendamento criado com sucesso!
+2026-01-06 13:38:12 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:40:59 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:40:59 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:40:59 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:40:59 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:41:00 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:41:00 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:41:00 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:41:00 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @4274ms
+2026-01-06 13:41:00 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:41:00 INFO  Javalin:16 - Javalin started in 794ms \o/
+2026-01-06 13:41:01 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:41:01 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:41:01 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:41:06 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:41:16 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:41:16 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:41:18 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:41:22 INFO  AgendamentoController:120 - No metodo remover Agendamento
+2026-01-06 13:41:23 INFO  AgendamentoController:127 - Agendamento removido com sucesso!
+2026-01-06 13:41:24 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:41:26 INFO  AgendamentoController:117 - listando histórico
+2026-01-06 13:41:29 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:41:34 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:41:36 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:41:40 INFO  LoginController:88 - Direcionando para saida..
+2026-01-06 13:41:40 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:41:45 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:41:45 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:41:46 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:41:48 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:41:49 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:42:17 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-06 13:42:17 INFO  AgendamentoController:90 - Agendamento criado com sucesso!
+2026-01-06 13:42:17 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:45:08 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:45:09 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:45:09 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:45:09 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:45:09 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:45:09 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:45:09 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:45:09 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5149ms
+2026-01-06 13:45:09 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:45:09 INFO  Javalin:16 - Javalin started in 1029ms \o/
+2026-01-06 13:45:11 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:45:11 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:45:11 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:45:13 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:45:21 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:45:21 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:45:22 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:45:35 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-06 13:45:36 INFO  AgendamentoController:90 - Agendamento criado com sucesso!
+2026-01-06 13:45:36 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:45:38 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:45:41 INFO  LoginController:83 - Mostrando tela perfil
+2026-01-06 13:46:49 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:46:50 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:46:50 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:46:50 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:46:50 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:46:50 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:46:51 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:46:51 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @4423ms
+2026-01-06 13:46:51 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:46:51 INFO  Javalin:16 - Javalin started in 825ms \o/
+2026-01-06 13:46:52 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:46:52 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:46:52 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 197 days old. Consider checking for a newer version.).
+2026-01-06 13:46:54 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:47:08 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:47:08 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:47:10 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:47:54 INFO  AgendamentoController:120 - No metodo remover Agendamento
+2026-01-06 13:47:54 INFO  AgendamentoController:127 - Agendamento removido com sucesso!
+2026-01-06 13:48:24 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:48:26 INFO  AgendamentoController:117 - listando histórico
+2026-01-06 13:49:04 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:49:06 INFO  LoginController:88 - Direcionando para saida..
+2026-01-06 13:49:06 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:49:07 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-06 13:50:52 INFO  ClienteController:39 - Cliente: rasta@gmail.com já está cadastrado!
+2026-01-06 13:50:52 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-06 13:51:06 INFO  ClienteController:39 - Cliente: maxsuel.lima@dcx.ufpb.br já está cadastrado!
+2026-01-06 13:51:06 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-06 13:51:32 INFO  ClienteController:51 - cliente cai cadastrado com sucesso!
+2026-01-06 13:51:32 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:51:40 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:51:40 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:51:41 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:51:43 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:51:45 INFO  AgendamentoController:117 - listando histórico
+2026-01-06 13:51:46 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:51:47 INFO  AgendamentoController:117 - listando histórico
+2026-01-06 13:51:51 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:51:56 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:52:02 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-06 13:52:02 INFO  AgendamentoController:90 - Agendamento criado com sucesso!
+2026-01-06 13:52:02 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:52:04 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:52:06 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:52:13 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-06 13:52:14 INFO  AgendamentoController:90 - Agendamento criado com sucesso!
+2026-01-06 13:52:14 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:52:19 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-06 13:52:19 WARN  AgendamentoController:69 - Horario ocupado!
+2026-01-06 13:52:19 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:53:17 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:53:18 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:53:18 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:53:19 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:53:19 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:53:19 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:53:19 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:53:19 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5802ms
+2026-01-06 13:53:19 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:53:19 INFO  Javalin:16 - Javalin started in 1212ms \o/
+2026-01-06 13:53:21 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:53:21 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:53:21 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 13:53:24 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:53:42 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-06 13:53:43 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-06 13:54:40 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:54:41 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:54:41 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:54:41 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:54:41 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:54:41 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:54:42 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:54:42 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5217ms
+2026-01-06 13:54:42 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:54:42 INFO  Javalin:16 - Javalin started in 1078ms \o/
+2026-01-06 13:54:43 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:54:43 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:54:43 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 13:54:46 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:55:04 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-06 13:55:04 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-06 13:56:35 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:56:36 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:56:36 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:56:36 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:56:36 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:56:36 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:56:36 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:56:36 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5901ms
+2026-01-06 13:56:36 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:56:36 INFO  Javalin:16 - Javalin started in 1021ms \o/
+2026-01-06 13:56:38 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:56:38 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:56:38 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 13:56:40 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:57:12 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:57:12 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:57:25 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 13:57:26 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:57:28 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-06 13:57:29 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:57:30 INFO  AgendamentoController:117 - listando histórico
+2026-01-06 13:57:32 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 13:58:37 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 13:58:38 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 13:58:38 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 13:58:38 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 13:58:38 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 13:58:38 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 13:58:39 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 13:58:39 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5836ms
+2026-01-06 13:58:39 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 13:58:39 INFO  Javalin:16 - Javalin started in 1111ms \o/
+2026-01-06 13:58:40 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 13:58:40 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 13:58:40 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 13:58:44 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 13:58:52 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 13:58:52 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:00:36 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:00:37 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:00:37 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:00:37 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:00:37 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:00:37 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:00:37 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:00:37 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @4877ms
+2026-01-06 14:00:37 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:00:37 INFO  Javalin:16 - Javalin started in 1021ms \o/
+2026-01-06 14:00:38 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:00:38 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:00:38 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:00:41 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:00:51 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 14:00:51 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:01:29 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:01:30 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:01:30 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:01:30 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:01:30 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:01:30 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:01:30 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:01:30 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @4643ms
+2026-01-06 14:01:30 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:01:30 INFO  Javalin:16 - Javalin started in 906ms \o/
+2026-01-06 14:01:31 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:01:31 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:01:31 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:01:35 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:01:43 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 14:01:43 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:01:57 INFO  AgendamentoController:117 - listando histórico
+2026-01-06 14:01:58 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:02:42 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:02:43 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:02:43 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:02:43 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:02:44 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:02:44 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:02:44 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:02:44 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @5023ms
+2026-01-06 14:02:44 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:02:44 INFO  Javalin:16 - Javalin started in 959ms \o/
+2026-01-06 14:02:45 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:02:45 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:02:45 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:02:50 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:02:59 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 14:02:59 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:04:08 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:04:09 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:04:09 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:04:09 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:04:09 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:04:09 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:04:09 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:04:09 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @4722ms
+2026-01-06 14:04:09 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:04:09 INFO  Javalin:16 - Javalin started in 857ms \o/
+2026-01-06 14:04:10 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:04:10 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:04:10 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:04:26 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:04:33 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 14:04:33 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:04:40 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 14:04:42 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:05:08 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 14:05:10 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:05:11 INFO  AgendamentoController:117 - listando histórico
+2026-01-06 14:05:13 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:05:17 INFO  LoginController:88 - Direcionando para saida..
+2026-01-06 14:05:17 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:07:03 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:07:04 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:07:04 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:07:04 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:07:04 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:07:04 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:07:05 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:07:05 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @4790ms
+2026-01-06 14:07:05 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:07:05 INFO  Javalin:16 - Javalin started in 1199ms \o/
+2026-01-06 14:07:06 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:07:06 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:07:06 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:07:14 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:08:06 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:08:08 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:08:08 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:08:08 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:08:08 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:08:08 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:08:08 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:08:08 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @6764ms
+2026-01-06 14:08:08 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:08:08 INFO  Javalin:16 - Javalin started in 1247ms \o/
+2026-01-06 14:08:10 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:08:10 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:08:10 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:08:13 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:16:48 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:16:48 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:16:48 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:16:48 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:16:49 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:16:49 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:16:49 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:16:49 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @3405ms
+2026-01-06 14:16:49 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:16:49 INFO  Javalin:16 - Javalin started in 712ms \o/
+2026-01-06 14:16:50 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:16:50 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:16:50 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:16:52 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:16:59 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 14:16:59 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:17:01 ERROR TemplateEngine:1141 - [THYMELEAF][JettyServerThreadPool-36] Exception processing template "meusAgendamentos": An error happened during template parsing (template: "templates/meusAgendamentos.html")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "templates/meusAgendamentos.html")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1064) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1053) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at io.javalin.rendering.template.JavalinThymeleaf.render(JavalinThymeleaf.kt:33) ~[javalin-rendering-6.7.0.jar:6.7.0]
+	at io.javalin.http.Context.render(Context.kt:515) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.Context.render(Context.kt:518) ~[javalin-6.7.0.jar:6.7.0]
+	at org.example.Controllers.AgendamentoController.listarAgendamentos(AgendamentoController.java:106) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.attoparser.ParseException: Exception evaluating OGNL expression: "#temporals.format(a.data, 'EEEE', T(java.util.Locale).forLanguageTag('pt-BR'))" (template: "meusAgendamentos" - line 88, col 25)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 50 more
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating OGNL expression: "#temporals.format(a.data, 'EEEE', T(java.util.Locale).forLanguageTag('pt-BR'))" (template: "meusAgendamentos" - line 88, col 25)
+	at org.thymeleaf.standard.expression.OGNLVariableExpressionEvaluator.evaluate(OGNLVariableExpressionEvaluator.java:199) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.OGNLVariableExpressionEvaluator.evaluate(OGNLVariableExpressionEvaluator.java:104) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:368) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:222) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 50 more
+Caused by: ognl.OgnlException: source is null for getProperty(null, "util")
+2026-01-06 14:17:01 ERROR AppBarbearia:157 - Erro não tratado
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "templates/meusAgendamentos.html")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1064) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1053) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at io.javalin.rendering.template.JavalinThymeleaf.render(JavalinThymeleaf.kt:33) ~[javalin-rendering-6.7.0.jar:6.7.0]
+	at io.javalin.http.Context.render(Context.kt:515) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.Context.render(Context.kt:518) ~[javalin-6.7.0.jar:6.7.0]
+	at org.example.Controllers.AgendamentoController.listarAgendamentos(AgendamentoController.java:106) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.attoparser.ParseException: Exception evaluating OGNL expression: "#temporals.format(a.data, 'EEEE', T(java.util.Locale).forLanguageTag('pt-BR'))" (template: "meusAgendamentos" - line 88, col 25)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 50 more
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating OGNL expression: "#temporals.format(a.data, 'EEEE', T(java.util.Locale).forLanguageTag('pt-BR'))" (template: "meusAgendamentos" - line 88, col 25)
+	at org.thymeleaf.standard.expression.OGNLVariableExpressionEvaluator.evaluate(OGNLVariableExpressionEvaluator.java:199) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.OGNLVariableExpressionEvaluator.evaluate(OGNLVariableExpressionEvaluator.java:104) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:368) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:222) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 50 more
+Caused by: ognl.OgnlException: source is null for getProperty(null, "util")
+2026-01-06 14:23:03 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:23:04 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:23:04 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:23:04 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:23:04 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:23:04 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:23:04 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:23:04 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @2071ms
+2026-01-06 14:23:04 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:23:04 INFO  Javalin:16 - Javalin started in 467ms \o/
+2026-01-06 14:23:04 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:23:04 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:23:04 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:23:07 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:23:13 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 14:23:13 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:23:14 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 14:25:21 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:25:22 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:25:22 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:25:22 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:25:22 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:25:22 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:25:22 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:25:22 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @1774ms
+2026-01-06 14:25:22 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:25:22 INFO  Javalin:16 - Javalin started in 296ms \o/
+2026-01-06 14:25:22 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:25:22 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:25:22 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:25:24 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:25:34 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-06 14:25:34 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:25:36 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-06 14:25:38 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:25:39 INFO  AgendamentoController:117 - listando histórico
+2026-01-06 14:25:56 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-06 14:26:00 INFO  LoginController:88 - Direcionando para saida..
+2026-01-06 14:26:00 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:26:06 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-06 14:26:06 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-06 14:28:14 INFO  AppBarbearia:151 - Método iniciar() foi chamado!
+2026-01-06 14:28:15 INFO  AppBarbearia:133 - Servidor Javalin está iniciando...
+2026-01-06 14:28:15 INFO  Javalin:16 - Starting Javalin ...
+2026-01-06 14:28:15 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-06 14:28:15 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-06 14:28:15 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@18245eb0{/,null,AVAILABLE}
+2026-01-06 14:28:15 INFO  AbstractConnector:376 - Started ServerConnector@655ef322{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-06 14:28:15 INFO  Server:439 - Started Server@47a5b70d{STARTING}[11.0.25,sto=0] @2765ms
+2026-01-06 14:28:15 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-06 14:28:15 INFO  Javalin:16 - Javalin started in 428ms \o/
+2026-01-06 14:28:16 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-06 14:28:16 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-06 14:28:16 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 198 days old. Consider checking for a newer version.).
+2026-01-06 14:28:22 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-06 14:28:34 WARN  LoginController:66 - Tentativa de login com erro.
+2026-01-06 14:28:34 WARN  LoginController:72 - igor.melo@gmail.com não está cadastrado.
+2026-01-06 14:28:39 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-06 14:28:39 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro

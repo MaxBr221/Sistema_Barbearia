@@ -2,6 +2,8 @@ package org.example.Dominios;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.UUID;
 
 public class Agendamento {
@@ -33,6 +35,18 @@ public class Agendamento {
     }
 
     public Agendamento() {
+    }
+
+    public String getDiaSemana() {
+        return data.format(
+                DateTimeFormatter.ofPattern("EEEE", new Locale("pt", "BR"))
+        );
+    }
+
+    public String getDataFormatada() {
+        return data.format(
+                DateTimeFormatter.ofPattern("dd/MM/yyyy")
+        );
     }
 
 
