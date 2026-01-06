@@ -95,8 +95,6 @@ public class AppBarbearia {
         app.get("/cadastro", clienteController:: mostrarPaginaCadastro);
         app.post("/cadastro", clienteController :: cadastrarCliente);
         app.get("/listarClientes", clienteController :: listarClientes);
-//        criar tela de editar usuario.
-//        app.get("/telaEditar", clienteController:: editarCliente);
         app.post("/telaEditar", clienteController :: editarCliente);
 
 
