@@ -27,7 +27,7 @@ function carregarHorarios() {
 function gerarHorarios() {
   const horarios = [];
 
-  for (let h = 9; h < 12; h++) {
+  for (let h = 8:30; h < 12; h++) {
     horarios.push(formataHora(h, 0));
     horarios.push(formataHora(h, 30));
   }

@@ -54,7 +54,8 @@ public class AgendamentoController {
 
             if (strData == null || strHora == null || clienteId == null || tipoServicoStr == null ||
                     strData.isBlank() || strHora.isBlank() || clienteId.isBlank()) {
-                ctx.status(400).result("Campos obrigatórios não preenchidos");
+                ctx.sessionAttribute("nulo","Preencha os campos para prosseguir!");
+                ctx.redirect("/novoAgendamento/" + clienteId);
                 return;
             }
 

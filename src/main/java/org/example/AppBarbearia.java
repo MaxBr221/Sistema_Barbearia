@@ -167,7 +167,7 @@ public class AppBarbearia {
             logger.error("Erro não tratado", e);
             ctx.status(500);
         });
-        app.start(obterPortaServidor());
+        app.start("0.0.0.0", obterPortaServidor());
 
     }
     public static void main(String[] args) {

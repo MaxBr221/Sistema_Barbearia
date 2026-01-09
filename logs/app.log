@@ -26156,3 +26156,122 @@ Caused by: ognl.OgnlException: source is null for getProperty(null, "util")
 2026-01-09 00:09:01 INFO  AgendamentoController:107 - Listando agendamentos..
 2026-01-09 00:09:03 INFO  AgendamentoController:120 - No metodo remover Agendamento
 2026-01-09 00:09:03 INFO  AgendamentoController:127 - Agendamento removido com sucesso!
+2026-01-09 00:17:23 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 00:17:23 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 00:20:52 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 00:20:53 INFO  AppBarbearia:60 - Conectado ao MySQL com sucesso!
+2026-01-09 00:20:53 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 00:20:53 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 00:20:53 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 00:20:54 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 00:20:54 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@47c64cfe{/,null,AVAILABLE}
+2026-01-09 00:20:54 INFO  AbstractConnector:376 - Started ServerConnector@109f5dd8{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 00:20:54 INFO  Server:439 - Started Server@1358b28e{STARTING}[11.0.25,sto=0] @2337ms
+2026-01-09 00:20:54 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 00:20:54 INFO  Javalin:16 - Javalin started in 270ms \o/
+2026-01-09 00:20:54 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'jar:file:/C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/projeto-grupo-6-1.0.0.jar!/public'
+2026-01-09 00:20:54 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-09 00:20:54 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 00:25:41 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 00:25:45 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 00:25:45 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:26:02 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-09 00:26:05 INFO  AgendamentoController:120 - No metodo remover Agendamento
+2026-01-09 00:26:05 INFO  AgendamentoController:127 - Agendamento removido com sucesso!
+2026-01-09 00:26:07 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:26:09 INFO  LoginController:83 - Mostrando tela perfil
+2026-01-09 00:26:10 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:26:12 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 00:26:12 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 00:26:16 WARN  LoginController:52 - senha invalida para login.
+2026-01-09 00:26:16 WARN  LoginController:72 - maxsuel.lima@dcx.ufpb.br não está cadastrado.
+2026-01-09 00:26:19 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 00:26:19 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:26:20 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-09 00:26:21 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:26:22 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 00:26:24 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:26:25 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 00:26:25 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 00:26:27 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-09 00:26:39 INFO  ClienteController:51 - cliente Maxsuel de Lima Barbosa cadastrado com sucesso!
+2026-01-09 00:26:39 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 00:26:43 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 00:26:43 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:26:44 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-09 00:26:46 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:26:47 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 00:26:47 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 00:26:54 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 00:26:54 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 00:27:10 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 00:27:10 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:27:11 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-09 00:27:13 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:27:14 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 00:27:18 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-09 00:27:19 INFO  AgendamentoController:90 - Agendamento criado com sucesso!
+2026-01-09 00:27:19 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 00:27:20 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 00:27:21 INFO  AgendamentoController:107 - Listando agendamentos..
+2026-01-09 07:58:15 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 07:58:16 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 08:02:23 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:02:23 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 08:03:41 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:03:44 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 08:04:32 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:04:32 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 08:04:32 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 08:04:32 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 08:04:32 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 08:04:32 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@b40bb6e{/,null,AVAILABLE}
+2026-01-09 08:04:32 INFO  AbstractConnector:376 - Started ServerConnector@6bb2d00b{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 08:04:32 INFO  Server:439 - Started Server@c5ee75e{STARTING}[11.0.25,sto=0] @2481ms
+2026-01-09 08:04:32 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 08:04:32 INFO  Javalin:16 - Javalin started in 696ms \o/
+2026-01-09 08:04:33 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-09 08:04:33 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-09 08:04:33 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 08:11:22 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:11:22 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 08:25:44 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:25:45 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 08:33:00 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:33:00 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 08:33:09 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:33:10 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 08:34:33 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:34:33 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 08:36:36 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:36:37 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 08:39:00 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 08:39:01 ERROR AppBarbearia:62 - Erro ao conectar no MySQL
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:59) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:164) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:174) [classes/:?]
