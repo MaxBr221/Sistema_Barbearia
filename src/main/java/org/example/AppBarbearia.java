@@ -167,7 +167,7 @@ public class AppBarbearia {
             logger.error("Erro não tratado", e);
             ctx.status(500);
         });
-        int porta = Integer.parseInt(System.getenv().getOrDefault("PORT", "7000"));
+        int porta = obterPortaServidor();
         app.start(porta);
 
 
