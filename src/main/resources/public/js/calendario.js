@@ -1,6 +1,30 @@
 let horarioSelecionado = null;
 
 function carregarHorarios() {
+function carregarHorarios() {
+  const data = document.getElementById("data").value;
+  const container = document.getElementById("horarios");
+
+  container.innerHTML = "";
+  horarioSelecionado = null;
+
+  if (!data) return;
+
+  const diaSemana = new Date(data + "T00:00").getDay();
+
+  if (diaSemana === 0) {
+    container.innerHTML = "<p>❌ Barbearia fechada neste dia</p>";
+    return;
+  }
+
+  fetch(`/agendamentos/ocupados?data=${data}`)
+    .then(res => res.json())
+    .then(ocupados => {
+      const horarios = gerarHorarios();
+      montarHorarios(horarios, ocupados);
+    });
+}
+
   const data = document.getElementById("data").value;
   const container = document.getElementById("horarios");
 
@@ -27,7 +51,7 @@ function carregarHorarios() {
 function gerarHorarios() {
   const horarios = [];
 
-  for (let h = 8:30; h < 12; h++) {
+  for (let h = 9; h < 12; h++) {
     horarios.push(formataHora(h, 0));
     horarios.push(formataHora(h, 30));
   }

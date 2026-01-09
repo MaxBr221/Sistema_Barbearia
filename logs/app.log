@@ -26275,3 +26275,474 @@ java.sql.SQLException: Access denied for user 'root'@'localhost' (using password
 	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:59) [classes/:?]
 	at org.example.AppBarbearia.iniciar(AppBarbearia.java:164) [classes/:?]
 	at org.example.AppBarbearia.main(AppBarbearia.java:174) [classes/:?]
+2026-01-09 09:26:47 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 09:26:48 ERROR AppBarbearia:62 - Erro ao conectar no MySQL
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:59) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:164) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:174) [classes/:?]
+2026-01-09 09:30:09 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 09:30:10 ERROR AppBarbearia:62 - Erro ao conectar no MySQL
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:59) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:164) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:174) [classes/:?]
+2026-01-09 09:33:11 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 09:33:11 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 09:35:39 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 09:35:41 INFO  AppBarbearia:60 - Conectado ao MySQL com sucesso!
+2026-01-09 09:35:41 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 09:35:41 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 09:35:41 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 09:35:41 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 09:35:42 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@11ee02f8{/,null,AVAILABLE}
+2026-01-09 09:35:42 INFO  AbstractConnector:376 - Started ServerConnector@24f360b2{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 09:35:42 INFO  Server:439 - Started Server@182f1e9a{STARTING}[11.0.25,sto=0] @5255ms
+2026-01-09 09:35:42 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 09:35:42 INFO  Javalin:16 - Javalin started in 1333ms \o/
+2026-01-09 09:35:43 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'jar:file:/C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/projeto-grupo-6-1.0.0.jar!/public'
+2026-01-09 09:35:43 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-09 09:35:43 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 09:36:49 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 09:36:56 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 09:36:56 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:36:57 INFO  AgendamentoController:108 - Listando agendamentos..
+2026-01-09 09:36:59 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:37:00 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 09:37:11 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:37:13 INFO  LoginController:83 - Mostrando tela perfil
+2026-01-09 09:37:14 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:37:15 INFO  AgendamentoController:118 - listando histórico
+2026-01-09 09:37:18 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:37:19 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 09:38:18 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 09:38:20 ERROR AppBarbearia:62 - Erro ao conectar no MySQL
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:59) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:164) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:174) [classes/:?]
+2026-01-09 09:39:42 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 09:39:43 INFO  AppBarbearia:60 - Conectado ao MySQL com sucesso!
+2026-01-09 09:39:43 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 09:39:43 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 09:39:43 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 09:39:43 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 09:39:43 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@11ee02f8{/,null,AVAILABLE}
+2026-01-09 09:39:43 INFO  AbstractConnector:376 - Started ServerConnector@24f360b2{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 09:39:43 INFO  Server:439 - Started Server@182f1e9a{STARTING}[11.0.25,sto=0] @4517ms
+2026-01-09 09:39:43 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 09:39:44 INFO  Javalin:16 - Javalin started in 810ms \o/
+2026-01-09 09:39:44 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'jar:file:/C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/projeto-grupo-6-1.0.0.jar!/public'
+2026-01-09 09:39:45 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-09 09:39:45 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 09:40:01 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 09:40:08 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 09:40:08 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:40:09 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 09:40:25 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:40:27 INFO  AgendamentoController:108 - Listando agendamentos..
+2026-01-09 09:44:14 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 09:44:15 INFO  AppBarbearia:60 - Conectado ao MySQL com sucesso!
+2026-01-09 09:44:16 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 09:44:16 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 09:44:16 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 09:44:16 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 09:44:16 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@11ee02f8{/,null,AVAILABLE}
+2026-01-09 09:44:16 INFO  AbstractConnector:376 - Started ServerConnector@24f360b2{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 09:44:16 INFO  Server:439 - Started Server@182f1e9a{STARTING}[11.0.25,sto=0] @4372ms
+2026-01-09 09:44:16 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 09:44:16 INFO  Javalin:16 - Javalin started in 867ms \o/
+2026-01-09 09:44:17 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'jar:file:/C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/projeto-grupo-6-1.0.0.jar!/public'
+2026-01-09 09:44:17 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-09 09:44:17 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 09:44:48 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 09:44:56 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 09:44:56 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 09:45:06 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 09:45:06 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:45:08 INFO  AgendamentoController:108 - Listando agendamentos..
+2026-01-09 09:45:09 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:45:10 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 09:45:36 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:45:39 INFO  AgendamentoController:118 - listando histórico
+2026-01-09 09:45:41 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:45:42 INFO  AgendamentoController:108 - Listando agendamentos..
+2026-01-09 09:45:46 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:45:48 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 09:46:02 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 09:46:03 INFO  AgendamentoController:118 - listando histórico
+2026-01-09 10:03:22 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 10:03:24 INFO  AppBarbearia:60 - Conectado ao MySQL com sucesso!
+2026-01-09 10:03:24 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 10:03:24 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 10:03:24 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 10:03:24 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 10:03:24 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@11ee02f8{/,null,AVAILABLE}
+2026-01-09 10:03:25 INFO  AbstractConnector:376 - Started ServerConnector@24f360b2{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 10:03:25 INFO  Server:439 - Started Server@182f1e9a{STARTING}[11.0.25,sto=0] @4690ms
+2026-01-09 10:03:25 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 10:03:25 INFO  Javalin:16 - Javalin started in 1148ms \o/
+2026-01-09 10:03:26 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'jar:file:/C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/projeto-grupo-6-1.0.0.jar!/public'
+2026-01-09 10:03:26 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-09 10:03:26 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 10:03:51 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:04:01 WARN  LoginController:72 - rasta@gmail.com não está cadastrado.
+2026-01-09 10:04:05 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:04:05 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:04:06 INFO  AgendamentoController:108 - Listando agendamentos..
+2026-01-09 10:04:08 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:04:09 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:04:18 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:04:19 INFO  AgendamentoController:118 - listando histórico
+2026-01-09 10:04:21 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:04:23 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:04:23 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:04:25 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-09 10:04:36 INFO  ClienteController:51 - cliente Ciano cadastrado com sucesso!
+2026-01-09 10:04:36 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:04:40 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:04:40 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:04:41 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:07:09 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:07:17 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:07:17 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:07:22 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:09:58 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 10:10:02 ERROR AppBarbearia:62 - Erro ao conectar no MySQL
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:59) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:164) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:174) [classes/:?]
+2026-01-09 10:15:17 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 10:15:17 ERROR AppBarbearia:54 - Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.
+2026-01-09 10:18:05 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 10:18:05 ERROR AppBarbearia:62 - Erro ao conectar no MySQL
+java.sql.SQLException: No suitable driver found for =jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:708) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:59) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:164) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:174) [classes/:?]
+2026-01-09 10:18:40 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 10:18:40 INFO  AppBarbearia:60 - Conectado ao MySQL com sucesso!
+2026-01-09 10:18:41 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 10:18:41 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 10:18:41 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 10:18:41 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 10:18:41 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@71652c98{/,null,AVAILABLE}
+2026-01-09 10:18:41 INFO  AbstractConnector:376 - Started ServerConnector@5c1bd44c{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 10:18:41 INFO  Server:439 - Started Server@407cf41{STARTING}[11.0.25,sto=0] @1928ms
+2026-01-09 10:18:41 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 10:18:41 INFO  Javalin:16 - Javalin started in 443ms \o/
+2026-01-09 10:18:41 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-09 10:18:41 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-09 10:18:41 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 10:20:09 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:20:14 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:20:14 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:20:16 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:20:30 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-09 10:20:30 INFO  AgendamentoController:91 - Agendamento criado com sucesso!
+2026-01-09 10:20:30 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:20:32 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:20:33 INFO  AgendamentoController:108 - Listando agendamentos..
+2026-01-09 10:20:35 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:20:41 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:20:49 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-09 10:20:49 INFO  AgendamentoController:91 - Agendamento criado com sucesso!
+2026-01-09 10:20:49 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:20:56 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-09 10:20:56 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:21:04 INFO  AgendamentoController:46 - No metodo criarAgendamento
+2026-01-09 10:21:04 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:24:49 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 10:24:49 INFO  AppBarbearia:60 - Conectado ao MySQL com sucesso!
+2026-01-09 10:24:49 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 10:24:49 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 10:24:49 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 10:24:50 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 10:24:50 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@71652c98{/,null,AVAILABLE}
+2026-01-09 10:24:50 INFO  AbstractConnector:376 - Started ServerConnector@5c1bd44c{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 10:24:50 INFO  Server:439 - Started Server@407cf41{STARTING}[11.0.25,sto=0] @2175ms
+2026-01-09 10:24:50 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 10:24:50 INFO  Javalin:16 - Javalin started in 351ms \o/
+2026-01-09 10:24:50 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-09 10:24:50 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-09 10:24:50 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 10:24:59 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:25:03 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:25:07 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:25:07 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:25:09 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:25:13 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-09 10:25:14 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:25:21 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-09 10:25:21 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-09 10:25:21 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:25:27 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-09 10:25:27 WARN  AgendamentoController:73 - Horario ocupado!
+2026-01-09 10:25:27 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:25:30 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:25:31 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:25:33 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:25:35 INFO  AgendamentoController:121 - listando histórico
+2026-01-09 10:25:36 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:25:37 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:27:10 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 10:27:12 INFO  AppBarbearia:60 - Conectado ao MySQL com sucesso!
+2026-01-09 10:27:12 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 10:27:12 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 10:27:12 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 10:27:12 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 10:27:12 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@71652c98{/,null,AVAILABLE}
+2026-01-09 10:27:12 INFO  AbstractConnector:376 - Started ServerConnector@5c1bd44c{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 10:27:12 INFO  Server:439 - Started Server@407cf41{STARTING}[11.0.25,sto=0] @5012ms
+2026-01-09 10:27:12 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 10:27:12 INFO  Javalin:16 - Javalin started in 584ms \o/
+2026-01-09 10:27:13 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-09 10:27:13 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-09 10:27:13 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 10:27:16 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:27:20 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:27:20 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:27:21 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:27:25 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-09 10:27:25 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:28:50 INFO  AppBarbearia:159 - Método iniciar() foi chamado!
+2026-01-09 10:28:51 INFO  AppBarbearia:60 - Conectado ao MySQL com sucesso!
+2026-01-09 10:28:51 INFO  AppBarbearia:141 - Servidor Javalin está iniciando...
+2026-01-09 10:28:51 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 10:28:51 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.9+7-LTS-338
+2026-01-09 10:28:51 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 10:28:51 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@71652c98{/,null,AVAILABLE}
+2026-01-09 10:28:51 INFO  AbstractConnector:376 - Started ServerConnector@5c1bd44c{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 10:28:51 INFO  Server:439 - Started Server@407cf41{STARTING}[11.0.25,sto=0] @2377ms
+2026-01-09 10:28:51 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 10:28:51 INFO  Javalin:16 - Javalin started in 452ms \o/
+2026-01-09 10:28:52 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/Users/maxsu/OneDrive/Documentos/Spring%20Boot/meu-primeiro-springboot/Sistema_Barbearia/target/classes/public/'
+2026-01-09 10:28:52 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-09 10:28:52 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 200 days old. Consider checking for a newer version.).
+2026-01-09 10:28:58 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:29:06 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:29:06 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:29:07 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:29:11 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-09 10:29:11 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:29:18 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-09 10:29:18 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-09 10:29:18 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:29:20 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:29:21 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:29:30 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:29:32 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:29:32 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:29:39 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 10:29:39 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 10:30:05 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:30:05 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:30:06 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:30:10 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:30:13 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:30:15 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:30:17 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:30:17 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:30:22 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 10:30:22 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 10:30:35 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:30:35 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:30:36 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:30:38 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:30:39 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:30:41 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-09 10:30:41 INFO  AgendamentoController:131 - Agendamento removido com sucesso!
+2026-01-09 10:30:44 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:30:45 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:30:51 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-09 10:30:51 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-09 10:30:51 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:30:52 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:30:54 INFO  AgendamentoController:121 - listando histórico
+2026-01-09 10:30:56 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:30:57 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:30:57 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:31:03 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 10:31:03 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 10:31:41 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:31:41 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:31:42 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:31:45 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-09 10:31:45 INFO  AgendamentoController:131 - Agendamento removido com sucesso!
+2026-01-09 10:31:48 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-09 10:31:48 INFO  AgendamentoController:131 - Agendamento removido com sucesso!
+2026-01-09 10:31:50 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-09 10:31:51 INFO  AgendamentoController:131 - Agendamento removido com sucesso!
+2026-01-09 10:31:54 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-09 10:31:54 INFO  AgendamentoController:131 - Agendamento removido com sucesso!
+2026-01-09 10:31:56 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:31:59 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:31:59 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:32:05 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 10:32:05 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 10:32:24 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-09 10:32:39 INFO  ClienteController:51 - cliente Hadassa cadastrado com sucesso!
+2026-01-09 10:32:39 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:32:44 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:32:44 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:32:46 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:32:47 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:32:48 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:32:56 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-09 10:32:56 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-09 10:32:56 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:32:58 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:32:59 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:33:01 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:33:02 INFO  AgendamentoController:121 - listando histórico
+2026-01-09 10:33:03 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:33:04 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:33:04 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:33:10 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 10:33:10 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 10:33:15 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-09 10:33:30 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:33:30 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:33:31 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:33:37 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-09 10:33:37 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-09 10:33:37 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:33:39 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:33:40 INFO  AgendamentoController:121 - listando histórico
+2026-01-09 10:33:42 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:33:44 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:33:47 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:33:48 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:33:48 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:33:53 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 10:33:53 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 10:34:24 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:34:24 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:34:25 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:34:27 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-09 10:34:27 INFO  AgendamentoController:131 - Agendamento removido com sucesso!
+2026-01-09 10:34:30 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-09 10:34:30 INFO  AgendamentoController:131 - Agendamento removido com sucesso!
+2026-01-09 10:34:32 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:34:33 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:34:33 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:34:38 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 10:34:38 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 10:34:47 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:34:47 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:34:48 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-09 10:34:49 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:37:27 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 10:37:28 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:37:30 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:37:30 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:37:45 INFO  LoginController:61 - Tentativa de login valida com sucesso!
+2026-01-09 10:37:45 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-09 10:37:54 WARN  LoginController:72 - maxsuel.lima@dcx.ufpb.br não está cadastrado.
+2026-01-09 10:37:58 WARN  LoginController:72 - maxsuel.lima@dcx.ufpb.br não está cadastrado.
+2026-01-09 10:38:15 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-09 10:38:30 INFO  ClienteController:51 - cliente Maxsuel de Lima Barbosa cadastrado com sucesso!
+2026-01-09 10:38:30 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 10:38:33 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 10:38:33 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 10:39:11 INFO  LoginController:88 - Direcionando para saida..
+2026-01-09 10:39:11 INFO  LoginController:21 - Direcionado para tela de login

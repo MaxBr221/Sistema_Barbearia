@@ -33,6 +33,9 @@ public class AgendamentoController {
             ctx.attribute("msg_erro", msgErro);
             ctx.sessionAttribute("msg_erro", null);
         }
+        String nulo = ctx.consumeSessionAttribute("nulo");
+        ctx.attribute("nulo", nulo);
+        ctx.render("novoAgendamento");
         String ocupado = ctx.consumeSessionAttribute("ocupado");
         ctx.attribute("ocupado", ocupado);
         ctx.render("novoAgendamento");
@@ -54,7 +57,7 @@ public class AgendamentoController {
 
             if (strData == null || strHora == null || clienteId == null || tipoServicoStr == null ||
                     strData.isBlank() || strHora.isBlank() || clienteId.isBlank()) {
-                ctx.sessionAttribute("nulo","Preencha os campos para prosseguir!");
+                ctx.sessionAttribute("nulo","É necessário escolher ao menos um serviço para prosseguir!");
                 ctx.redirect("/novoAgendamento/" + clienteId);
                 return;
             }
