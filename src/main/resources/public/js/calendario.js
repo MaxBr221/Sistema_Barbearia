@@ -11,7 +11,7 @@ function carregarHorarios() {
 
   const diaSemana = new Date(data + "T00:00").getDay();
 
-  if (diaSemana === 0 || diaSemana === 1) {
+  if (diaSemana === 0) {
     container.innerHTML = "<p>❌ Barbearia fechada neste dia</p>";
     return;
   }
@@ -33,7 +33,7 @@ function gerarHorarios() {
   }
 
 
-  for (let h = 15; h < 19; h ++) {
+  for (let h = 15; h < 18; h ++) {
     horarios.push(formataHora(h, 0));
     horarios.push(formataHora(h, 30));
   }

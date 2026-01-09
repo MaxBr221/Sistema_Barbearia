@@ -25,6 +25,9 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -37,21 +40,28 @@ public class AppBarbearia {
     private static final String PROP_PORTA_SERVIDOR = "porta.servidor";
     private final Properties propriedades;
 
+    private Connection connection;
+
     public AppBarbearia() {
-        this.propriedades = carregarPropriedades();
+        this.propriedades = new Properties();
     }
-    public Properties carregarPropriedades(){
-        Properties prop = new Properties();
-        try (InputStream input = AppBarbearia.class.getClassLoader().getResourceAsStream("application.properties")) {
-            if (input == null) {
-                logger.error("Arquivo application.properties não encontrado em /resources");
-                System.exit(1);
-            }
-            prop.load(input);
-        } catch (IOException e) {
-            throw new RuntimeException("Erro ao carregar application.properties", e);
+    private void inicializarBanco() {
+        String dbUrl = System.getenv("DB_URL");
+        String dbUser = System.getenv("DB_USER");
+        String dbPassword = System.getenv("DB_PASSWORD");
+
+        if (dbUrl == null || dbUser == null || dbPassword == null) {
+            logger.error("Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.");
+            System.exit(1);
         }
-        return prop;
+
+        try {
+            this.connection = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
+            logger.info("Conectado ao MySQL com sucesso!");
+        } catch (SQLException e) {
+            logger.error("Erro ao conectar no MySQL", e);
+            System.exit(1);
+        }
     }
     private void registrarServicos(JavalinConfig config){
         ClienteRepository clienteRepository = new ClienteRepositoryImpl();
@@ -151,6 +161,8 @@ public class AppBarbearia {
         configurarPaginasDeErro(app);
         configurarRotas(app);
 
+        inicializarBanco();
+
         app.exception(Exception.class, (e, ctx) -> {
             logger.error("Erro não tratado", e);
             ctx.status(500);
@@ -166,11 +178,12 @@ public class AppBarbearia {
         app.error(500, ctx -> ctx.render("erro_500.html"));
     }
     private int obterPortaServidor() {
-        if (propriedades.containsKey(PROP_PORTA_SERVIDOR)) {
+        String portEnv = System.getenv("PORT");
+        if (portEnv != null) {
             try {
-                return Integer.parseInt(propriedades.getProperty(PROP_PORTA_SERVIDOR));
+                return Integer.parseInt(portEnv);
             } catch (NumberFormatException e) {
-                logger.error("Porta inválida, usando padrão: " + PORTA_PADRAO);
+                logger.error("Porta inválida em PORT, usando padrão: " + PORTA_PADRAO);
             }
         }
         return PORTA_PADRAO;
