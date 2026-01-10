@@ -18,6 +18,15 @@ import java.util.UUID;
 public class BarbeiroController {
     private static final Logger logger = LogManager.getLogger(BarbeiroController.class);
 
+    public void listarAgendamentos(Context ctx){
+        AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
+        List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamento();
+        ctx.attribute("agendamento", listaAgendamentos);
+        ctx.render("barbeiro");
+        logger.info("Listando agendamentos na tela de barbeiro");
+
+    }
+
 
     public void listarCLientes(Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
@@ -27,13 +36,6 @@ public class BarbeiroController {
         ctx.render("/listarClientes.html", Map.of("listarClientes", listarClientes));
     }
 
-    public void listarAgendamentos(Context ctx){
-        AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
-        List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamento();
-        logger.info("Listando agendamentos");
-        ctx.attribute("listarAgendamento", listaAgendamentos);
-    }
-
     public void removerCliente(@NotNull Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
         BarbeiroService barbeiroService = ctx.appData(Keys.BARBEIRO_SERVICE.key());
@@ -41,7 +43,7 @@ public class BarbeiroController {
         try {
             UUID id = UUID.fromString(idStr);
             Cliente cliente = clienteService.buscarPorId(id);
-            barbeiroService.removerCliente(cliente.getId());
+//            clienteService.removerCliente(cliente.getId());
             logger.info("Cliente removido com sucesso!");
         }
         catch (IllegalArgumentException e){

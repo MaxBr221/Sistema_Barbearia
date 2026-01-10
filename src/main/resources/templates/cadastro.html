@@ -1,42 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br"  xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+
+    <style>
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+
+        }
+
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
+
+            body{
+                text-align: center;
+                background-image: url("/favicon_io/android-chrome-512x512.png");
+            }
+            header h1{
+                margin-bottom: 10%;
+                color: white;
+                width: 100%;
+                font-size: xx-large;
+                font-style: bold;
+            }
+            h2{
+                color: #090e0b;
+
+            }
+            label{
+                margin-top: 10%;
+                color: rgb(54, 54, 54);
+                font-weight: bold;
+            }
+            input{
+                width:100%;
+                max-width: 300px;
+                display: block;
+                margin: 8px auto;
+                margin-top: 1%;
+                border: 1px solid #000000;
+                border-radius: 6px;
+                outline: none;
+                transition: border-color 0.2s;
+                padding: 1%;
+            }
+             input:focus {
+                border-color: #007bff;
+            }
+            .form-button{
+                width: 100%, height: 100%;
+                margin-top:20%;
+                padding: 3%;
+                background: black;
+                color: black;
+                cursor: pointer;
+                border: none;
+                border-radius: 6px;
+                transition: background 0.3s;
+            }
+            footer {
+                bottom: 10px;
+                font-size: 14px;
+                color: #ccc;
+            }
+            header{
+                width: 100%, height: 100%;
+                color: #050303;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .form-box{
+                border: 1px solid #000000;
+                border-radius: 8px;
+                padding: 20px;
+                max-width: 400px;
+                margin: 40px auto;
+                background-color: #f9f9f9;
+            }
+
+    </style>
 </head>
 <body>
-<header>Cadastro</header>
+<header>
+    <h1>Cadastro</h1>
+</header>
 <main>
-  <div class="form-container"  xmlns:th="http://www.w3.org/1999/xhtml">
-    <h2>Crie sua conta</h2>
-    <form th:action="@{/cadastro}" method="post"></form>
-    <div th:if="${Erro}" class="alert alert-danger" role="alert">
-      <p th:text="${Erro}"></p>
+    <div class="form-box"  xmlns:th="http://www.w3.org/1999/xhtml">
+        <h2>Crie sua conta</h2>
+        <form th:action="@{/cadastro}" method="post"  onsubmit="return validarSenha()">
+        <div th:if="${session.Erro}" class="alert alert-danger" role="alert">
+            <p th:text="${session.Erro}"></p>
+        </div>
+        <div th:if="${info}" class="alert alert-info" role="alert">
+            <p th:text="${info}"></p>
+        </div>
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="number" id="telefone" name="telefone" required>
+
+        <label for="login">Login</label>
+        <input type="email" id="login" name="login" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <label for="confirmar-senha">Confirmar-senha</label>
+        <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+
+        <button type="submit">Cadastrar</button>
+        </form>
     </div>
-    <div th:if="${info}" class="alert alert-info" role="alert">
-      <p th:text="${info}"></p>
     </div>
-
-    <label for="nome">Nome</label>
-    <input type="text" id="nome" name="nome" required>
-
-    <label for="telefone">Telefone</label>
-    <input type="number" id="telefone" name="telefone" required>
-
-    <label for="login">E-mail/Login</label>
-    <input type="email" id="login" name="login" required>
-
-    <label for="senha">Senha</label>
-    <input type="password" id="senha" name="senha" required>
-
-    <label for="confirmar-senha">Confirmar-senha</label>
-    <input type="password" id="confirmar-senha" name="confirmar-senha" required>
-
-    <button type="submit">Cadastrar</button>
-
-  </div>
-  </div>
 </main>
+<footer>
+    <p>&copy; Barbearia do Igor </p>
+</footer>
+<script>
+    function validarSenha() {
+        const senha = document.getElementById('senha').value;
+        const confirmarSenha = document.getElementById('confirmar-senha').value;
+
+
+
+        if (senha !== confirmarSenha) {
+            alert('As senhas não coincidem.');
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
 </body>
 </html>

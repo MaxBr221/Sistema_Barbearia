@@ -31,6 +31,10 @@ public abstract class Usuario {
         this.senha = senha;
     }
 
+    public Usuario(String nome) {
+        this.nome = nome;
+    }
+
     public Usuario(String nome, String telefone, String login, String senha) {
         this.nome = nome;
         this.telefone = telefone;

@@ -12,6 +12,9 @@ public interface AgendamentoRepository {
     void removerAgendamento(UUID id);
     List<Agendamento> listarAgendamentos();
     Agendamento buscarAgendamentoPorId(UUID id);
-    boolean existeAgendamento(LocalDate localDate, LocalTime localTime, UUID barbeiroId);
+    boolean existeAgendamento(LocalDate localDate, LocalTime localTime);
+    List<LocalTime> buscarHorariosOcupadosPorData(LocalDate data);
+    List<Agendamento> listarAgendamentoAtivos(UUID clienteId);
+    List<Agendamento> listarHistorico(UUID clienteId);
 
 }

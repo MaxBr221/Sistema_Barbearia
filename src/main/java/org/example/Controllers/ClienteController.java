@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.example.Dominios.Cliente;
 import org.example.Keys;
 import org.example.Services.ClienteService;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,11 @@ import java.util.UUID;
 public class ClienteController {
     private static final Logger logger = LogManager.getLogger(ClienteController.class);
 
+    public void mostrarPaginaCadastro(Context ctx){
+        logger.info("Direcionando para tela de cadastro..");
+        ctx.render("cadastro.html");
+    }
+
     public void cadastrarCliente(Context ctx){
         String nome = ctx.formParam("nome");
         String telefone = ctx.formParam("telefone");
@@ -22,24 +28,29 @@ public class ClienteController {
         String senha = ctx.formParam("senha");
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());
 
-        if(nome.isBlank() || telefone.isBlank() || login.isBlank() || senha.isBlank()){
+        if(nome == null || nome.isBlank() || telefone == null || telefone.isBlank() || login == null || login.isBlank() || senha == null || senha.isBlank()){
             logger.warn("Não é permitido valores vazios.");
             ctx.attribute("Erro, não é possivel cadastrar usuário com campo vazio.");
-            ctx.render("cadastro.html");
+            ctx.render("cadastro");
         }
 
         Cliente cliente = clienteService.buscarPorLogin(login);
         if (cliente != null){
             logger.info("Cliente: " + login + " já está cadastrado!");
-            ctx.attribute("Erro", "Cliente já cadastrado!");
-            ctx.render("login.html");
+            ctx.sessionAttribute("Erro", "Cliente já cadastrado!");
+            ctx.redirect("/cadastro");
+            return;
         }
-        Cliente cliente1 = new Cliente(nome, telefone, login, senha);
+
+        Cliente cliente1 = new Cliente(UUID.randomUUID(), nome, telefone, login, senha);
+
+        String senhaForm = BCrypt.hashpw(cliente1.getSenha(), BCrypt.gensalt());
+        cliente1.setSenha(senhaForm);
 
         clienteService.cadastrarCliente(cliente1);
         logger.info("cliente " + nome + " cadastrado com sucesso!");
-        ctx.attribute("Muito bem", "Cliente cadastrado com sucesso!");
-        ctx.redirect("/telaCliente.html");
+        ctx.sessionAttribute("ok", "Cliente cadastrado com sucesso!");
+        ctx.redirect("login");
     }
     public void listarClientes(Context ctx){
         ClienteService clienteService = ctx.appData(Keys.CLIENTE_SERVICE.key());

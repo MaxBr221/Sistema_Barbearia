@@ -1,8 +1,7 @@
 package org.example.Services;
 
 import org.example.Dominios.Cliente;
-import org.example.ClienteAtivo;
-import org.example.ClienteNaoAtivo;
+import org.example.Exceptions.ClienteNaoAtivo;
 import org.example.Repositorys.ClienteRepository;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +14,10 @@ public class ClienteService {
     public ClienteService(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
     }
+
     public void cadastrarCliente(Cliente cliente){
         if(cliente == null){
             throw new IllegalArgumentException("Cliente nulo não é permitido!");
-        }
-        if(cliente.isAtivo()){
-            throw new ClienteAtivo("Cliente já está ativo");
         }
         clienteRepository.cadastrarCliente(cliente);
 
@@ -53,9 +50,6 @@ public class ClienteService {
         return clientesAtivos;
     }
     public Cliente buscarPorLogin(String login){
-        if (login == null){
-            throw new IllegalArgumentException("Erro, não é permitido login nulo.");
-        }
        return clienteRepository.buscarPorLogin(login);
     }
 }

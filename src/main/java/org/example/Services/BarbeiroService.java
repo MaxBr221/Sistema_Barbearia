@@ -3,22 +3,37 @@ package org.example.Services;
 import org.example.Dominios.Agendamento;
 import org.example.Dominios.Barbeiro;
 import org.example.Dominios.Cliente;
+import org.example.Dominios.Status;
+import org.example.Repositorys.AgendamentoRepository;
 import org.example.Repositorys.BarbeiroRepository;
+import org.example.Repositorys.ClienteRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class BarbeiroService {
     private BarbeiroRepository barbeiroRepository;
+    private AgendamentoRepository agendamentoRepository;
+    private ClienteRepository clienteRepository;
 
-    public BarbeiroService(BarbeiroRepository barbeiroRepository) {
+    public BarbeiroService(BarbeiroRepository barbeiroRepository, AgendamentoRepository agendamentoRepository, ClienteRepository clienteRepository) {
         this.barbeiroRepository = barbeiroRepository;
+        this.agendamentoRepository = agendamentoRepository;
+        this.clienteRepository = clienteRepository;
+
     }
     public List<Agendamento> listarAgendamento(){
-        return barbeiroRepository.listarAgendamentos();
+        List<Agendamento> filtro = new ArrayList<>();
+        for (Agendamento agendamento: agendamentoRepository.listarAgendamentos()){
+            if (agendamento.getStatus().equals(Status.RESERVADO)){
+                filtro.add(agendamento);
+            }
+        }
+        return agendamentoRepository.listarAgendamentos();
     }
     public List<Cliente> listarClientes(){
-        return barbeiroRepository.listarCliente();
+        return clienteRepository.listarClientes();
     }
     public Barbeiro buscarPorLogin(String login){
         if (login == null){
@@ -26,16 +41,10 @@ public class BarbeiroService {
         }
         return barbeiroRepository.buscarPorLogin(login);
     }
-    public void removerCliente(UUID id){
-        if (id == null){
-            throw new IllegalArgumentException("id não é permitido nulo.");
-        }
-        barbeiroRepository.removerCLiente(id);
+
+    public Barbeiro buscarBarbeiroPadrao(){
+        return barbeiroRepository.buscarBarbeiroPadrao()
+                .orElseThrow(()-> new RuntimeException("barbeiro não encontrado."));
     }
-    public Barbeiro buscarPorId(UUID id){
-        if (id == null){
-            throw new IllegalArgumentException("Erro, valor nulo.");
-        }
-        return barbeiroRepository.buscarPorId(id);
-    }
+
 }
