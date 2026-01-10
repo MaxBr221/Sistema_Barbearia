@@ -1,4 +1,5 @@
 package org.example.BancoDeDados;
+
 import org.example.Dominios.Cliente;
 import org.example.Repositorys.ClienteRepository;
 
@@ -9,9 +10,9 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public void cadastrarCliente(Cliente cliente) {
-        String sql = "INSERT INTO Cliente (id, nome, telefone, login, senha) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Cliente (id, nome, telefone, email, senha) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = Database.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, cliente.getId().toString());
             stmt.setString(2, cliente.getNome());
@@ -28,9 +29,9 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public void editarCliente(Cliente cliente) {
-        String sql = "UPDATE Cliente SET nome = ?, telefone = ?, login = ?, senha = ? WHERE id = ?";
+        String sql = "UPDATE Cliente SET nome = ?, telefone = ?, email = ?, senha = ? WHERE id = ?";
         try (Connection conn = Database.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, cliente.getNome());
             stmt.setString(2, cliente.getTelefone());
@@ -50,17 +51,16 @@ public class ClienteRepositoryImpl implements ClienteRepository {
         List<Cliente> clientes = new ArrayList<>();
         String sql = "SELECT * FROM Cliente";
         try (Connection conn = Database.getConnection();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(sql)) {
 
             while (rs.next()) {
                 Cliente c = new Cliente(
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("login"),
-                        rs.getString("senha")
-                );
+                        rs.getString("email"),
+                        rs.getString("senha"));
                 clientes.add(c);
             }
 
@@ -74,7 +74,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
     public Cliente buscarClientePorId(UUID id) {
         String sql = "SELECT * FROM Cliente WHERE id = ?";
         try (Connection conn = Database.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, id.toString());
             ResultSet rs = stmt.executeQuery();
@@ -84,9 +84,8 @@ public class ClienteRepositoryImpl implements ClienteRepository {
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("login"),
-                        rs.getString("senha")
-                );
+                        rs.getString("email"),
+                        rs.getString("senha"));
             }
 
         } catch (SQLException e) {
@@ -97,22 +96,22 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public Cliente buscarPorLogin(String login) {
-        String slq = "SELECT * FROM Cliente WHERE login = ?";
-        try(Connection conn = Database.getConnection();
-           PreparedStatement stmt = conn.prepareStatement(slq)){
+        String slq = "SELECT * FROM Cliente WHERE email = ?";
+        try (Connection conn = Database.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(slq)) {
 
             stmt.setString(1, login);
             ResultSet rs = stmt.executeQuery();
 
-            if(rs.next()){
+            if (rs.next()) {
                 return new Cliente(
                         UUID.fromString(rs.getString("id")),
                         rs.getString("nome"),
                         rs.getString("telefone"),
-                        rs.getString("login"),
+                        rs.getString("email"),
                         rs.getString("senha"));
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("Erro ao buscar cliente por login" + e.getMessage());
         }
         return null;

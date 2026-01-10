@@ -22,7 +22,6 @@ import org.example.Services.ClienteService;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -45,14 +44,30 @@ public class AppBarbearia {
     public AppBarbearia() {
         this.propriedades = new Properties();
     }
+
     private void inicializarBanco() {
         String dbUrl = System.getenv("DB_URL");
         String dbUser = System.getenv("DB_USER");
         String dbPassword = System.getenv("DB_PASSWORD");
 
-        if (dbUrl == null || dbUser == null || dbPassword == null) {
-            logger.error("Variáveis de ambiente do DB não definidas! DB_URL, DB_USER ou DB_PASSWORD faltando.");
-            System.exit(1);
+        if (dbUrl == null)
+            dbUrl = "jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+        if (dbUser == null)
+            dbUser = "root";
+        if (dbPassword == null)
+            dbPassword = "12345678";
+
+        // Setup Flyway
+        org.flywaydb.core.Flyway flyway = org.flywaydb.core.Flyway.configure()
+                .dataSource(dbUrl, dbUser, dbPassword)
+                .baselineOnMigrate(true)
+                .load();
+
+        try {
+            flyway.migrate();
+            logger.info("Migrações do Flyway executadas com sucesso!");
+        } catch (Exception e) {
+            logger.error("Erro ao executar migrações do Flyway", e);
         }
 
         try {
@@ -63,32 +78,35 @@ public class AppBarbearia {
             System.exit(1);
         }
     }
-    private void registrarServicos(JavalinConfig config){
+
+    private void registrarServicos(JavalinConfig config) {
         ClienteRepository clienteRepository = new ClienteRepositoryImpl();
         ClienteService clienteService = new ClienteService(clienteRepository);
         BarbeiroRepository barbeiroRepository = new BarbeiroRepositoryImpl();
         AgendamentoRepository agendamentoRepository = new AgendamentoRepositoryImpl();
-        BarbeiroService barbeiroService = new BarbeiroService(barbeiroRepository, agendamentoRepository, clienteRepository);
+        BarbeiroService barbeiroService = new BarbeiroService(barbeiroRepository, agendamentoRepository,
+                clienteRepository);
 
         AgendamentoService agendamentoService = new AgendamentoService(agendamentoRepository);
         config.appData(Keys.CLIENTE_SERVICE.key(), clienteService);
         config.appData(Keys.BARBEIRO_SERVICE.key(), barbeiroService);
         config.appData(Keys.AGENDAMENTO_SERVICE.key(), agendamentoService);
     }
+
     private TemplateEngine configurarThymeleaf() {
         ClassLoaderTemplateResolver resolver = new ClassLoaderTemplateResolver();
         resolver.setPrefix("/templates/");
         resolver.setSuffix(".html");
         resolver.setTemplateMode("HTML");
         resolver.setCharacterEncoding("UTF-8");
-        resolver.setCacheable(false);   
+        resolver.setCacheable(false);
 
         TemplateEngine engine = new TemplateEngine();
         engine.setTemplateResolver(resolver);
         return engine;
     }
 
-    public void configurarRotas(Javalin app){
+    public void configurarRotas(Javalin app) {
         LoginController loginController = new LoginController();
         app.get("/", ctx -> {
             ctx.redirect("/login");
@@ -100,21 +118,18 @@ public class AppBarbearia {
         app.get("/perfil/{clienteId}", loginController::mostrarPerfil);
         app.get("/logOut", loginController::logOut);
 
-
         ClienteController clienteController = new ClienteController();
-        app.get("/cadastro", clienteController:: mostrarPaginaCadastro);
-        app.post("/cadastro", clienteController :: cadastrarCliente);
-        app.get("/listarClientes", clienteController :: listarClientes);
-        app.post("/telaEditar", clienteController :: editarCliente);
-
+        app.get("/cadastro", clienteController::mostrarPaginaCadastro);
+        app.post("/cadastro", clienteController::cadastrarCliente);
+        app.get("/listarClientes", clienteController::listarClientes);
+        app.post("/telaEditar", clienteController::editarCliente);
 
         BarbeiroController barbeiroController = new BarbeiroController();
-        app.get("/barbeiro", barbeiroController :: listarAgendamentos);
-
+        app.get("/barbeiro", barbeiroController::listarAgendamentos);
 
         AgendamentoController agendamentoController = new AgendamentoController();
-        app.get("/novoAgendamento/{clienteId}", agendamentoController :: mostrarPaginaAgendamento);
-        app.post("/novoAgendamento", agendamentoController :: criarAgendamento);
+        app.get("/novoAgendamento/{clienteId}", agendamentoController::mostrarPaginaAgendamento);
+        app.post("/novoAgendamento", agendamentoController::criarAgendamento);
         app.get("/agendamentos/ocupados", ctx -> {
             String dataStr = ctx.queryParam("data");
             if (dataStr == null) {
@@ -130,10 +145,11 @@ public class AppBarbearia {
             ctx.json(horariosOcupados);
         });
         app.get("/meusAgendamentos/{clienteId}", agendamentoController::listarAgendamentos);
-        app.get("/historico/{clienteId}", agendamentoController:: listarHistoricoDeAgendamento);
+        app.get("/historico/{clienteId}", agendamentoController::listarHistoricoDeAgendamento);
         app.delete("/agendamentos/{id}", agendamentoController::removerAgendamento);
 
     }
+
     private void configureJavalin(JavalinConfig config) {
         TemplateEngine templateEngine = configurarThymeleaf();
 
@@ -149,12 +165,14 @@ public class AppBarbearia {
             staticFileConfig.location = Location.CLASSPATH;
         });
 
-        config.fileRenderer(new JavalinThymeleaf(templateEngine));    }
+        config.fileRenderer(new JavalinThymeleaf(templateEngine));
+    }
 
     private Javalin inicializarJavalin() {
         Consumer<JavalinConfig> configConsumer = this::configureJavalin;
         return Javalin.create(configConsumer);
     }
+
     public void iniciar() {
         logger.info("Método iniciar() foi chamado!");
         Javalin app = inicializarJavalin();
@@ -170,15 +188,17 @@ public class AppBarbearia {
         int porta = obterPortaServidor();
         app.start(porta);
 
-
     }
+
     public static void main(String[] args) {
         new AppBarbearia().iniciar();
     }
-    public void configurarPaginasDeErro(Javalin app){
+
+    public void configurarPaginasDeErro(Javalin app) {
         app.error(404, ctx -> ctx.render("erro_404.html"));
         app.error(500, ctx -> ctx.render("erro_500.html"));
     }
+
     private int obterPortaServidor() {
         String portEnv = System.getenv("PORT");
         if (portEnv != null) {
