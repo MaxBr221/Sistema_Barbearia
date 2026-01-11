@@ -133,10 +133,10 @@ public class AgendamentoController {
             return;
         }
         if (agendamentos.getStatus().equals(Status.RESERVADO)) {
+            UUID clienteId = agendamentos.getCliente().getId();
             agendamentoService.removerAgendamento(id);
             logger.info("Agendamento removido com sucesso!");
-            ctx.attribute("agendamentos", agendamentos);
-            ctx.render("meusAgendamentos");
+            ctx.redirect("/meusAgendamentos/" + clienteId);
         } else {
             logger.info("Esse agendamento não está agendado");
             ctx.result("Esse agendamento não existe.");
