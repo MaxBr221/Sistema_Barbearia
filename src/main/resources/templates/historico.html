@@ -1,98 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Histórico</title>
+    <title>Meu Histórico | Barbearia Premium</title>
     <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
-
-    <style>
-        body{
-            background-image: url("/favicon_io/android-chrome-512x512.png");
-            text-align: center;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-        }
-        header{
-            border-radius: 10px;
-            color: rgb(255, 255, 255);
-            text-align: center;
-            max-height: 200px;
-
-        }
-        .form-container{
-            color: rgb(0, 0, 0);
-            margin-top: 60px;
-
-        }
-        .tabela{
-            background-color: white;
-            border-radius: 8px;
-            padding: 40px;
-            margin: 30px auto;
-            align-items: center;
-
-        }
-        .tabela th,
-        .tabela td{
-            border: 1px solid #000;
-            padding: 10px 15px;
-            text-align: center;
-            padding: 40px;
-        }
-        .voltar-btn {
-            position: fixed;
-            top: 12px;
-            left: 12px;
-            background-color: white;
-            color: black;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
-
-        .voltar-btn:hover {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/style/main.css">
 </head>
+
 <body>
-<header>
-    <div>
-        <h1>
-            Histórico de Agendamentos
-        </h1>
-    </div>
-</header>
 
-<div class="form-container">
-    <table class="tabela">
-        <thead>
-        <tr>
-            <th>Data</th>
-            <th>Hora</th>
-            <th>Serviço</th>
-        </tr>
-        </thead>
+    <header>
+        <div class="container navbar">
+            <h1><i class="fas fa-cut"></i> Barbearia do Igor</h1>
+            <div class="nav-links">
+                <a th:href="@{/telaCliente}"><i class="fas fa-arrow-left"></i> Voltar</a>
+            </div>
+        </div>
+    </header>
 
-        <tbody>
-        <tr th:each="a: ${historicos}">
-            <td>
-                <strong th:text="${a.diaSemana}"></strong><br>
-                <span th:text="${a.dataFormatada}"></span>
-            </td>            <td th:text="${a.hora}"></td>
-            <td th:text="${a.tipoServico}"></td>
-        </tr>
-        </tbody>
-    </table>
-    <div class="form-box">
-        <a href="/telaCliente" class="voltar-btn">Voltar</a>
-    </div>
-</div>
+    <main>
+        <div class="container">
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <h2><i class="fas fa-history"></i> Histórico de Agendamentos</h2>
+
+                <div class="table-container">
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Hora</th>
+                                <th>Serviço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="a: ${historicos}">
+                                <td>
+                                    <strong th:text="${a.diaSemana}" style="color: var(--primary-color);"></strong><br>
+                                    <span th:text="${a.dataFormatada}"
+                                        style="font-size: 0.9em; color: var(--text-secondary);"></span>
+                                </td>
+                                <td th:text="${a.hora}"></td>
+                                <td th:text="${a.tipoServico}"></td>
+                            </tr>
+                            <tr th:if="${#lists.isEmpty(historicos)}">
+                                <td colspan="3" style="text-align: center; color: var(--text-secondary);">
+                                    Nenhum histórico disponível.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Barbearia do Igor - Estilo & Tradição</p>
+    </footer>
+
 </body>
+
 </html>

@@ -22,8 +22,6 @@ import org.example.Services.ClienteService;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -142,7 +140,12 @@ public class AppBarbearia {
 
             List<LocalTime> horariosOcupados = agendamentoRepository.buscarHorariosOcupadosPorData(data);
 
-            ctx.json(horariosOcupados);
+            // Format timestamps to HH:mm string to match frontend expected format
+            List<String> horariosFormatados = horariosOcupados.stream()
+                    .map(time -> String.format("%02d:%02d", time.getHour(), time.getMinute()))
+                    .toList();
+
+            ctx.json(horariosFormatados);
         });
         app.get("/meusAgendamentos/{clienteId}", agendamentoController::listarAgendamentos);
         app.get("/historico/{clienteId}", agendamentoController::listarHistoricoDeAgendamento);

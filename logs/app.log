@@ -27154,3 +27154,1534 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'sistema_barbearia.agendament
 	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:226) ~[classes/:?]
 	... 43 more
 2026-01-09 23:18:11 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 23:26:22 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-09 23:26:22 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-09 23:26:22 INFO  DbValidate:41 - Successfully validated 2 migrations (execution time 00:00.037s)
+2026-01-09 23:26:22 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 1
+2026-01-09 23:26:22 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-09 23:26:22 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-09 23:26:23 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-09 23:26:23 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-09 23:26:23 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 23:26:23 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-09 23:26:23 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 23:26:23 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@2cfbeac4{/,null,AVAILABLE}
+2026-01-09 23:26:23 INFO  AbstractConnector:376 - Started ServerConnector@54534abf{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 23:26:23 INFO  Server:439 - Started Server@12477988{STARTING}[11.0.25,sto=0] @1773ms
+2026-01-09 23:26:23 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 23:26:23 INFO  Javalin:16 - Javalin started in 196ms \o/
+2026-01-09 23:26:23 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-09 23:26:23 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-09 23:26:23 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-09 23:26:25 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 23:26:28 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 23:26:28 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 23:26:31 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 23:26:37 ERROR AppBarbearia:183 - Erro não tratado
+java.lang.RuntimeException: Erro ao listar agendamentos ativos
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:257) ~[classes/:?]
+	at org.example.Services.AgendamentoService.listarAgendamentosAtivos(AgendamentoService.java:65) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.listarAgendamentos(AgendamentoController.java:108) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'sistema_barbearia.agendamento' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:226) ~[classes/:?]
+	... 43 more
+2026-01-09 23:26:39 ERROR AppBarbearia:183 - Erro não tratado
+java.lang.RuntimeException: Erro ao listar histórico
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarHistorico(AgendamentoRepositoryImpl.java:324) ~[classes/:?]
+	at org.example.Services.AgendamentoService.listarHistorico(AgendamentoService.java:71) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.listarHistoricoDeAgendamento(AgendamentoController.java:118) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-01-09 23:26:42 INFO  LoginController:83 - Mostrando tela perfil
+2026-01-09 23:29:33 INFO  LoginController:83 - Mostrando tela perfil
+2026-01-09 23:29:34 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 23:29:36 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 23:29:51 ERROR AppBarbearia:183 - Erro não tratado
+java.lang.RuntimeException: Erro ao buscar horários ocupados
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.buscarHorariosOcupadosPorData(AgendamentoRepositoryImpl.java:184) ~[classes/:?]
+	at org.example.AppBarbearia.lambda$configurarRotas$1(AppBarbearia.java:141) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'dat' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.buscarHorariosOcupadosPorData(AgendamentoRepositoryImpl.java:177) ~[classes/:?]
+	... 42 more
+2026-01-09 23:30:09 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 23:31:07 ERROR AppBarbearia:183 - Erro não tratado
+java.lang.RuntimeException: Erro ao listar agendamentos ativos
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:257) ~[classes/:?]
+	at org.example.Services.AgendamentoService.listarAgendamentosAtivos(AgendamentoService.java:65) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.listarAgendamentos(AgendamentoController.java:108) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'sistema_barbearia.agendamento' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:226) ~[classes/:?]
+	... 43 more
+2026-01-09 23:31:08 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 23:31:10 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 23:31:10 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 23:31:10 ERROR AppBarbearia:183 - Erro não tratado
+java.lang.RuntimeException: Erro ao listar histórico
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarHistorico(AgendamentoRepositoryImpl.java:324) ~[classes/:?]
+	at org.example.Services.AgendamentoService.listarHistorico(AgendamentoService.java:71) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.listarHistoricoDeAgendamento(AgendamentoController.java:118) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-01-09 23:31:12 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 23:31:13 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 23:31:13 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 23:31:14 INFO  LoginController:83 - Mostrando tela perfil
+2026-01-09 23:31:17 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 23:31:38 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-09 23:31:39 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-09 23:31:39 INFO  DbValidate:41 - Successfully validated 2 migrations (execution time 00:00.042s)
+2026-01-09 23:31:39 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 1
+2026-01-09 23:31:39 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-09 23:31:39 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-09 23:31:39 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-09 23:31:39 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-09 23:31:39 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 23:31:39 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-09 23:31:39 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 23:31:39 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@1bcb79c2{/,null,AVAILABLE}
+2026-01-09 23:31:39 INFO  AbstractConnector:376 - Started ServerConnector@7bc9e6ab{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 23:31:39 INFO  Server:439 - Started Server@7e97551f{STARTING}[11.0.25,sto=0] @1785ms
+2026-01-09 23:31:39 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 23:31:39 INFO  Javalin:16 - Javalin started in 188ms \o/
+2026-01-09 23:31:40 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-09 23:31:40 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-09 23:31:40 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-09 23:31:43 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 23:31:46 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 23:31:47 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 23:31:47 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 23:31:55 ERROR AppBarbearia:183 - Erro não tratado
+java.lang.RuntimeException: Erro ao listar agendamentos ativos
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:257) ~[classes/:?]
+	at org.example.Services.AgendamentoService.listarAgendamentosAtivos(AgendamentoService.java:65) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.listarAgendamentos(AgendamentoController.java:108) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'sistema_barbearia.agendamento' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:226) ~[classes/:?]
+	... 43 more
+2026-01-09 23:37:29 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-09 23:37:29 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-09 23:37:29 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.045s)
+2026-01-09 23:37:29 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 1
+2026-01-09 23:37:29 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "2 - Fix Schema"
+2026-01-09 23:37:29 WARN  DefaultSqlScriptExecutor:45 - DB: Table 'Cliente' already exists (SQL State: 42S01 - Error Code: 1050)
+2026-01-09 23:37:29 WARN  DefaultSqlScriptExecutor:45 - DB: Table 'Barbeiro' already exists (SQL State: 42S01 - Error Code: 1050)
+2026-01-09 23:37:30 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "3 - Override Schema"
+2026-01-09 23:37:30 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.cliente' (SQL State: 42S02 - Error Code: 1051)
+2026-01-09 23:37:30 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.barbeiro' (SQL State: 42S02 - Error Code: 1051)
+2026-01-09 23:37:30 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.agendamento' (SQL State: 42S02 - Error Code: 1051)
+2026-01-09 23:37:30 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.servico' (SQL State: 42S02 - Error Code: 1051)
+2026-01-09 23:37:30 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.administrador' (SQL State: 42S02 - Error Code: 1051)
+2026-01-09 23:37:30 ERROR DbMigrate:49 - Migration of schema `sistema_barbearia` to version "3 - Override Schema" failed! Please restore backups and roll back database and code!
+2026-01-09 23:37:30 ERROR AppBarbearia:68 - Erro ao executar migrações do Flyway
+org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Script V3__Override_Schema.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1826
+Message    : Duplicate foreign key constraint name 'agendamento_ibfk_1'
+Location   : db/migration/V3__Override_Schema.sql (C:\PROJETOS\Maxsuel\Sistema_Barbearia\target\classes\db\migration\V3__Override_Schema.sql)
+Line       : 35
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:392) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:280) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:279) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:252) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:146) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:62) ~[flyway-mysql-10.15.2.jar:?]
+	at org.flywaydb.database.mysql.MySQLConnection.lock(MySQLConnection.java:159) ~[flyway-mysql-10.15.2.jar:?]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:149) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:146) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:104) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:222) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:210) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:164) ~[flyway-core-10.15.2.jar:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:65) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:180) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:192) [classes/:?]
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Script V3__Override_Schema.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1826
+Message    : Duplicate foreign key constraint name 'agendamento_ibfk_1'
+Location   : db/migration/V3__Override_Schema.sql (C:\PROJETOS\Maxsuel\Sistema_Barbearia\target\classes\db\migration\V3__Override_Schema.sql)
+Line       : 35
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:256) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:217) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:137) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:75) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:66) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:31) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:65) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:384) ~[flyway-core-10.15.2.jar:?]
+	... 16 more
+Caused by: java.sql.SQLException: Duplicate foreign key constraint name 'agendamento_ibfk_1'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:210) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:88) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:212) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:137) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:75) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:66) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:31) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:65) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:384) ~[flyway-core-10.15.2.jar:?]
+	... 16 more
+2026-01-09 23:37:30 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-09 23:37:30 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-09 23:37:30 INFO  Javalin:16 - Starting Javalin ...
+2026-01-09 23:37:30 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-09 23:37:30 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-09 23:37:30 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@5631962{/,null,AVAILABLE}
+2026-01-09 23:37:30 INFO  AbstractConnector:376 - Started ServerConnector@27068a50{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-09 23:37:30 INFO  Server:439 - Started Server@1d207fad{STARTING}[11.0.25,sto=0] @2503ms
+2026-01-09 23:37:30 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-09 23:37:30 INFO  Javalin:16 - Javalin started in 204ms \o/
+2026-01-09 23:37:31 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-09 23:37:31 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-09 23:37:31 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-09 23:37:35 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 23:37:36 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 23:37:36 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 23:37:38 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-09 23:37:40 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 23:37:40 ERROR AppBarbearia:183 - Erro não tratado
+java.lang.RuntimeException: Erro ao listar agendamentos ativos
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:257) ~[classes/:?]
+	at org.example.Services.AgendamentoService.listarAgendamentosAtivos(AgendamentoService.java:65) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.listarAgendamentos(AgendamentoController.java:108) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'sistema_barbearia.agendamento' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:226) ~[classes/:?]
+	... 43 more
+2026-01-09 23:37:46 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-09 23:37:47 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-09 23:37:47 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-09 23:37:48 ERROR AppBarbearia:183 - Erro não tratado
+java.lang.RuntimeException: Erro ao listar histórico
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarHistorico(AgendamentoRepositoryImpl.java:324) ~[classes/:?]
+	at org.example.Services.AgendamentoService.listarHistorico(AgendamentoService.java:71) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.listarHistoricoDeAgendamento(AgendamentoController.java:118) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-01-09 23:37:49 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-10 00:42:31 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 00:42:43 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 00:42:44 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 00:42:44 INFO  JdbcTableSchemaHistory:41 - Schema history table `sistema_barbearia`.`flyway_schema_history` does not exist yet
+2026-01-10 00:42:44 INFO  DbValidate:41 - Successfully validated 1 migration (execution time 00:00.028s)
+2026-01-10 00:42:44 INFO  JdbcTableSchemaHistory:41 - Creating Schema History table `sistema_barbearia`.`flyway_schema_history` ...
+2026-01-10 00:42:44 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: << Empty Schema >>
+2026-01-10 00:42:44 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "1 - Initial Setup"
+2026-01-10 00:42:44 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.cliente' (SQL State: 42S02 - Error Code: 1051)
+2026-01-10 00:42:44 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.barbeiro' (SQL State: 42S02 - Error Code: 1051)
+2026-01-10 00:42:44 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.agendamento' (SQL State: 42S02 - Error Code: 1051)
+2026-01-10 00:42:44 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.servico' (SQL State: 42S02 - Error Code: 1051)
+2026-01-10 00:42:44 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.administrador' (SQL State: 42S02 - Error Code: 1051)
+2026-01-10 00:42:45 INFO  DbMigrate:41 - Successfully applied 1 migration to schema `sistema_barbearia`, now at version v1 (execution time 00:00.459s)
+2026-01-10 00:42:45 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 00:42:45 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 00:42:45 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 00:42:45 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 00:42:45 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 00:42:45 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 00:42:45 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@298d9a05{/,null,AVAILABLE}
+2026-01-10 00:42:45 INFO  AbstractConnector:376 - Started ServerConnector@27f1bbe0{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 00:42:45 INFO  Server:439 - Started Server@1917d90f{STARTING}[11.0.25,sto=0] @2348ms
+2026-01-10 00:42:45 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 00:42:45 INFO  Javalin:16 - Javalin started in 141ms \o/
+2026-01-10 00:42:45 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 00:42:45 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 00:42:45 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-10 00:42:52 WARN  LoginController:72 - jonasl.bernardino@gmail.com não está cadastrado.
+2026-01-10 00:43:00 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-10 00:43:12 INFO  ClienteController:51 - cliente JOnas cadastrado com sucesso!
+2026-01-10 00:43:12 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-10 00:45:22 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 00:45:23 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 00:45:23 INFO  DbValidate:41 - Successfully validated 1 migration (execution time 00:00.045s)
+2026-01-10 00:45:23 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 1
+2026-01-10 00:45:23 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 00:45:23 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 00:45:23 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 00:45:23 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 00:45:23 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 00:45:23 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 00:45:23 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 00:45:23 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@31fc71ab{/,null,AVAILABLE}
+2026-01-10 00:45:23 INFO  AbstractConnector:376 - Started ServerConnector@712ca57b{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 00:45:23 INFO  Server:439 - Started Server@7a94b64e{STARTING}[11.0.25,sto=0] @1762ms
+2026-01-10 00:45:23 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 00:45:23 INFO  Javalin:16 - Javalin started in 207ms \o/
+2026-01-10 00:45:24 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 00:45:24 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 00:45:24 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-10 00:45:28 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-10 00:45:37 INFO  ClienteController:51 - cliente JONAS BERNARDINO DE LIMA cadastrado com sucesso!
+2026-01-10 00:45:37 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-10 00:45:50 WARN  LoginController:72 - jonasl.bernardino@gmail.com não está cadastrado.
+2026-01-10 00:48:40 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 00:48:40 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 00:48:40 INFO  DbValidate:41 - Successfully validated 2 migrations (execution time 00:00.041s)
+2026-01-10 00:48:40 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 1
+2026-01-10 00:48:40 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "2 - Increase Phone Size"
+2026-01-10 00:48:40 INFO  DbMigrate:41 - Successfully applied 1 migration to schema `sistema_barbearia`, now at version v2 (execution time 00:00.093s)
+2026-01-10 00:48:40 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 00:48:40 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 00:48:40 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 00:48:40 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 00:48:40 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 00:48:41 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 00:48:41 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@529cfee5{/,null,AVAILABLE}
+2026-01-10 00:48:41 INFO  AbstractConnector:376 - Started ServerConnector@66908383{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 00:48:41 INFO  Server:439 - Started Server@4565a70a{STARTING}[11.0.25,sto=0] @1892ms
+2026-01-10 00:48:41 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 00:48:41 INFO  Javalin:16 - Javalin started in 177ms \o/
+2026-01-10 00:48:41 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 00:48:41 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 00:48:41 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-10 00:48:49 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-10 00:48:58 INFO  ClienteController:51 - cliente JONAS BERNARDINO DE LIMA cadastrado com sucesso!
+2026-01-10 00:48:58 INFO  LoginController:21 - Direcionado para tela de login
+2026-01-10 00:51:08 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 00:51:09 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 00:51:09 INFO  DbValidate:41 - Successfully validated 3 migrations (execution time 00:00.051s)
+2026-01-10 00:51:09 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 2
+2026-01-10 00:51:09 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "3 - Increase Password Size"
+2026-01-10 00:51:09 INFO  DbMigrate:41 - Successfully applied 1 migration to schema `sistema_barbearia`, now at version v3 (execution time 00:00.495s)
+2026-01-10 00:51:09 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 00:51:09 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 00:51:09 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 00:51:09 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 00:51:09 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 00:51:09 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 00:51:09 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@529cfee5{/,null,AVAILABLE}
+2026-01-10 00:51:10 INFO  AbstractConnector:376 - Started ServerConnector@66908383{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 00:51:10 INFO  Server:439 - Started Server@4565a70a{STARTING}[11.0.25,sto=0] @2277ms
+2026-01-10 00:51:10 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 00:51:10 INFO  Javalin:16 - Javalin started in 206ms \o/
+2026-01-10 00:51:10 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 00:51:10 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 00:51:10 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-10 00:51:11 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-10 00:51:16 INFO  ClienteController:51 - cliente JONAS BERNARDINO DE LIMA cadastrado com sucesso!
+2026-01-10 00:51:16 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 00:51:18 WARN  LoginController:72 - jonasl.bernardino@gmail.com não está cadastrado.
+2026-01-10 00:51:23 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-10 00:51:36 INFO  ClienteController:51 - cliente JONAS BERNARDINO DE LIMA cadastrado com sucesso!
+2026-01-10 00:51:36 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 00:51:41 WARN  LoginController:72 - jonasl.bernardino@gmail.com não está cadastrado.
+2026-01-10 00:51:49 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-10 00:52:01 INFO  ClienteController:51 - cliente JONAS cadastrado com sucesso!
+2026-01-10 00:52:01 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 00:52:11 WARN  LoginController:72 - jonasl.bernardino@gmail.com não está cadastrado.
+2026-01-10 01:02:30 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 01:02:30 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 01:02:30 INFO  DbValidate:41 - Successfully validated 3 migrations (execution time 00:00.042s)
+2026-01-10 01:02:30 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 3
+2026-01-10 01:02:30 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 01:02:30 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 01:02:31 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 01:02:31 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 01:02:31 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 01:02:31 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 01:02:31 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 01:02:31 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@31fc71ab{/,null,AVAILABLE}
+2026-01-10 01:02:31 INFO  AbstractConnector:376 - Started ServerConnector@712ca57b{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 01:02:31 INFO  Server:439 - Started Server@7a94b64e{STARTING}[11.0.25,sto=0] @1639ms
+2026-01-10 01:02:31 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 01:02:31 INFO  Javalin:16 - Javalin started in 180ms \o/
+2026-01-10 01:02:31 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 01:02:31 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 01:02:31 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-10 01:02:42 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-10 01:02:48 INFO  ClienteController:39 - Cliente: jonasl.bernardino@gmail.com já está cadastrado!
+2026-01-10 01:02:48 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-10 01:02:55 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 01:02:56 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 01:02:56 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 01:03:01 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 01:03:22 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 01:03:22 ERROR AgendamentoController:98 - Erro ao criar agendamento
+java.lang.IllegalArgumentException: Não é permitido cadastrar datas passadas.
+	at org.example.Services.AgendamentoService.validarData(AgendamentoService.java:77) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.criarAgendamento(AgendamentoController.java:70) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-01-10 01:03:22 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 01:03:31 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 01:03:31 ERROR AgendamentoController:98 - Erro ao criar agendamento
+java.lang.RuntimeException: barbeiro não encontrado.
+	at org.example.Services.BarbeiroService.lambda$buscarBarbeiroPadrao$0(BarbeiroService.java:47) ~[classes/:?]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at org.example.Services.BarbeiroService.buscarBarbeiroPadrao(BarbeiroService.java:47) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.criarAgendamento(AgendamentoController.java:79) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-01-10 01:03:31 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 01:03:54 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 01:03:54 ERROR AgendamentoController:98 - Erro ao criar agendamento
+java.lang.RuntimeException: barbeiro não encontrado.
+	at org.example.Services.BarbeiroService.lambda$buscarBarbeiroPadrao$0(BarbeiroService.java:47) ~[classes/:?]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at org.example.Services.BarbeiroService.buscarBarbeiroPadrao(BarbeiroService.java:47) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.criarAgendamento(AgendamentoController.java:79) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-01-10 01:03:54 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 01:06:01 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 01:06:01 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 01:06:01 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.049s)
+2026-01-10 01:06:01 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 3
+2026-01-10 01:06:01 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "4 - Seed Data"
+2026-01-10 01:06:02 INFO  DbMigrate:41 - Successfully applied 1 migration to schema `sistema_barbearia`, now at version v4 (execution time 00:00.037s)
+2026-01-10 01:06:02 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 01:06:02 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 01:06:02 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 01:06:02 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 01:06:02 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 01:06:02 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 01:06:02 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@2dbd803f{/,null,AVAILABLE}
+2026-01-10 01:06:02 INFO  AbstractConnector:376 - Started ServerConnector@5eccd3b9{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 01:06:02 INFO  Server:439 - Started Server@6ad5923a{STARTING}[11.0.25,sto=0] @1641ms
+2026-01-10 01:06:02 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 01:06:02 INFO  Javalin:16 - Javalin started in 162ms \o/
+2026-01-10 01:06:02 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 01:06:02 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 01:06:02 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-10 01:06:13 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 01:06:21 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 01:06:21 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-10 01:06:21 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 01:06:24 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 01:06:25 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 01:06:25 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 01:06:29 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 01:06:30 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 01:06:31 ERROR AppBarbearia:183 - Erro não tratado
+java.lang.RuntimeException: Erro ao listar agendamentos ativos
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:252) ~[classes/:?]
+	at org.example.Services.AgendamentoService.listarAgendamentosAtivos(AgendamentoService.java:65) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.listarAgendamentos(AgendamentoController.java:108) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'c.login' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.example.BancoDeDados.AgendamentoRepositoryImpl.listarAgendamentoAtivos(AgendamentoRepositoryImpl.java:223) ~[classes/:?]
+	... 43 more
+2026-01-10 01:07:41 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 01:07:42 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 01:07:42 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.042s)
+2026-01-10 01:07:42 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 01:07:42 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 01:07:42 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 01:07:42 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 01:07:42 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 01:07:42 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 01:07:42 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 01:07:42 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 01:07:42 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@7068f7ca{/,null,AVAILABLE}
+2026-01-10 01:07:42 INFO  AbstractConnector:376 - Started ServerConnector@5300f14a{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 01:07:42 INFO  Server:439 - Started Server@40226788{STARTING}[11.0.25,sto=0] @1645ms
+2026-01-10 01:07:42 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 01:07:42 INFO  Javalin:16 - Javalin started in 194ms \o/
+2026-01-10 01:07:43 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 01:07:43 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 01:07:43 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 201 days old. Consider checking for a newer version.).
+2026-01-10 01:07:47 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 01:07:52 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 01:07:52 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 01:07:54 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 01:07:57 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 01:07:59 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 01:07:59 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 01:08:00 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 01:08:06 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 01:08:06 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-10 01:08:06 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 01:08:09 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 01:08:10 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 22:08:00 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 22:07:59 ERROR AppBarbearia:68 - Erro ao executar migrações do Flyway
+org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:71) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:138) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:164) ~[flyway-core-10.15.2.jar:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:65) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:180) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:192) [classes/:?]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+2026-01-10 22:07:59 ERROR AppBarbearia:75 - Erro ao conectar no MySQL
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:72) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:180) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:192) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+2026-01-10 22:09:16 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 22:09:17 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 22:09:17 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.055s)
+2026-01-10 22:09:17 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 22:09:17 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 22:09:17 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 22:09:17 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 22:09:17 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 22:09:17 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 22:09:17 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 22:09:17 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 22:09:17 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@4d23015c{/,null,AVAILABLE}
+2026-01-10 22:09:17 INFO  AbstractConnector:376 - Started ServerConnector@4642b71d{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 22:09:17 INFO  Server:439 - Started Server@77128dab{STARTING}[11.0.25,sto=0] @2049ms
+2026-01-10 22:09:17 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 22:09:17 INFO  Javalin:16 - Javalin started in 215ms \o/
+2026-01-10 22:09:17 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 22:09:17 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 22:09:17 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-10 22:09:42 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:10:38 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 22:10:38 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:10:40 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:10:45 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 22:10:49 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:11:03 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:11:03 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:11:04 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:11:04 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-10 22:11:04 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-10 22:11:04 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-10 22:11:04 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:11:08 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:11:08 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:11:09 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 22:13:54 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 22:14:21 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 22:14:22 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 22:14:23 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.100s)
+2026-01-10 22:14:23 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 22:14:23 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 22:14:23 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 22:14:23 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 22:14:23 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 22:14:23 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 22:14:23 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 22:14:23 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 22:14:23 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@7068f7ca{/,null,AVAILABLE}
+2026-01-10 22:14:23 INFO  AbstractConnector:376 - Started ServerConnector@5300f14a{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 22:14:23 INFO  Server:439 - Started Server@40226788{STARTING}[11.0.25,sto=0] @2632ms
+2026-01-10 22:14:23 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 22:14:23 INFO  Javalin:16 - Javalin started in 386ms \o/
+2026-01-10 22:14:24 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 22:14:24 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 22:14:24 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-10 22:15:05 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 22:15:08 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:15:10 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 22:15:10 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:15:13 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 22:15:19 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:15:31 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:15:31 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-10 22:15:31 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:15:36 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:15:38 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 22:15:46 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:15:47 INFO  AgendamentoController:121 - listando histórico
+2026-01-10 22:15:51 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:15:53 INFO  LoginController:84 - Mostrando tela perfil
+2026-01-10 22:16:36 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:16:39 INFO  LoginController:90 - Direcionando para saida..
+2026-01-10 22:16:39 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:17:01 WARN  LoginController:66 - Tentativa de login com erro.
+2026-01-10 22:17:01 WARN  LoginController:72 - igor@barbearia.com não está cadastrado.
+2026-01-10 22:17:21 WARN  LoginController:66 - Tentativa de login com erro.
+2026-01-10 22:17:21 WARN  LoginController:72 - igor@barbearia.com não está cadastrado.
+2026-01-10 22:19:18 WARN  LoginController:66 - Tentativa de login com erro.
+2026-01-10 22:19:18 WARN  LoginController:72 - igor@barbearia.com não está cadastrado.
+2026-01-10 22:24:10 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 22:24:11 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 22:24:11 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.041s)
+2026-01-10 22:24:11 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 22:24:11 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 22:24:11 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 22:24:11 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 22:24:11 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 22:24:11 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 22:24:11 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 22:24:11 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 22:24:11 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@7068f7ca{/,null,AVAILABLE}
+2026-01-10 22:24:11 INFO  AbstractConnector:376 - Started ServerConnector@5300f14a{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 22:24:11 INFO  Server:439 - Started Server@40226788{STARTING}[11.0.25,sto=0] @1710ms
+2026-01-10 22:24:11 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 22:24:11 INFO  Javalin:16 - Javalin started in 201ms \o/
+2026-01-10 22:24:12 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 22:24:12 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 22:24:12 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-10 22:24:55 WARN  LoginController:64 - Detectou login padrão. Atualizando hash de senha para garantir compatibilidade.
+2026-01-10 22:24:55 INFO  LoginController:71 - Tentativa de login valida com sucesso!
+2026-01-10 22:24:56 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-10 22:25:15 INFO  LoginController:101 - Direcionando para saida..
+2026-01-10 22:25:15 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:25:18 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 22:25:18 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:25:20 INFO  AgendamentoController:121 - listando histórico
+2026-01-10 22:25:24 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:25:25 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 22:25:28 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:25:31 INFO  LoginController:95 - Mostrando tela perfil
+2026-01-10 22:25:33 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:25:35 INFO  LoginController:101 - Direcionando para saida..
+2026-01-10 22:25:35 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:25:39 WARN  LoginController:64 - Detectou login padrão. Atualizando hash de senha para garantir compatibilidade.
+2026-01-10 22:25:39 INFO  LoginController:71 - Tentativa de login valida com sucesso!
+2026-01-10 22:25:39 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-10 22:28:45 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 22:28:46 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 22:28:46 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.056s)
+2026-01-10 22:28:46 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 22:28:46 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 22:28:46 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 22:28:46 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 22:28:46 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 22:28:46 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 22:28:46 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 22:28:46 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 22:28:46 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@73877e19{/,null,AVAILABLE}
+2026-01-10 22:28:46 INFO  AbstractConnector:376 - Started ServerConnector@40620d8e{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 22:28:46 INFO  Server:439 - Started Server@17d238b1{STARTING}[11.0.25,sto=0] @1724ms
+2026-01-10 22:28:46 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 22:28:46 INFO  Javalin:16 - Javalin started in 177ms \o/
+2026-01-10 22:28:46 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 22:28:46 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 22:28:46 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-10 22:28:51 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-10 22:29:28 INFO  LoginController:101 - Direcionando para saida..
+2026-01-10 22:29:28 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:29:34 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 22:29:34 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:29:35 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:31:02 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:31:04 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:31:05 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:31:58 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:32:47 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:32:47 ERROR AgendamentoController:98 - Erro ao criar agendamento
+java.lang.IllegalArgumentException: Não é permitido cadastrar datas passadas.
+	at org.example.Services.AgendamentoService.validarData(AgendamentoService.java:77) ~[classes/:?]
+	at org.example.Controllers.AgendamentoController.criarAgendamento(AgendamentoController.java:70) ~[classes/:?]
+	at io.javalin.router.Endpoint.handle(Endpoint.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.router.ParsedEndpoint.handle(ParsedEndpoint.kt:15) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$11$lambda$9$lambda$8(DefaultTasks.kt:55) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:99) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:64) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.handle(JavalinServlet.kt:50) ~[javalin-6.7.0.jar:6.7.0]
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:30) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:52) ~[javalin-6.7.0.jar:6.7.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587) ~[jetty-jakarta-servlet-api-5.0.2.jar:?]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-11.0.25.jar:11.0.25]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-01-10 22:32:47 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:33:05 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:33:05 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-10 22:33:05 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:33:25 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:33:25 WARN  AgendamentoController:73 - Horario ocupado!
+2026-01-10 22:33:25 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:33:32 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:33:52 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:33:55 INFO  LoginController:101 - Direcionando para saida..
+2026-01-10 22:33:55 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:34:48 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:35:28 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 22:35:28 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:35:31 INFO  LoginController:101 - Direcionando para saida..
+2026-01-10 22:35:31 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:35:51 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:35:52 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:35:52 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:36:12 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:36:14 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:36:19 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:36:21 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:36:22 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 22:36:22 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:36:30 INFO  LoginController:101 - Direcionando para saida..
+2026-01-10 22:36:30 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:37:24 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 22:37:25 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 22:37:25 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.043s)
+2026-01-10 22:37:25 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 22:37:25 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 22:37:25 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 22:37:25 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 22:37:25 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 22:37:25 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 22:37:25 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 22:37:25 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 22:37:25 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@41f35f7c{/,null,AVAILABLE}
+2026-01-10 22:37:25 INFO  AbstractConnector:376 - Started ServerConnector@1a1ed4e5{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 22:37:25 INFO  Server:439 - Started Server@4a31c2ee{STARTING}[11.0.25,sto=0] @1919ms
+2026-01-10 22:37:25 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 22:37:25 INFO  Javalin:16 - Javalin started in 172ms \o/
+2026-01-10 22:37:25 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:37:26 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 22:37:26 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 22:37:26 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-10 22:37:27 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:38:24 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 22:38:24 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:38:26 INFO  LoginController:101 - Direcionando para saida..
+2026-01-10 22:38:26 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:38:36 WARN  LoginController:64 - Detectou login padrão. Atualizando hash de senha para garantir compatibilidade.
+2026-01-10 22:38:36 WARN  LoginController:64 - Detectou login padrão. Atualizando hash de senha para garantir compatibilidade.
+2026-01-10 22:38:36 INFO  LoginController:71 - Tentativa de login valida com sucesso!
+2026-01-10 22:38:36 INFO  LoginController:71 - Tentativa de login valida com sucesso!
+2026-01-10 22:38:37 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-10 22:39:09 INFO  LoginController:101 - Direcionando para saida..
+2026-01-10 22:39:09 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:39:18 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 22:39:18 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:39:21 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:39:35 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:39:35 WARN  AgendamentoController:73 - Horario ocupado!
+2026-01-10 22:39:35 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:39:49 INFO  AppBarbearia:175 - Método iniciar() foi chamado!
+2026-01-10 22:39:49 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 22:39:49 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.059s)
+2026-01-10 22:39:49 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 22:39:49 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 22:39:49 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 22:39:49 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 22:39:49 INFO  AppBarbearia:155 - Servidor Javalin está iniciando...
+2026-01-10 22:39:49 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 22:39:49 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 22:39:49 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 22:39:50 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@7068f7ca{/,null,AVAILABLE}
+2026-01-10 22:39:50 INFO  AbstractConnector:376 - Started ServerConnector@5300f14a{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 22:39:50 INFO  Server:439 - Started Server@40226788{STARTING}[11.0.25,sto=0] @1691ms
+2026-01-10 22:39:50 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 22:39:50 INFO  Javalin:16 - Javalin started in 188ms \o/
+2026-01-10 22:39:50 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 22:39:50 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 22:39:50 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-10 22:39:58 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:40:16 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:40:16 WARN  AgendamentoController:73 - Horario ocupado!
+2026-01-10 22:40:16 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:41:36 INFO  AppBarbearia:180 - Método iniciar() foi chamado!
+2026-01-10 22:41:37 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 22:41:37 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.046s)
+2026-01-10 22:41:37 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 22:41:37 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 22:41:37 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 22:41:37 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 22:41:37 INFO  AppBarbearia:160 - Servidor Javalin está iniciando...
+2026-01-10 22:41:37 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 22:41:37 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 22:41:37 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 22:41:37 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@4443ef6f{/,null,AVAILABLE}
+2026-01-10 22:41:37 INFO  AbstractConnector:376 - Started ServerConnector@56febdc{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 22:41:37 INFO  Server:439 - Started Server@23eee4b8{STARTING}[11.0.25,sto=0] @1715ms
+2026-01-10 22:41:37 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 22:41:37 INFO  Javalin:16 - Javalin started in 177ms \o/
+2026-01-10 22:41:37 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 22:41:37 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 22:41:37 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-10 22:41:41 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:43:53 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:44:24 INFO  AppBarbearia:180 - Método iniciar() foi chamado!
+2026-01-10 22:44:25 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 22:44:25 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.048s)
+2026-01-10 22:44:25 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 22:44:25 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 22:44:25 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 22:44:25 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 22:44:25 INFO  AppBarbearia:160 - Servidor Javalin está iniciando...
+2026-01-10 22:44:25 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 22:44:25 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 22:44:25 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 22:44:25 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@31fc71ab{/,null,AVAILABLE}
+2026-01-10 22:44:25 INFO  AbstractConnector:376 - Started ServerConnector@712ca57b{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 22:44:25 INFO  Server:439 - Started Server@7a94b64e{STARTING}[11.0.25,sto=0] @1675ms
+2026-01-10 22:44:25 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 22:44:25 INFO  Javalin:16 - Javalin started in 175ms \o/
+2026-01-10 22:44:25 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 22:44:25 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 22:44:25 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-10 22:44:34 INFO  AgendamentoController:23 - Direcionando para tela de agendamento

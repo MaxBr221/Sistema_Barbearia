@@ -1,200 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-BR"  xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novo Agendamento</title>
-
-    <script src="/js/calendario.js" defer></script>
+    <title>Novo Agendamento | Barbearia Premium</title>
     <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
-
-
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-image: url("/favicon_io/android-chrome-512x512.png");
-            margin: 0;
-
-        }
-        header{
-            color: white;
-            border-radius: 6px;
-            font-size: medium;
-            font-style:oblique;
-            text-align: center;
-        }
-        .horarios button.selecionado {
-            background-color: #1e90ff;
-            color: white;
-            border: 3px solid #0b5ed7;
-            transform: scale(1.05);
-        }
-        .horarios button.ocupado {
-            background-color: #ccc;
-            color: #666;
-            cursor: not-allowed;
-            border: 2px dashed #999;
-        }
-
-
-        .box{
-            background-color: white;
-            color: white;
-            border-radius: 8px;
-            padding: 30px;
-            max-width: 400px;
-            margin: 40px auto;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-            text-align: center;
-        }.box label{
-            font-size: x-large;
-            font-style:initial;
-            color: black;
-
-
-        }.box input[type="date"] {
-            width: 180px;
-            height: 40px;
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
-        .box button{
-            width: 100px;
-            height: 70px;
-            padding: 8px;
-            border-radius: 12px;
-        }
-            .horarios {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 20px 0;
-        }
-
-        .horarios button {
-            padding: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .select{
-            padding: 12px;
-            border-radius: 8px;
-            width: 400px;
-            height: 50px;
-            margin:10px 0;
-            display: flex;
-            align-items: center;
-            gap: 0px;
-
-        }
-        .select h2{
-            text-align: center;
-            font-style: initial;
-            width: 200px;
-            font-size: 16px;
-            padding: 5px;
-
-
-        }
-        #servicos {
-            width: 200px;
-            height: 100px;
-            color: black;
-        }
-        .voltar-btn {
-            position: fixed;
-            top: 12px;
-            left: 12px;
-            background-color: white;
-            color: black;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
-
-        .voltar-btn:hover {
-            background-color: #f2f2f2;
-        }
-
-        .box p{
-            font-style: normal;
-            font-size: x-large;
-            color: black;
-        }
-        .box h2{
-            font-style: normal;
-            font-size: x-large;
-            color: black;
-        }
-    </style>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/style/main.css">
+    <!-- JS Calendario -->
+    <script src="/js/calendario.js" defer></script>
 </head>
+
 <body>
-<header>
-    <div>
-        <h1>
-            Escolha seu Agendamento!
-        </h1>
-    </div>
-</header>
-<form action="/novoAgendamento" method="post" id="formAgendamento">
 
-    <div class="box">
-        <div th:if="${msg}" class="alert-sucesso">
-            <h2 th:text="${msg}"></h2>
+    <header>
+        <div class="container navbar">
+            <h1><i class="fas fa-cut"></i> Barbearia do Igor</h1>
+            <div class="nav-links">
+                <a th:href="@{/telaCliente}"><i class="fas fa-arrow-left"></i> Voltar</a>
+            </div>
         </div>
-        <div th:if="${msg_erro}" class="alert alert-danger">
-            <h2 th:text="${msg_erro}"></h2>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <form action="/novoAgendamento" method="post" id="formAgendamento">
+
+                <div class="card" style="max-width: 600px; margin: 0 auto;">
+                    <h2><i class="fas fa-calendar-alt"></i> Novo Agendamento</h2>
+
+                    <!-- Alerts -->
+                    <div th:if="${msg}" class="alert"
+                        style="background-color: rgba(76, 175, 80, 0.1); border: 1px solid var(--success-color); color: var(--success-color);">
+                        <i class="fas fa-check-circle"></i> <span th:text="${msg}"></span>
+                    </div>
+                    <div th:if="${msg_erro}" class="alert alert-error">
+                        <i class="fas fa-exclamation-triangle"></i> <span th:text="${msg_erro}"></span>
+                    </div>
+                    <div th:if="${ocupado}" class="alert alert-error">
+                        <i class="fas fa-clock"></i> <span th:text="${ocupado}"></span>
+                    </div>
+                    <div th:if="${nulo}" class="alert alert-error">
+                        <span th:text="${nulo}"></span>
+                    </div>
+
+                    <!-- Date Picker -->
+                    <div class="form-group">
+                        <label for="data">Escolha o dia:</label>
+                        <input type="date" name="data" id="data" onchange="carregarHorarios()" required>
+                    </div>
+
+                    <!-- Time Grid Container -->
+                    <div class="form-group">
+                        <label>Horários disponíveis:</label>
+                        <div id="horarios" class="time-grid">
+                            <p style="color: var(--text-secondary); font-style: italic;">Selecione uma data para ver os
+                                horários.</p>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="hora" id="hora">
+                    <input type="hidden" name="clienteId" th:value="${clienteId}">
+
+                    <!-- Services Selection -->
+                    <!-- Services Selection -->
+                    <div class="form-group">
+                        <label style="margin-bottom: 10px; display: block;">Escolha os Serviços:</label>
+
+                        <div class="service-grid">
+                            <!-- Corte -->
+                            <label class="service-card">
+                                <input type="checkbox" name="servicos" value="CORTE_CABELO">
+                                <div class="service-content">
+                                    <i class="fas fa-cut"></i>
+                                    <span>Corte de Cabelo</span>
+                                </div>
+                            </label>
+
+                            <!-- Sobrancelha -->
+                            <label class="service-card">
+                                <input type="checkbox" name="servicos" value="SOBRANCELHA">
+                                <div class="service-content">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Sobrancelha</span>
+                                </div>
+                            </label>
+
+                            <!-- Barba -->
+                            <label class="service-card">
+                                <input type="checkbox" name="servicos" value="BARBA">
+                                <div class="service-content">
+                                    <i class="fas fa-user"></i>
+                                    <span>Barba</span>
+                                </div>
+                            </label>
+
+                            <!-- Pintura -->
+                            <label class="service-card">
+                                <input type="checkbox" name="servicos" value="PINTAR_CABELO">
+                                <div class="service-content">
+                                    <i class="fas fa-paint-fill"></i>
+                                    <span>Pintura/Luzes</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="confirmarAgendamento()"
+                        style="margin-top: 20px;">
+                        <i class="fas fa-check"></i> CONFIRMAR AGENDAMENTO
+                    </button>
+
+                </div>
+            </form>
         </div>
-        <div th:if="${ocupado}" class="alert-ocupado">
-            <p th:text="${ocupado}"></p>
-        </div>
-        <div th:if="${nulo}" class="alert-nulo">
-            <p th:text="${nulo}"></p>
-        </div>
+    </main>
 
-
-        <label>Escolha o dia:</label>
-        <input type="date" name="data" id="data" onchange="carregarHorarios()">
-
-        <div class="horarios" id="horarios"></div>
-
-        <input type="hidden" name="hora" id="hora">
-
-        <input type="hidden" name="clienteId" th:value="${clienteId}">
-
-        <div class="servicos">
-            <h2>Escolha os Serviços:</h2>
-
-            <label class="servico-btn">
-                <input type="checkbox" name="servicos" value="CORTE_CABELO">
-                Corte de Cabelo
-            </label>
-
-            <label class="servico-btn">
-                <input type="checkbox" name="servicos" value="SOBRANCELHA">
-                Sobrancelha
-            </label>
-
-            <label class="servico-btn">
-                <input type="checkbox" name="servicos" value="BARBA">
-                Barba
-            </label>
-        </div>
-
-        <button type="button" onclick="confirmarAgendamento()">
-            Confirmar
-        </button>
-
-    </div>
-    <div class="form-box">
-        <a href="/telaCliente" class="voltar-btn">Voltar</a>
-    </div>
-</form>
+    <footer>
+        <p>&copy; 2026 Barbearia do Igor - Estilo & Tradição</p>
+    </footer>
 
 </body>
+
 </html>

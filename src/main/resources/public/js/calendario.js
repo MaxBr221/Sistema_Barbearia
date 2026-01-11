@@ -1,7 +1,6 @@
 let horarioSelecionado = null;
 
 function carregarHorarios() {
-function carregarHorarios() {
   const data = document.getElementById("data").value;
   const container = document.getElementById("horarios");
 
@@ -13,30 +12,7 @@ function carregarHorarios() {
   const diaSemana = new Date(data + "T00:00").getDay();
 
   if (diaSemana === 0) {
-    container.innerHTML = "<p>❌ Barbearia fechada neste dia</p>";
-    return;
-  }
-
-  fetch(`/agendamentos/ocupados?data=${data}`)
-    .then(res => res.json())
-    .then(ocupados => {
-      const horarios = gerarHorarios();
-      montarHorarios(horarios, ocupados);
-    });
-}
-
-  const data = document.getElementById("data").value;
-  const container = document.getElementById("horarios");
-
-  container.innerHTML = "";
-  horarioSelecionado = null;
-
-  if (!data) return;
-
-  const diaSemana = new Date(data + "T00:00").getDay();
-
-  if (diaSemana === 0) {
-    container.innerHTML = "<p>❌ Barbearia fechada neste dia</p>";
+    container.innerHTML = "<p style='grid-column: 1/-1; text-align: center;'>❌ Barbearia fechada neste dia</p>";
     return;
   }
 
@@ -56,8 +32,7 @@ function gerarHorarios() {
     horarios.push(formataHora(h, 30));
   }
 
-
-  for (let h = 15; h < 18; h ++) {
+  for (let h = 15; h < 18; h++) {
     horarios.push(formataHora(h, 0));
     horarios.push(formataHora(h, 30));
   }
@@ -68,20 +43,21 @@ function gerarHorarios() {
 function montarHorarios(horarios, ocupados) {
   const container = document.getElementById("horarios");
   container.innerHTML = "";
+  // Ensure the container has the grid class if not already in HTML (but it should be)
+  container.classList.add("time-grid");
 
   horarios.forEach(hora => {
+    // If occupied, do not render the button (hide it)
+    if (ocupados.includes(hora)) {
+      return; 
+    }
+
     const botao = document.createElement("button");
     botao.type = "button";
     botao.innerText = hora;
+    botao.classList.add("time-btn"); // Add the main design class
 
-
-    if (ocupados.includes(hora)) {
-      botao.disabled = true;
-      botao.classList.add("ocupado");
-    } else {
-      botao.onclick = () => selecionarHorario(hora, botao);
-    }
-
+    botao.onclick = () => selecionarHorario(hora, botao);
     container.appendChild(botao);
   });
 }
@@ -90,12 +66,11 @@ function selecionarHorario(hora, botaoSelecionado) {
   horarioSelecionado = hora;
   document.getElementById("hora").value = hora;
 
-
   document
     .querySelectorAll("#horarios button")
-    .forEach(btn => btn.classList.remove("selecionado"));
+    .forEach(btn => btn.classList.remove("selected"));
 
-  botaoSelecionado.classList.add("selecionado");
+  botaoSelecionado.classList.add("selected");
 }
 
 function confirmarAgendamento() {
@@ -104,6 +79,12 @@ function confirmarAgendamento() {
 
   if (!data || !hora) {
     alert("Selecione a data e o horário");
+    return;
+  }
+
+  const checkboxes = document.querySelectorAll('input[name="servicos"]:checked');
+  if (checkboxes.length === 0) {
+    alert("Selecione pelo menos um serviço.");
     return;
   }
 

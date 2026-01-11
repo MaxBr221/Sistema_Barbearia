@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erro no servidor</title>
+    <title>Página Não Encontrada | Barbearia Premium</title>
+    <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/style/main.css">
 </head>
+
 <body>
-<h1>Infelizmente o servidor deu um Erro</h1>
+    <header>
+        <div class="container navbar">
+            <h1><i class="fas fa-cut"></i> Barbearia do Igor</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="card" style="text-align: center; padding: 40px;">
+            <i class="fas fa-search-location"
+                style="font-size: 4rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+            <h2 style="margin-bottom: 10px;">404 - Página Não Encontrada</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">A página que você está procurando não existe
+                ou foi movida.</p>
+            <a href="/login" class="btn btn-primary" style="max-width: 200px;">VOLTAR AO INÍCIO</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Barbearia do Igor - Estilo & Tradição</p>
+    </footer>
 </body>
+
 </html>

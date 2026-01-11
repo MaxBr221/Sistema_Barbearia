@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbeiro</title>
+    <title>Área do Barbeiro | Barbearia Premium</title>
     <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
-
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/style/main.css">
     <style>
-        body{
-            background-image: url("/favicon_io/android-chrome-512x512.png");
-        }
-        header{
-            color: white;
-        }
-        h2{
-            text-align: center;
-            border-radius: 8px;
-            font-style: normal;
-            color: aliceblue;
-            font-size: xx-large;
-
-        }
-        p{
-            text-align: center;
-            color: rgb(0, 0, 0);
-            margin: 6px 0;
-            font-style:initial;
-            font-size: larger;
-
-        }.agendamento-container{
-            display: flex;
-            flex-wrap: wrap;
+        .appointments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            justify-content: center;
-            padding: 20px;
-        }
-        .agendamento-card{
-            width: 300px;
-            color: rgb(0, 0, 0);
-            background-color: white;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 4px 10px white;
-
-
         }
 
-
+        .appointment-card {
+            border-left: 4px solid var(--primary-color);
+        }
     </style>
 </head>
+
 <body>
-<header>
-    <div>
-        <h1>Igor barbeiro</h1>
-    </div>
-</header>
 
-<div>
-    <h2>Agendamentos</h2>
-</div>
-<div th:if="${#lists.isEmpty(agendamento)}">
-    <p>Nenhum agendamento encontrado.</p>
-</div>
-<div class="agendamento-container">
-    <div th:each="ag : ${agendamento}" class="agendamento-card">
-        <p><strong>Nome: </strong> <span th:text="${ag.cliente.nome}"></span></p>
-        <p><strong>Hora: </strong><span th:text="${ag.hora}"></span></p>
-        <p>
-            <strong>Data: </strong>
-            <span th:text="${ag.diaSemana}"></span> -
-            <span th:text="${ag.dataFormatada}"></span>
-        </p>
+    <header>
+        <div class="container navbar">
+            <h1><i class="fas fa-cut"></i> Barbearia do Igor - Profissional</h1>
+            <div class="nav-links">
+                <a href="/logOut"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </div>
+        </div>
+    </header>
 
-        <p><strong>Serviço: </strong><span th:text="${ag.tipoServico}"></span></p>
-        <p><strong>Status: </strong><span th:text="${ag.status}"></span></p>
-    </div>
-</div>
+    <main>
+        <div class="container">
+            <h2><i class="fas fa-calendar-alt"></i> Agenda de Hoje</h2>
+
+            <div th:if="${#lists.isEmpty(agendamento)}" class="alert"
+                style="background-color: var(--surface-color); color: var(--text-secondary);">
+                <i class="fas fa-info-circle"></i> Nenhum agendamento encontrado.
+            </div>
+
+            <div class="appointments-grid">
+                <div th:each="ag : ${agendamento}" class="card appointment-card">
+                    <h3
+                        style="margin-bottom: 10px; font-size: 1.2rem; border-bottom: 1px solid #333; padding-bottom: 5px;">
+                        <i class="fas fa-user"></i> <span th:text="${ag.cliente.nome}">Nome do Cliente</span>
+                    </h3>
+
+                    <p><strong><i class="fas fa-clock" style="color: var(--primary-color);"></i> Horário:</strong> <span
+                            th:text="${ag.hora}">10:00</span></p>
+                    <p><strong><i class="fas fa-calendar-day" style="color: var(--primary-color);"></i> Data:</strong>
+                        <span th:text="${ag.diaSemana}">Segunda</span> - <span
+                            th:text="${ag.dataFormatada}">01/01</span>
+                    </p>
+                    <p><strong><i class="fas fa-cut" style="color: var(--primary-color);"></i> Serviço:</strong> <span
+                            th:text="${ag.tipoServico}">Corte</span></p>
+
+                    <p><strong><i class="fas fa-phone" style="color: var(--primary-color);"></i> Telefone:</strong>
+                        <span th:text="${ag.cliente.telefone}">11999999999</span>
+                    </p>
+
+                    <a th:href="'https://wa.me/55' + ${ag.cliente.telefone} + '?text=Olá ' + ${ag.cliente.nome} + ', aqui é da Barbearia do Igor. Tudo certo para seu agendamento?'"
+                        target="_blank" class="btn btn-sm"
+                        style="background-color: #25D366; color: white; display: inline-block; margin-top: 10px; text-decoration: none; padding: 5px 10px; border-radius: 5px;">
+                        <i class="fab fa-whatsapp"></i> Confirmar no Zap
+                    </a>
+                    <p><strong><i class="fas fa-info-circle" style="color: var(--primary-color);"></i> Status:</strong>
+                        <span th:text="${ag.status}" style="color: var(--success-color);">Confirmado</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Barbearia do Igor - Estilo & Tradição</p>
+    </footer>
+
 </body>
+
 </html>

@@ -10,7 +10,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public void cadastrarCliente(Cliente cliente) {
-        String sql = "INSERT INTO Cliente (id, nome, telefone, email, senha) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO cliente (id, nome, telefone, email, senha) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = Database.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -29,7 +29,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public void editarCliente(Cliente cliente) {
-        String sql = "UPDATE Cliente SET nome = ?, telefone = ?, email = ?, senha = ? WHERE id = ?";
+        String sql = "UPDATE cliente SET nome = ?, telefone = ?, email = ?, senha = ? WHERE id = ?";
         try (Connection conn = Database.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -49,7 +49,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
     @Override
     public List<Cliente> listarClientes() {
         List<Cliente> clientes = new ArrayList<>();
-        String sql = "SELECT * FROM Cliente";
+        String sql = "SELECT * FROM cliente";
         try (Connection conn = Database.getConnection();
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql)) {
@@ -72,7 +72,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public Cliente buscarClientePorId(UUID id) {
-        String sql = "SELECT * FROM Cliente WHERE id = ?";
+        String sql = "SELECT * FROM cliente WHERE id = ?";
         try (Connection conn = Database.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -96,7 +96,7 @@ public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Override
     public Cliente buscarPorLogin(String login) {
-        String slq = "SELECT * FROM Cliente WHERE email = ?";
+        String slq = "SELECT * FROM cliente WHERE email = ?";
         try (Connection conn = Database.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(slq)) {
 

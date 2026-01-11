@@ -1,92 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cliente</title>
+    <title>Painel do Cliente | Barbearia Premium</title>
     <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
-
-    <style>
-        body{
-            margin: 0;
-            background-image: url("/favicon_io/android-chrome-512x512.png");
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        header{
-            color: white;
-            padding: 20px;
-        }
-
-        .top-bar{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .form-box{
-            background-color: white;
-            padding: 10px 15px;
-            border-radius: 8px;
-        }
-
-        .form-box a{
-            display: block;
-            margin: 6px 0;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .form-container{
-            background-color: rgb(250, 242, 242);
-            max-width: 400px;
-            margin: 40px auto;
-            border-radius: 8px;
-            padding: 30px;
-        }
-
-        .form-container a{
-            display: block;
-            margin: 18px 0;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            font-size: large;
-        }
-
-        footer{
-            margin-top: 40px;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/main.css">
 </head>
+
 <body>
 
-<header>
-    <div class="top-bar">
-        <h1>Painel do Cliente</h1>
-        <div class="form-box">
-            <a th:href="@{/perfil/{clienteId}(clienteId=${clienteId})}">Perfil</a>
-            <a href="/logOut">Sair</a>
+    <header>
+        <div class="container navbar">
+            <h1><i class="fas fa-cut"></i> Barbearia do Igor</h1>
+            <div class="nav-links">
+                <a th:href="@{/perfil/{clienteId}(clienteId=${clienteId})}"><i class="fas fa-user-circle"></i>
+                    Perfil</a>
+                <a href="/logOut" style="color: var(--error-color);"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<div class="form-container">
-    <h2>Agendamentos</h2>
-    <a th:href="@{/meusAgendamentos/{clienteId}(clienteId=${clienteId})}">
-        Meus Agendamentos</a>
-    <a th:href="@{/novoAgendamento/{clienteId}(clienteId=${clienteId})}">
-        Novo Agendamento</a>
-    <a th:href="@{/historico/{clienteId}(clienteId=${clienteId})}">
-        Histórico de Serviço</a>
-</div>
+    <main>
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 40px;">Painel do Cliente</h2>
 
-<footer>
-    <p>&copy; Barbearia do Igor </p>
-</footer>
+            <div class="dashboard-grid" style="margin: 0 auto;">
+
+                <!-- Card: Novo Agendamento -->
+                <a th:href="@{/novoAgendamento/{clienteId}(clienteId=${clienteId})}" class="dashboard-card">
+                    <i class="fas fa-calendar-plus"></i>
+                    <h3>Novo Agendamento</h3>
+                </a>
+
+                <!-- Card: Meus Agendamentos -->
+                <a th:href="@{/meusAgendamentos/{clienteId}(clienteId=${clienteId})}" class="dashboard-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Meus Agendamentos</h3>
+                </a>
+
+                <!-- Card: Histórico -->
+                <a th:href="@{/historico/{clienteId}(clienteId=${clienteId})}" class="dashboard-card">
+                    <i class="fas fa-history"></i>
+                    <h3>Histórico de Serviços</h3>
+                </a>
+
+                <!-- Card: Perfil (Optional redundancy but good for UX) -->
+                <a th:href="@{/perfil/{clienteId}(clienteId=${clienteId})}" class="dashboard-card">
+                    <i class="fas fa-user-cog"></i>
+                    <h3>Minha Conta</h3>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Barbearia do Igor - Estilo & Tradição</p>
+    </footer>
 
 </body>
+
 </html>

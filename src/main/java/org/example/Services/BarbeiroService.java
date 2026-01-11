@@ -17,34 +17,42 @@ public class BarbeiroService {
     private AgendamentoRepository agendamentoRepository;
     private ClienteRepository clienteRepository;
 
-    public BarbeiroService(BarbeiroRepository barbeiroRepository, AgendamentoRepository agendamentoRepository, ClienteRepository clienteRepository) {
+    public BarbeiroService(BarbeiroRepository barbeiroRepository, AgendamentoRepository agendamentoRepository,
+            ClienteRepository clienteRepository) {
         this.barbeiroRepository = barbeiroRepository;
         this.agendamentoRepository = agendamentoRepository;
         this.clienteRepository = clienteRepository;
 
     }
-    public List<Agendamento> listarAgendamento(){
+
+    public List<Agendamento> listarAgendamento() {
         List<Agendamento> filtro = new ArrayList<>();
-        for (Agendamento agendamento: agendamentoRepository.listarAgendamentos()){
-            if (agendamento.getStatus().equals(Status.RESERVADO)){
+        for (Agendamento agendamento : agendamentoRepository.listarAgendamentos()) {
+            if (agendamento.getStatus().equals(Status.RESERVADO)) {
                 filtro.add(agendamento);
             }
         }
         return agendamentoRepository.listarAgendamentos();
     }
-    public List<Cliente> listarClientes(){
+
+    public List<Cliente> listarClientes() {
         return clienteRepository.listarClientes();
     }
-    public Barbeiro buscarPorLogin(String login){
-        if (login == null){
+
+    public Barbeiro buscarPorLogin(String login) {
+        if (login == null) {
             throw new IllegalArgumentException("Erro, não é permitido login nulo.");
         }
         return barbeiroRepository.buscarPorLogin(login);
     }
 
-    public Barbeiro buscarBarbeiroPadrao(){
+    public Barbeiro buscarBarbeiroPadrao() {
         return barbeiroRepository.buscarBarbeiroPadrao()
-                .orElseThrow(()-> new RuntimeException("barbeiro não encontrado."));
+                .orElseThrow(() -> new RuntimeException("barbeiro não encontrado."));
+    }
+
+    public void atualizar(Barbeiro barbeiro) {
+        barbeiroRepository.atualizar(barbeiro);
     }
 
 }

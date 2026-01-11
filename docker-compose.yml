@@ -9,6 +9,7 @@ services:
       MYSQL_DATABASE: 'sistema_barbearia'
     ports:
       - "3306:3306"
-    volumes:
-      - ./src/main/resources/setup.sql:/docker-entrypoint-initdb.d/init.sql
+    # No volumes needed for schema init, handled by Flyway in the app
+    # Data is ephemeral (resets on restart) unless a volume is added here
+
     restart: always

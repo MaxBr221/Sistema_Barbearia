@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Meu Perfil | Barbearia Premium</title>
     <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
-
-    <style>
-        body{
-            background-image: url("/favicon_io/android-chrome-512x512.png");
-        }
-        .form-container{
-            background-color: white;
-            padding: 12px;
-            border-radius: 10px;
-            margin: 100px auto;
-            max-width: 400px;
-            height: 150px;
-        }
-        header{
-            text-align: center;
-            color: rgb(194, 194, 194);
-        }
-         .voltar-btn {
-            position: fixed;
-            top: 12px;
-            left: 12px;
-            background-color: white;
-            color: black;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
-
-        .voltar-btn:hover {
-            background-color: #f2f2f2;
-        }
-
-
-
-    </style>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/style/main.css">
 </head>
-<body>
-<header>
-    <div>
-        <h1>Perfil</h1>
-    </div>
-</header>
 
-<div  th:each="c : ${clienteId}" class="form-container">
-    <p><strong>Login: </strong> <span th:text="${c.login}"></span></p>
-    <p><strong>Telefone: </strong><span th:text="${c.telefone}"></span></p>
-    <p><strong>Nome: </strong><span th:text="${c.nome}"></span></p>
-</div>
-<div class="form-box">
-    <a href="/telaCliente" class="voltar-btn">Voltar</a>
-</div>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <h1><i class="fas fa-cut"></i> Barbearia do Igor</h1>
+            <div class="nav-links">
+                <a th:href="@{/telaCliente}"><i class="fas fa-arrow-left"></i> Voltar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card" style="max-width: 500px; margin: 0 auto; text-align: left;">
+                <h2 style="text-align: center; margin-bottom: 30px;"><i class="fas fa-user-circle"></i> Meus Dados</h2>
+
+                <div th:each="c : ${clienteId}">
+                    <div class="form-group" style="padding: 10px; border-bottom: 1px solid #333;">
+                        <label style="font-size: 0.8rem; text-transform: uppercase;">Nome Completo</label>
+                        <p style="font-size: 1.1rem; font-weight: bold; color: var(--text-primary);">
+                            <i class="fas fa-user" style="color: var(--primary-color); width: 20px;"></i>
+                            <span th:text="${c.nome}">Nome</span>
+                        </p>
+                    </div>
+
+                    <div class="form-group" style="padding: 10px; border-bottom: 1px solid #333;">
+                        <label style="font-size: 0.8rem; text-transform: uppercase;">E-mail / Login</label>
+                        <p style="font-size: 1.1rem; font-weight: bold; color: var(--text-primary);">
+                            <i class="fas fa-envelope" style="color: var(--primary-color); width: 20px;"></i>
+                            <span th:text="${c.login}">email@teste.com</span>
+                        </p>
+                    </div>
+
+                    <div class="form-group" style="padding: 10px;">
+                        <label style="font-size: 0.8rem; text-transform: uppercase;">Telefone</label>
+                        <p style="font-size: 1.1rem; font-weight: bold; color: var(--text-primary);">
+                            <i class="fas fa-phone" style="color: var(--primary-color); width: 20px;"></i>
+                            <span th:text="${c.telefone}">99999-9999</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Barbearia do Igor - Estilo & Tradição</p>
+    </footer>
+
 </body>
+
 </html>
