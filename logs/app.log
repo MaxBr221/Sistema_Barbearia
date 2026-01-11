@@ -28685,3 +28685,874 @@ java.lang.IllegalArgumentException: Não é permitido cadastrar datas passadas.
 2026-01-10 22:44:25 INFO  Javalin:16 - Listening on http://localhost:7000/
 2026-01-10 22:44:25 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
 2026-01-10 22:44:34 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:46:07 INFO  AppBarbearia:180 - Método iniciar() foi chamado!
+2026-01-10 22:46:07 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3306/sistema_barbearia (MySQL 8.0)
+2026-01-10 22:46:08 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.041s)
+2026-01-10 22:46:08 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-10 22:46:08 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-10 22:46:08 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-10 22:46:08 INFO  AppBarbearia:73 - Conectado ao MySQL com sucesso!
+2026-01-10 22:46:08 INFO  AppBarbearia:160 - Servidor Javalin está iniciando...
+2026-01-10 22:46:08 INFO  Javalin:16 - Starting Javalin ...
+2026-01-10 22:46:08 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-10 22:46:08 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-10 22:46:08 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@41aaedaa{/,null,AVAILABLE}
+2026-01-10 22:46:08 INFO  AbstractConnector:376 - Started ServerConnector@77bb0ab5{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-10 22:46:08 INFO  Server:439 - Started Server@5b5caf08{STARTING}[11.0.25,sto=0] @1818ms
+2026-01-10 22:46:08 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-10 22:46:08 INFO  Javalin:16 - Javalin started in 177ms \o/
+2026-01-10 22:46:08 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-10 22:46:08 INFO  Javalin:16 - Listening on http://localhost:7000/
+2026-01-10 22:46:08 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-10 22:46:11 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:46:17 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:47:43 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-10 22:47:43 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:47:47 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:48:03 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-10 22:48:03 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-10 22:48:03 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-10 22:48:08 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:48:09 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-10 22:48:13 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-10 22:48:18 INFO  LoginController:101 - Direcionando para saida..
+2026-01-10 22:48:18 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-10 22:48:23 WARN  LoginController:64 - Detectou login padrão. Atualizando hash de senha para garantir compatibilidade.
+2026-01-10 22:48:23 INFO  LoginController:71 - Tentativa de login valida com sucesso!
+2026-01-10 22:48:23 INFO  BarbeiroController:26 - Listando agendamentos na tela de barbeiro
+2026-01-11 08:11:00 INFO  AppBarbearia:181 - Método iniciar() foi chamado!
+2026-01-11 08:11:01 ERROR AppBarbearia:68 - Erro ao executar migrações do Flyway: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:71) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:138) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:164) ~[flyway-core-10.15.2.jar:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:65) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+2026-01-11 08:11:01 ERROR AppBarbearia:76 - Erro ao conectar no MySQL
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:73) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+2026-01-11 08:11:21 INFO  AppBarbearia:181 - Método iniciar() foi chamado!
+2026-01-11 08:11:22 ERROR AppBarbearia:68 - Erro ao executar migrações do Flyway: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:71) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:138) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:164) ~[flyway-core-10.15.2.jar:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:65) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+2026-01-11 08:11:22 ERROR AppBarbearia:76 - Erro ao conectar no MySQL
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:73) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+2026-01-11 08:13:12 INFO  AppBarbearia:181 - Método iniciar() foi chamado!
+2026-01-11 08:13:13 ERROR AppBarbearia:68 - Erro ao executar migrações do Flyway: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:71) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:138) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:164) ~[flyway-core-10.15.2.jar:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:65) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+2026-01-11 08:13:13 ERROR AppBarbearia:76 - Erro ao conectar no MySQL
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:73) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+2026-01-11 08:13:45 INFO  AppBarbearia:181 - Método iniciar() foi chamado!
+2026-01-11 08:13:46 ERROR AppBarbearia:68 - Erro ao executar migrações do Flyway: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:71) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:138) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:164) ~[flyway-core-10.15.2.jar:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:65) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+2026-01-11 08:13:46 ERROR AppBarbearia:76 - Erro ao conectar no MySQL
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:73) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+2026-01-11 08:17:38 INFO  AppBarbearia:181 - Método iniciar() foi chamado!
+2026-01-11 08:17:39 ERROR AppBarbearia:68 - Erro ao executar migrações do Flyway: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database (jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true) for user 'root': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:71) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:138) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:164) ~[flyway-core-10.15.2.jar:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:65) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:275) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:240) ~[flyway-core-10.15.2.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.15.2.jar:?]
+	... 6 more
+2026-01-11 08:17:39 ERROR AppBarbearia:76 - Erro ao conectar no MySQL
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at org.example.AppBarbearia.inicializarBanco(AppBarbearia.java:73) [classes/:?]
+	at org.example.AppBarbearia.iniciar(AppBarbearia.java:186) [classes/:?]
+	at org.example.AppBarbearia.main(AppBarbearia.java:199) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:589) ~[?:?]
+	at java.base/sun.nio.ch.Net.connect(Net.java:578) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[?:?]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 8 more
+2026-01-11 08:18:44 INFO  AppBarbearia:181 - Método iniciar() foi chamado!
+2026-01-11 08:18:45 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3307/sistema_barbearia (MySQL 8.0)
+2026-01-11 08:18:45 INFO  JdbcTableSchemaHistory:41 - Schema history table `sistema_barbearia`.`flyway_schema_history` does not exist yet
+2026-01-11 08:18:45 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.054s)
+2026-01-11 08:18:45 INFO  JdbcTableSchemaHistory:41 - Creating Schema History table `sistema_barbearia`.`flyway_schema_history` ...
+2026-01-11 08:18:45 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: << Empty Schema >>
+2026-01-11 08:18:45 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "1 - Initial Setup"
+2026-01-11 08:18:45 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.cliente' (SQL State: 42S02 - Error Code: 1051)
+2026-01-11 08:18:46 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.barbeiro' (SQL State: 42S02 - Error Code: 1051)
+2026-01-11 08:18:46 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.agendamento' (SQL State: 42S02 - Error Code: 1051)
+2026-01-11 08:18:46 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.servico' (SQL State: 42S02 - Error Code: 1051)
+2026-01-11 08:18:46 WARN  DefaultSqlScriptExecutor:45 - DB: Unknown table 'sistema_barbearia.administrador' (SQL State: 42S02 - Error Code: 1051)
+2026-01-11 08:18:46 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "2 - Increase Phone Size"
+2026-01-11 08:18:46 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "3 - Increase Password Size"
+2026-01-11 08:18:47 INFO  DbMigrate:41 - Migrating schema `sistema_barbearia` to version "4 - Seed Data"
+2026-01-11 08:18:47 INFO  DbMigrate:41 - Successfully applied 4 migrations to schema `sistema_barbearia`, now at version v4 (execution time 00:01.729s)
+2026-01-11 08:18:47 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-11 08:18:47 INFO  AppBarbearia:74 - Conectado ao MySQL com sucesso!
+2026-01-11 08:18:47 INFO  AppBarbearia:193 - Iniciando servidor na porta: 7000
+2026-01-11 08:18:48 INFO  AppBarbearia:161 - Servidor Javalin está iniciando...
+2026-01-11 08:18:48 INFO  Javalin:16 - Starting Javalin ...
+2026-01-11 08:18:48 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-11 08:18:48 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-11 08:18:48 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@70e02081{/,null,AVAILABLE}
+2026-01-11 08:18:48 INFO  AbstractConnector:376 - Started ServerConnector@2d66530f{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-11 08:18:48 INFO  Server:439 - Started Server@2d195ee4{STARTING}[11.0.25,sto=0] @4883ms
+2026-01-11 08:18:48 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-11 08:18:48 INFO  Javalin:16 - Javalin started in 318ms \o/
+2026-01-11 08:18:48 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-11 08:18:48 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-11 08:18:48 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-11 08:19:05 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-11 08:19:09 WARN  LoginController:83 - igor@barbearia.com não está cadastrado.
+2026-01-11 08:19:13 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-11 08:19:28 INFO  ClienteController:51 - cliente JONAS BERNARDINO DE LIMA cadastrado com sucesso!
+2026-01-11 08:19:28 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-11 08:19:29 WARN  LoginController:83 - jonasl.bernardino@gmail.com não está cadastrado.
+2026-01-11 08:19:31 WARN  LoginController:83 - jonasl.bernardino@gmail.com não está cadastrado.
+2026-01-11 08:20:51 INFO  AppBarbearia:181 - Método iniciar() foi chamado!
+2026-01-11 08:20:52 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3307/sistema_barbearia (MySQL 8.0)
+2026-01-11 08:20:52 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.056s)
+2026-01-11 08:20:52 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-11 08:20:52 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-11 08:20:52 INFO  AppBarbearia:66 - Migrações do Flyway executadas com sucesso!
+2026-01-11 08:20:52 INFO  AppBarbearia:74 - Conectado ao MySQL com sucesso!
+2026-01-11 08:20:52 INFO  AppBarbearia:193 - Iniciando servidor na porta: 7000
+2026-01-11 08:20:52 INFO  AppBarbearia:161 - Servidor Javalin está iniciando...
+2026-01-11 08:20:52 INFO  Javalin:16 - Starting Javalin ...
+2026-01-11 08:20:52 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-11 08:20:52 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-11 08:20:52 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@783efb48{/,null,AVAILABLE}
+2026-01-11 08:20:52 INFO  AbstractConnector:376 - Started ServerConnector@6ea94d6a{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-11 08:20:52 INFO  Server:439 - Started Server@41d7b27f{STARTING}[11.0.25,sto=0] @2430ms
+2026-01-11 08:20:52 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-11 08:20:52 INFO  Javalin:16 - Javalin started in 243ms \o/
+2026-01-11 08:20:53 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-11 08:20:53 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-11 08:20:53 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-11 08:21:01 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-11 08:21:02 INFO  ClienteController:20 - Direcionando para tela de cadastro..
+2026-01-11 08:21:13 INFO  ClienteController:51 - cliente JONAS BERNARDINO DE LIMA cadastrado com sucesso!
+2026-01-11 08:21:13 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-11 08:21:14 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-11 08:21:14 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-11 08:21:16 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-11 08:21:22 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-11 08:21:28 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-11 08:21:28 INFO  AgendamentoController:94 - Agendamento criado com sucesso!
+2026-01-11 08:21:28 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-11 08:21:31 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-11 08:21:32 INFO  AgendamentoController:111 - Listando agendamentos..
+2026-01-11 08:51:29 INFO  AppBarbearia:188 - Método iniciar() foi chamado!
+2026-01-11 08:51:30 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3307/sistema_barbearia (MySQL 8.0)
+2026-01-11 08:51:30 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.049s)
+2026-01-11 08:51:30 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-11 08:51:30 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-11 08:51:30 INFO  AppBarbearia:73 - Migrações do Flyway executadas com sucesso!
+2026-01-11 08:51:30 INFO  AppBarbearia:81 - Conectado ao MySQL com sucesso!
+2026-01-11 08:51:30 INFO  AppBarbearia:200 - Iniciando servidor na porta: 7000
+2026-01-11 08:51:30 INFO  AppBarbearia:168 - Servidor Javalin está iniciando...
+2026-01-11 08:51:30 INFO  Javalin:16 - Starting Javalin ...
+2026-01-11 08:51:30 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-11 08:51:30 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-11 08:51:30 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@71391b3f{/,null,AVAILABLE}
+2026-01-11 08:51:30 INFO  AbstractConnector:376 - Started ServerConnector@4564e94b{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-11 08:51:30 INFO  Server:439 - Started Server@3e6f3bae{STARTING}[11.0.25,sto=0] @2095ms
+2026-01-11 08:51:30 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-11 08:51:30 INFO  Javalin:16 - Javalin started in 193ms \o/
+2026-01-11 08:51:31 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-11 08:51:31 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-11 08:51:31 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-11 08:51:40 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-11 08:51:43 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-11 08:51:43 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-11 08:51:45 INFO  AgendamentoController:109 - Listando agendamentos..
+2026-01-11 08:51:54 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-11 08:51:54 INFO  AgendamentoController:138 - Agendamento removido com sucesso!
+2026-01-11 08:52:06 INFO  AgendamentoController:109 - Listando agendamentos..
+2026-01-11 08:52:35 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-11 08:52:36 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-11 08:52:46 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-11 08:52:46 INFO  AgendamentoController:92 - Agendamento criado com sucesso!
+2026-01-11 08:52:46 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-11 08:52:53 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-11 08:52:55 INFO  AgendamentoController:109 - Listando agendamentos..
+2026-01-11 08:53:00 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-11 08:53:01 INFO  AgendamentoController:138 - Agendamento removido com sucesso!
+2026-01-11 08:53:18 INFO  AgendamentoController:109 - Listando agendamentos..
+2026-01-11 08:54:48 INFO  AppBarbearia:188 - Método iniciar() foi chamado!
+2026-01-11 08:54:48 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3307/sistema_barbearia (MySQL 8.0)
+2026-01-11 08:54:48 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.043s)
+2026-01-11 08:54:48 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-11 08:54:48 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-11 08:54:48 INFO  AppBarbearia:73 - Migrações do Flyway executadas com sucesso!
+2026-01-11 08:54:48 INFO  AppBarbearia:81 - Conectado ao MySQL com sucesso!
+2026-01-11 08:54:48 INFO  AppBarbearia:200 - Iniciando servidor na porta: 7000
+2026-01-11 08:54:48 INFO  AppBarbearia:168 - Servidor Javalin está iniciando...
+2026-01-11 08:54:48 INFO  Javalin:16 - Starting Javalin ...
+2026-01-11 08:54:48 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-11 08:54:49 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-11 08:54:49 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@79a1728c{/,null,AVAILABLE}
+2026-01-11 08:54:49 INFO  AbstractConnector:376 - Started ServerConnector@27abb83e{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-11 08:54:49 INFO  Server:439 - Started Server@34237b90{STARTING}[11.0.25,sto=0] @1687ms
+2026-01-11 08:54:49 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-11 08:54:49 INFO  Javalin:16 - Javalin started in 169ms \o/
+2026-01-11 08:54:49 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-11 08:54:49 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-11 08:54:49 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-11 08:54:58 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-11 08:55:00 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-11 08:55:00 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-11 08:55:03 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-11 08:55:14 INFO  AgendamentoController:49 - No metodo criarAgendamento
+2026-01-11 08:55:14 INFO  AgendamentoController:92 - Agendamento criado com sucesso!
+2026-01-11 08:55:14 INFO  AgendamentoController:23 - Direcionando para tela de agendamento
+2026-01-11 08:55:17 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-11 08:55:19 INFO  AgendamentoController:109 - Listando agendamentos..
+2026-01-11 08:55:23 INFO  AgendamentoController:124 - No metodo remover Agendamento
+2026-01-11 08:55:23 INFO  AgendamentoController:137 - Agendamento removido com sucesso!
+2026-01-11 08:55:47 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-11 08:55:50 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-11 08:55:50 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-11 08:57:21 INFO  AgendamentoController:109 - Listando agendamentos..
+2026-01-11 08:57:24 INFO  LoginController:20 - Direcionado para tela de login
+2026-01-11 08:57:36 INFO  AppBarbearia:188 - Método iniciar() foi chamado!
+2026-01-11 08:57:36 INFO  FlywayExecutor:41 - Database: jdbc:mysql://localhost:3307/sistema_barbearia (MySQL 8.0)
+2026-01-11 08:57:36 INFO  DbValidate:41 - Successfully validated 4 migrations (execution time 00:00.048s)
+2026-01-11 08:57:36 INFO  DbMigrate:41 - Current version of schema `sistema_barbearia`: 4
+2026-01-11 08:57:36 INFO  DbMigrate:41 - Schema `sistema_barbearia` is up to date. No migration necessary.
+2026-01-11 08:57:36 INFO  AppBarbearia:73 - Migrações do Flyway executadas com sucesso!
+2026-01-11 08:57:36 INFO  AppBarbearia:81 - Conectado ao MySQL com sucesso!
+2026-01-11 08:57:36 INFO  AppBarbearia:200 - Iniciando servidor na porta: 7000
+2026-01-11 08:57:36 INFO  AppBarbearia:168 - Servidor Javalin está iniciando...
+2026-01-11 08:57:36 INFO  Javalin:16 - Starting Javalin ...
+2026-01-11 08:57:36 INFO  Server:384 - jetty-11.0.25; built: 2025-03-13T00:15:57.301Z; git: a2e9fae3ad8320f2a713d4fa29bba356a99d1295; jvm 21.0.7+6-LTS
+2026-01-11 08:57:36 INFO  DefaultSessionIdManager:332 - Session workerName=node0
+2026-01-11 08:57:36 INFO  ContextHandler:907 - Started o.e.j.s.ServletContextHandler@71391b3f{/,null,AVAILABLE}
+2026-01-11 08:57:37 INFO  AbstractConnector:376 - Started ServerConnector@4564e94b{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+2026-01-11 08:57:37 INFO  Server:439 - Started Server@3e6f3bae{STARTING}[11.0.25,sto=0] @1566ms
+2026-01-11 08:57:37 INFO  Javalin:16 - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+2026-01-11 08:57:37 INFO  Javalin:16 - Javalin started in 183ms \o/
+2026-01-11 08:57:37 INFO  Javalin:21 - Static file handler added: StaticFileConfig(hostedPath=/, directory=public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, mimeTypes={}, roles=[]). File system location: 'file:///C:/PROJETOS/Maxsuel/Sistema_Barbearia/target/classes/public/'
+2026-01-11 08:57:37 INFO  Javalin:16 - Listening on http://0.0.0.0:7000/
+2026-01-11 08:57:37 INFO  Javalin:16 - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 202 days old. Consider checking for a newer version.).
+2026-01-11 08:57:41 INFO  LoginController:47 - Tentativa de login valida com sucesso!
+2026-01-11 08:57:41 INFO  LoginController:31 - Direcionando para tela do cliente
+2026-01-11 08:57:43 INFO  AgendamentoController:110 - Listando agendamentos..
+2026-01-11 08:57:44 INFO  AgendamentoController:23 - Direcionando para tela de agendamento

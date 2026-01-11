@@ -10,7 +10,7 @@ services:
     environment:
       - DB_URL=jdbc:mysql://db:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
       - DB_USER=root
-      - DB_PASSWORD=12345678
+      - DB_PASSWORD=${DB_PASSWORD}
       - PORT=7000
     depends_on:
       db:
@@ -22,8 +22,9 @@ services:
     image: mysql:8.0
     container_name: sistema_barbearia_db
     restart: always
+    command: --bind-address=0.0.0.0
     environment:
-      MYSQL_ROOT_PASSWORD: '12345678'
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: 'sistema_barbearia'
     ports:
       - "3307:3306" # Mapped to 3307 on host to avoid conflict with existing MySQL on 3306
@@ -43,3 +44,4 @@ networks:
 
 volumes:
   db_data:
+
