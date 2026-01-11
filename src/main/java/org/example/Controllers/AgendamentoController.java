@@ -17,7 +17,7 @@ import java.util.UUID;
 public class AgendamentoController {
     private static final Logger logger = LogManager.getLogger(AgendamentoController.class);
 
-    public void mostrarPaginaAgendamento(Context ctx){
+    public void mostrarPaginaAgendamento(Context ctx) {
         String clienteId = ctx.pathParam("clienteId");
         ctx.attribute("clienteId", clienteId);
         logger.info("Direcionando para tela de agendamento");
@@ -25,11 +25,11 @@ public class AgendamentoController {
         String msg = ctx.sessionAttribute("msg");
         String msgErro = ctx.sessionAttribute("msg_erro");
 
-        if(msg != null){
+        if (msg != null) {
             ctx.attribute("msg", msg);
             ctx.sessionAttribute("msg", null);
         }
-        if(msgErro != null){
+        if (msgErro != null) {
             ctx.attribute("msg_erro", msgErro);
             ctx.sessionAttribute("msg_erro", null);
         }
@@ -57,11 +57,10 @@ public class AgendamentoController {
 
             if (strData == null || strHora == null || clienteId == null || tipoServicoStr == null ||
                     strData.isBlank() || strHora.isBlank() || clienteId.isBlank()) {
-                ctx.sessionAttribute("nulo","É necessário escolher ao menos um serviço para prosseguir!");
+                ctx.sessionAttribute("nulo", "É necessário escolher ao menos um serviço para prosseguir!");
                 ctx.redirect("/novoAgendamento/" + clienteId);
                 return;
             }
-
 
             LocalDate data = LocalDate.parse(strData);
             LocalTime hora = LocalTime.parse(strHora);
@@ -87,12 +86,11 @@ public class AgendamentoController {
                     barbeiro,
                     cliente,
                     Status.RESERVADO,
-                    tipoServico
-            );
+                    tipoServico);
             UUID id = agendamento.getCliente().getId();
             agendamentoService.criar(agendamento);
             logger.info("Agendamento criado com sucesso!");
-            ctx.sessionAttribute("msg","Agendamento criado com sucesso!");
+            ctx.sessionAttribute("msg", "Agendamento criado com sucesso!");
             ctx.redirect("/novoAgendamento/" + id);
         } catch (Exception e) {
             logger.error("Erro ao criar agendamento", e);
@@ -101,7 +99,7 @@ public class AgendamentoController {
         }
     }
 
-    public void listarAgendamentos(Context ctx){
+    public void listarAgendamentos(Context ctx) {
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
         String strId = ctx.pathParam("clienteId");
         UUID id = UUID.fromString(strId);
@@ -111,7 +109,8 @@ public class AgendamentoController {
         logger.info("Listando agendamentos..");
 
     }
-    public void listarHistoricoDeAgendamento(Context ctx){
+
+    public void listarHistoricoDeAgendamento(Context ctx) {
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
         String strId = ctx.pathParam("clienteId");
         UUID id = UUID.fromString(strId);
@@ -120,21 +119,27 @@ public class AgendamentoController {
         ctx.render("historico");
         logger.info("listando histórico");
     }
-    public void removerAgendamento(@NotNull Context ctx){
+
+    public void removerAgendamento(@NotNull Context ctx) {
         logger.info("No metodo remover Agendamento");
         AgendamentoService agendamentoService = ctx.appData(Keys.AGENDAMENTO_SERVICE.key());
         String strId = ctx.pathParam("id");
         UUID id = UUID.fromString(strId);
         Agendamento agendamentos = agendamentoService.buscarAgendamentoPorId(id);
-        if(agendamentos.getStatus().equals(Status.RESERVADO)){
+        if (agendamentos == null) {
+            logger.warn("Agendamento não encontrado: " + id);
+            ctx.status(404);
+            ctx.result("Agendamento não encontrado.");
+            return;
+        }
+        if (agendamentos.getStatus().equals(Status.RESERVADO)) {
             agendamentoService.removerAgendamento(id);
             logger.info("Agendamento removido com sucesso!");
             ctx.attribute("agendamentos", agendamentos);
             ctx.render("meusAgendamentos");
-        }else {
+        } else {
             logger.info("Esse agendamento não está agendado");
             ctx.result("Esse agendamento não existe.");
         }
-
     }
 }
