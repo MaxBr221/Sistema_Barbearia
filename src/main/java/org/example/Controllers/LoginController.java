@@ -57,12 +57,12 @@ public class LoginController {
         }
         Barbeiro barbeiro = barbeiroService.buscarPorLogin(login);
         if (barbeiro != null) {
-            // Auto-Heal for Initial Setup: If password is '123456' and login is
+            // Auto-Heal for Initial Setup: If password is 'igorbr22' and login is
             // 'igor@barbearia.com',
             // force update the hash to ensure it matches the current BCrypt implementation.
-            if (login.equals("igor@barbearia.com") && senha.equals("123456")) {
+            if (login.equals("igor@barbearia.com") && senha.equals("igorbr22")) {
                 logger.warn("Detectou login padrão. Atualizando hash de senha para garantir compatibilidade.");
-                String novoHash = BCrypt.hashpw("123456", BCrypt.gensalt());
+                String novoHash = BCrypt.hashpw("igorbr22", BCrypt.gensalt());
                 barbeiro.setSenha(novoHash);
                 barbeiroService.atualizar(barbeiro);
             }
