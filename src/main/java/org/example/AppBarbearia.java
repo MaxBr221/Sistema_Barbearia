@@ -49,7 +49,7 @@ public class AppBarbearia {
         String dbPassword = System.getenv("DB_PASSWORD");
 
         if (dbUrl == null)
-            dbUrl = "jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+            dbUrl = "jdbc:mysql://localhost:3307/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
         if (dbUser == null)
             dbUser = "root";
         if (dbPassword == null)

@@ -28,7 +28,7 @@ public class Database {
         if (url == null)
             url = properties.getProperty("db.url");
         if (url == null || url.startsWith("${"))
-            url = "jdbc:mysql://localhost:3306/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+            url = "jdbc:mysql://localhost:3307/sistema_barbearia?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 
         if (user == null)
             user = properties.getProperty("db.usuario");
