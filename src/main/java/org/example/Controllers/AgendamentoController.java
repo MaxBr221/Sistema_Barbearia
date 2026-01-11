@@ -105,9 +105,9 @@ public class AgendamentoController {
         UUID id = UUID.fromString(strId);
         List<Agendamento> listaAgendamentos = agendamentoService.listarAgendamentosAtivos(id);
         ctx.attribute("agendamentos", listaAgendamentos);
+        ctx.attribute("clienteId", strId);
         ctx.render("meusAgendamentos");
         logger.info("Listando agendamentos..");
-
     }
 
     public void listarHistoricoDeAgendamento(Context ctx) {
@@ -133,10 +133,10 @@ public class AgendamentoController {
             return;
         }
         if (agendamentos.getStatus().equals(Status.RESERVADO)) {
-            UUID clienteId = agendamentos.getCliente().getId();
             agendamentoService.removerAgendamento(id);
             logger.info("Agendamento removido com sucesso!");
-            ctx.redirect("/meusAgendamentos/" + clienteId);
+            ctx.status(200);
+            ctx.json(java.util.Map.of("success", true, "message", "Agendamento removido"));
         } else {
             logger.info("Esse agendamento não está agendado");
             ctx.result("Esse agendamento não existe.");
