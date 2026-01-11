@@ -55,6 +55,13 @@ public class AppBarbearia {
         if (dbPassword == null)
             dbPassword = "12345678";
 
+        // Load MySQL driver explicitly before Flyway
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            logger.error("MySQL Driver não encontrado!", e);
+        }
+
         // Setup Flyway
         try {
             org.flywaydb.core.Flyway flyway = org.flywaydb.core.Flyway.configure()
