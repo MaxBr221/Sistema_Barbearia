@@ -56,16 +56,17 @@ public class AppBarbearia {
             dbPassword = "12345678";
 
         // Setup Flyway
-        org.flywaydb.core.Flyway flyway = org.flywaydb.core.Flyway.configure()
-                .dataSource(dbUrl, dbUser, dbPassword)
-                .baselineOnMigrate(true)
-                .load();
-
         try {
+            org.flywaydb.core.Flyway flyway = org.flywaydb.core.Flyway.configure()
+                    .dataSource(dbUrl, dbUser, dbPassword)
+                    .locations("classpath:db/migration")
+                    .baselineOnMigrate(true)
+                    .load();
             flyway.migrate();
             logger.info("Migrações do Flyway executadas com sucesso!");
         } catch (Exception e) {
-            logger.error("Erro ao executar migrações do Flyway", e);
+            logger.error("Erro ao executar migrações do Flyway: " + e.getMessage(), e);
+            // Continue startup - DB might already be migrated or we want app to try anyway
         }
 
         try {
@@ -189,7 +190,8 @@ public class AppBarbearia {
             ctx.status(500);
         });
         int porta = obterPortaServidor();
-        app.start(porta);
+        logger.info("Iniciando servidor na porta: " + porta);
+        app.start("0.0.0.0", porta);
 
     }
 
